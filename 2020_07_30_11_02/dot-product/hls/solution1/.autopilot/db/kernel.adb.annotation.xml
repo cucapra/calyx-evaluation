@@ -1,0 +1,4 @@
+<annotationInfo>
+<item  id="12" filename="./dot-product.cpp" linenumber="10" name="icmp_ln10" contextFuncName="kernel" moduleName="kernel" rtlName="icmp_ln10_fu_43_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="/tmp/tmp.vZ7XnB0FWw"><\/item>
+<item  id="13" filename="./dot-product.cpp" linenumber="10" name="i" contextFuncName="kernel" moduleName="kernel" rtlName="i_fu_49_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="13" fileDirectory="/tmp/tmp.vZ7XnB0FWw"><\/item>
+</annotationInfo>
