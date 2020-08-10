@@ -1,0 +1,105 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Fri Aug  7 17:43:52 2020
+| Host         : gorgonzola.cs.cornell.edu running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xc7z020
+-----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    27 |
+|    Minimum number of control sets                        |    27 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    29 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    27 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     1 |
+| >= 16              |    23 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              24 |           14 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             409 |          149 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             298 |          100 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+------------------------+--------------------------+------------------+----------------+
+| Clock Signal |      Enable Signal     |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
++--------------+------------------------+--------------------------+------------------+----------------+
+|  clk         | fsm0/i0_write_en       | fsm0/out_reg[0]_1        |                1 |              4 |
+|  clk         | fsm9/E[0]              |                          |                2 |              4 |
+|  clk         | fsm8/fsm8_write_en     |                          |                2 |              4 |
+|  clk         | fsm9/beta0_write_en    | fsm9/done_reg_1          |               12 |             15 |
+|  clk         | fsm9/beta0_write_en    |                          |                5 |             17 |
+|  clk         |                        |                          |               14 |             24 |
+|  clk         | fsm5/fsm5_write_en     | fsm5/out[31]_i_1_n_0     |                8 |             29 |
+|  clk         | fsm8/fsm1_write_en     | fsm1/out[31]_i_1_n_0     |                8 |             29 |
+|  clk         | fsm7/fsm7_write_en     | fsm7/out[31]_i_1_n_0     |                8 |             29 |
+|  clk         | fsm6/zRead00_write_en  |                          |               13 |             32 |
+|  clk         | fsm9/yWrite00_write_en |                          |               14 |             32 |
+|  clk         | fsm9/rRead00_write_en  |                          |                8 |             32 |
+|  clk         | fsm8/yWrite20_write_en |                          |               15 |             32 |
+|  clk         | fsm0/rRead10_write_en  |                          |               10 |             32 |
+|  clk         | fsm8/fsm3_write_en     | fsm8/out_reg[3]_1        |               14 |             32 |
+|  clk         | fsm7/fsm6_write_en     | fsm6/out[31]_i_1__11_n_0 |                8 |             32 |
+|  clk         | fsm0/sum0_write_en     | fsm0/out_reg[1]_3        |               13 |             32 |
+|  clk         | fsm6/yWrite10_write_en |                          |               11 |             32 |
+|  clk         | fsm5/yRead10_write_en  |                          |               10 |             32 |
+|  clk         | fsm5/fsm4_write_en     | fsm4/out[31]_i_1__13_n_0 |                8 |             32 |
+|  clk         | fsm4/zWrite00_write_en |                          |                8 |             32 |
+|  clk         | fsm4/y_i0_write_en     |                          |               11 |             32 |
+|  clk         | fsm3/E[0]              |                          |               12 |             32 |
+|  clk         | fsm3/fsm2_write_en     | fsm2/out[31]_i_1__15_n_0 |               12 |             32 |
+|  clk         | fsm2/rRead20_write_en  |                          |               16 |             32 |
+|  clk         | fsm1/fsm0_write_en     | fsm0/out[31]_i_1__14_n_0 |                8 |             32 |
+|  clk         | fsm0/yRead00_write_en  |                          |               12 |             32 |
++--------------+------------------------+--------------------------+------------------+----------------+
+
+

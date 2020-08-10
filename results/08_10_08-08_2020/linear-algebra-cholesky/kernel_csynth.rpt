@@ -1,0 +1,197 @@
+
+
+================================================================
+== Vivado HLS Report for 'kernel'
+================================================================
+* Date:           Sat Aug  8 13:13:14 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        benchmark.prj
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |   7.00|     5.806|        0.88|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+------+-----+------+---------+
+    |   Latency  |  Interval  | Pipeline|
+    | min |  max | min |  max |   Type  |
+    +-----+------+-----+------+---------+
+    |   25|  4617|   25|  4617|   none  |
+    +-----+------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+-----+------+----------+-----------+-----------+-------+----------+
+        |                 |   Latency  | Iteration|  Initiation Interval  |  Trip |          |
+        |    Loop Name    | min |  max |  Latency |  achieved |   target  | Count | Pipelined|
+        +-----------------+-----+------+----------+-----------+-----------+-------+----------+
+        |- Loop 1         |   24|  4616|  3 ~ 577 |          -|          -|      8|    no    |
+        | + Loop 1.1      |    0|   532|  40 ~ 76 |          -|          -| 0 ~ 7 |    no    |
+        |  ++ Loop 1.1.1  |    0|    36|         6|          -|          -| 0 ~ 6 |    no    |
+        | + Loop 1.2      |    0|    42|         6|          -|          -| 0 ~ 7 |    no    |
+        +-----------------+-----+------+----------+-----------+-----------+-------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    180|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        0|      6|     762|    376|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    347|    -|
+|Register         |        -|      -|     257|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      6|    1019|    903|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      2|   ~0   |      1|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------+-----------------------------------+---------+-------+-----+-----+-----+
+    |               Instance               |               Module              | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +--------------------------------------+-----------------------------------+---------+-------+-----+-----+-----+
+    |kernel_control_s_axi_U                |kernel_control_s_axi               |        0|      0|   36|   40|    0|
+    |kernel_mul_32s_32s_32_3_1_U1          |kernel_mul_32s_32s_32_3_1          |        0|      3|  166|   49|    0|
+    |kernel_mul_32s_32s_32_3_1_U3          |kernel_mul_32s_32s_32_3_1          |        0|      3|  166|   49|    0|
+    |kernel_udiv_32ns_32ns_32_36_seq_1_U2  |kernel_udiv_32ns_32ns_32_36_seq_1  |        0|      0|  394|  238|    0|
+    +--------------------------------------+-----------------------------------+---------+-------+-----+-----+-----+
+    |Total                                 |                                   |        0|      6|  762|  376|    0|
+    +--------------------------------------+-----------------------------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |add_ln43_fu_195_p2      |     +    |      0|  0|  15|           8|           8|
+    |i_fu_173_p2             |     +    |      0|  0|  13|           4|           1|
+    |j_V_fu_216_p2           |     +    |      0|  0|  12|           3|           1|
+    |k_V_1_fu_314_p2         |     +    |      0|  0|  12|           3|           1|
+    |k_V_fu_254_p2           |     +    |      0|  0|  12|           3|           1|
+    |sub_ln214_1_fu_339_p2   |     -    |      0|  0|  39|          32|          32|
+    |sub_ln214_fu_292_p2     |     -    |      0|  0|  39|          32|          32|
+    |icmp_ln16_fu_248_p2     |   icmp   |      0|  0|   9|           3|           3|
+    |icmp_ln887_1_fu_308_p2  |   icmp   |      0|  0|   9|           4|           4|
+    |icmp_ln887_fu_210_p2    |   icmp   |      0|  0|   9|           4|           4|
+    |icmp_ln8_fu_167_p2      |   icmp   |      0|  0|  11|           4|           5|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |Total                   |          |      0|  0| 180|         100|          92|
+    +------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +--------------------+-----+-----------+-----+-----------+
+    |        Name        | LUT | Input Size| Bits| Total Bits|
+    +--------------------+-----+-----------+-----+-----------+
+    |A_V_address0        |   27|          5|    6|         30|
+    |A_V_address1        |   27|          5|    6|         30|
+    |A_V_d1              |   15|          3|   32|         96|
+    |ap_NS_fsm           |  233|         54|    1|         54|
+    |indvars_iv_reg_124  |    9|          2|    3|          6|
+    |op2_assign_reg_112  |    9|          2|    4|          8|
+    |p_0114_0_reg_136    |    9|          2|    3|          6|
+    |p_0231_0_reg_147    |    9|          2|    3|          6|
+    |reg_158             |    9|          2|   32|         64|
+    +--------------------+-----+-----------+-----+-----------+
+    |Total               |  347|         77|   90|        300|
+    +--------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------+----+----+-----+-----------+
+    |         Name        | FF | LUT| Bits| Const Bits|
+    +---------------------+----+----+-----+-----------+
+    |A_V_addr_1_reg_353   |   6|   0|    6|          0|
+    |A_V_addr_2_reg_373   |   6|   0|    6|          0|
+    |A_V_addr_reg_367     |   6|   0|    6|          0|
+    |ap_CS_fsm            |  53|   0|   53|          0|
+    |i_reg_348            |   4|   0|    4|          0|
+    |indvars_iv_reg_124   |   3|   0|    3|          0|
+    |j_V_reg_362          |   3|   0|    3|          0|
+    |k_V_1_reg_409        |   3|   0|    3|          0|
+    |k_V_reg_381          |   3|   0|    3|          0|
+    |mul_ln214_1_reg_419  |  32|   0|   32|          0|
+    |mul_ln214_reg_396    |  32|   0|   32|          0|
+    |op2_assign_reg_112   |   4|   0|    4|          0|
+    |p_0114_0_reg_136     |   3|   0|    3|          0|
+    |p_0231_0_reg_147     |   3|   0|    3|          0|
+    |reg_158              |  32|   0|   32|          0|
+    |reg_163              |  32|   0|   32|          0|
+    |ret_V_reg_401        |  32|   0|   32|          0|
+    +---------------------+----+----+-----+-----------+
+    |Total                | 257|   0|  257|          0|
+    +---------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+--------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-----------------------+-----+-----+------------+--------------+--------------+
+|s_axi_control_AWVALID  |  in |    1|    s_axi   |    control   |  return void |
+|s_axi_control_AWREADY  | out |    1|    s_axi   |    control   |  return void |
+|s_axi_control_AWADDR   |  in |    4|    s_axi   |    control   |  return void |
+|s_axi_control_WVALID   |  in |    1|    s_axi   |    control   |  return void |
+|s_axi_control_WREADY   | out |    1|    s_axi   |    control   |  return void |
+|s_axi_control_WDATA    |  in |   32|    s_axi   |    control   |  return void |
+|s_axi_control_WSTRB    |  in |    4|    s_axi   |    control   |  return void |
+|s_axi_control_ARVALID  |  in |    1|    s_axi   |    control   |  return void |
+|s_axi_control_ARREADY  | out |    1|    s_axi   |    control   |  return void |
+|s_axi_control_ARADDR   |  in |    4|    s_axi   |    control   |  return void |
+|s_axi_control_RVALID   | out |    1|    s_axi   |    control   |  return void |
+|s_axi_control_RREADY   |  in |    1|    s_axi   |    control   |  return void |
+|s_axi_control_RDATA    | out |   32|    s_axi   |    control   |  return void |
+|s_axi_control_RRESP    | out |    2|    s_axi   |    control   |  return void |
+|s_axi_control_BVALID   | out |    1|    s_axi   |    control   |  return void |
+|s_axi_control_BREADY   |  in |    1|    s_axi   |    control   |  return void |
+|s_axi_control_BRESP    | out |    2|    s_axi   |    control   |  return void |
+|ap_clk                 |  in |    1| ap_ctrl_hs |    kernel    | return value |
+|ap_rst_n               |  in |    1| ap_ctrl_hs |    kernel    | return value |
+|interrupt              | out |    1| ap_ctrl_hs |    kernel    | return value |
+|A_V_address0           | out |    6|  ap_memory |      A_V     |     array    |
+|A_V_ce0                | out |    1|  ap_memory |      A_V     |     array    |
+|A_V_we0                | out |    1|  ap_memory |      A_V     |     array    |
+|A_V_d0                 | out |   32|  ap_memory |      A_V     |     array    |
+|A_V_q0                 |  in |   32|  ap_memory |      A_V     |     array    |
+|A_V_address1           | out |    6|  ap_memory |      A_V     |     array    |
+|A_V_ce1                | out |    1|  ap_memory |      A_V     |     array    |
+|A_V_we1                | out |    1|  ap_memory |      A_V     |     array    |
+|A_V_d1                 | out |   32|  ap_memory |      A_V     |     array    |
+|A_V_q1                 |  in |   32|  ap_memory |      A_V     |     array    |
++-----------------------+-----+-----+------------+--------------+--------------+
+

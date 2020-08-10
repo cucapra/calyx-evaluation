@@ -1,0 +1,8 @@
+benchmark,type,lut,dsp,latency,source
+linear-algebra-cholesky,hls,863,6,1881,results/04_11_53-08_2020
+linear-algebra-cholesky,hls_total,903,6,1881,results/04_11_53-08_2020
+linear-algebra-cholesky,futil,2098,6,0,results/04_11_53-08_2020
+linear-algebra-gramschmidt,hls,1252,9,12841,results/04_11_53-08_2020
+linear-algebra-gramschmidt,hls_total,1292,9,12841,results/04_11_53-08_2020
+linear-algebra-gramschmidt,futil,2231,9,0,results/04_11_53-08_2020
+

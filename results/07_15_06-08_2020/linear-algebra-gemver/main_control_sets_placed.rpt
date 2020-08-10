@@ -1,0 +1,120 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Fri Aug  7 18:13:56 2020
+| Host         : gorgonzola.cs.cornell.edu running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xc7z020
+-----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    42 |
+|    Minimum number of control sets                        |    42 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    75 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    42 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     8 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    34 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             117 |           45 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             306 |           78 |
+| Yes          | No                    | No                     |             636 |          170 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             250 |           71 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+---------------------------+--------------------------+------------------+----------------+
+| Clock Signal |       Enable Signal       |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
++--------------+---------------------------+--------------------------+------------------+----------------+
+|  clk         | fsm11/done_reg_0[0]       |                          |                1 |              4 |
+|  clk         | fsm11/go_1[0]             |                          |                2 |              4 |
+|  clk         | fsm11/done_reg[0]         |                          |                1 |              4 |
+|  clk         | fsm9/E[0]                 |                          |                1 |              4 |
+|  clk         | fsm8/E[0]                 |                          |                1 |              4 |
+|  clk         | fsm10/j2_write_en         | fsm10/done_reg_0         |                1 |              4 |
+|  clk         | fsm11/E[0]                |                          |                2 |              4 |
+|  clk         | fsm11/fsm11_write_en      |                          |                3 |              4 |
+|  clk         | fsm1/fsm1_write_en        | fsm1/out[31]_i_1_n_0     |               11 |             29 |
+|  clk         | fsm5/fsm5_write_en        | fsm5/out[31]_i_1_n_0     |                8 |             29 |
+|  clk         | fsm7/fsm7_write_en        | fsm7/out[31]_i_1_n_0     |                8 |             30 |
+|  clk         | fsm3/fsm3_write_en        | fsm3/out[31]_i_1_n_0     |                9 |             30 |
+|  clk         | fsm4/x_i1_write_en        |                          |               10 |             32 |
+|  clk         | fsm0/v1Read00_write_en    |                          |                9 |             32 |
+|  clk         | fsm0/u2Read00_write_en    |                          |                9 |             32 |
+|  clk         | fsm0/u1Read00_write_en    |                          |                8 |             32 |
+|  clk         | fsm2/yRead00_write_en     |                          |                6 |             32 |
+|  clk         | fsm2/x_i0_write_en        |                          |                7 |             32 |
+|  clk         | fsm2/xWrite00_write_en    |                          |                8 |             32 |
+|  clk         | fsm3/fsm2_write_en        | fsm2/out[31]_i_1__16_n_0 |                8 |             32 |
+|  clk         | fsm0/v2Read00_write_en    |                          |                9 |             32 |
+|  clk         | fsm0/A_i_j0_write_en      |                          |               10 |             32 |
+|  clk         | fsm0/AWrite00_write_en    |                          |                8 |             32 |
+|  clk         | fsm2/betaRead00_write_en  |                          |                9 |             32 |
+|  clk         | fsm7/w_i0_write_en        |                          |                6 |             32 |
+|  clk         | fsm4/xWrite10_write_en    |                          |                8 |             32 |
+|  clk         | fsm4/zRead00_write_en     |                          |                8 |             32 |
+|  clk         | fsm5/fsm4_write_en        | fsm4/out[31]_i_1__19_n_0 |                8 |             32 |
+|  clk         | fsm2/ARead00_write_en     |                          |                9 |             32 |
+|  clk         | fsm6/alphaRead00_write_en |                          |                8 |             32 |
+|  clk         | fsm6/out_reg[0]_4         |                          |                8 |             32 |
+|  clk         | fsm6/wWrite00_write_en    |                          |                8 |             32 |
+|  clk         | fsm6/xRead00_write_en     |                          |               11 |             32 |
+|  clk         | fsm7/out_reg[3]_1         | fsm6/out[31]_i_1__20_n_0 |                8 |             32 |
+|  clk         | fsm8/fsm0_write_en        | fsm0/out[31]_i_1__21_n_0 |               10 |             32 |
+|  clk         |                           | fsm0/p_0_in_0            |                9 |             51 |
+|  clk         |                           | fsm0/p_0_in              |               12 |             51 |
+|  clk         |                           | mult5/p_0_in             |               16 |             51 |
+|  clk         |                           | fsm3/p_0_in              |               13 |             51 |
+|  clk         |                           | fsm3/p_0_in_0            |               19 |             51 |
+|  clk         |                           | fsm6/p_0_in              |                9 |             51 |
+|  clk         |                           |                          |               45 |            117 |
++--------------+---------------------------+--------------------------+------------------+----------------+
+
+

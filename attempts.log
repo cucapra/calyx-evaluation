@@ -1,0 +1,11 @@
+Jul 30 11:10 a
+---
+examined dot-product timing report carefully and found out
+that all the logic that writes/reads into memories is being removed
+and that memories are being removed.
+
+
+Jul 30 11:43 a
+---
+manually changed the generated Verilog from dot-product to be
+exposed in the interface and this causes the circuit to not be removed.
