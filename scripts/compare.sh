@@ -73,14 +73,7 @@ $script_dir/vivado.sh 'hls' "$workdir/$benchmark_name.cpp" "$workdir/hls"
 
 #### Process Results ####
 # copy back the files we need
-mkdir -p "$result_dir"
-cp "$workdir"/futil/FutilBuild.runs/impl_1/runme.log "$result_dir/impl_runme.log"
-cp "$workdir"/futil/FutilBuild.runs/synth_1/runme.log "$result_dir/impl_runme.log"
-cp "$workdir"/futil/FutilBuild.runs/synth_1/*.rpt "$result_dir/"
-cp "$workdir"/futil/FutilBuild.runs/impl_1/*.rpt "$result_dir/"
-cp "$workdir"/futil/FutilBuild.runs/impl_1/*.rpt "$result_dir/"
-
-cp "$workdir"/hls/solution1/syn/report/kernel_csynth.rpt "$result_dir/"
-cp "$workdir"/hls/solution1/solution1_data.json "$result_dir/"
+$script_dir/futil_copy.sh "$workdir/futil" "$result_dir"
+$script_dir/hls_copy.sh "$workdir/hls" "$result_dir"
 
 $script_dir/extract.py "$result_dir" > "$result_dir/data.json"

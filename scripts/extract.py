@@ -23,37 +23,43 @@ def file_contains(regex, filename):
     return len(strings) == 0
 
 def futil_extract(directory):
-    parser = rpt.RPTParser(directory / "main_utilization_placed.rpt")
-    slice_logic = parser.get_table(re.compile(r'1\. Slice Logic'), 2)
-    dsp_table = parser.get_table(re.compile(r'4\. DSP'), 2)
-    meet_timing = file_contains(r'Timing constraints are not met.', directory / "main_timing_summary_routed.rpt")
+    try:
+        parser = rpt.RPTParser(directory / "main_utilization_placed.rpt")
+        slice_logic = parser.get_table(re.compile(r'1\. Slice Logic'), 2)
+        dsp_table = parser.get_table(re.compile(r'4\. DSP'), 2)
+        meet_timing = file_contains(r'Timing constraints are not met.', directory / "main_timing_summary_routed.rpt")
 
-    return {
-        'LUT': find_row(slice_logic, 'Site Type', 'Slice LUTs')['Used'],
-        'DSP': find_row(dsp_table, 'Site Type', 'DSPs')['Used'],
-        'MEET_TIMING': int(meet_timing)
-    }
+        return {
+            'LUT': find_row(slice_logic, 'Site Type', 'Slice LUTs')['Used'],
+            'DSP': find_row(dsp_table, 'Site Type', 'DSPs')['Used'],
+            'MEET_TIMING': int(meet_timing)
+        }
+    except:
+        print("Synthesis files weren't found, skipping.", file=sys.stderr)
 
 def hls_extract(directory):
-    parser = rpt.RPTParser(directory / "kernel_csynth.rpt")
-    summary_table = parser.get_table(re.compile(r'== Utilization Estimates'), 2)
-    instance_table = parser.get_table(re.compile(r'\* Instance:'), 0)
+    try:
+        parser = rpt.RPTParser(directory / "kernel_csynth.rpt")
+        summary_table = parser.get_table(re.compile(r'== Utilization Estimates'), 2)
+        instance_table = parser.get_table(re.compile(r'\* Instance:'), 0)
 
-    solution_data = json.load((directory / "solution1_data.json").open())
-    latency = solution_data['ModuleInfo']['Metrics']['kernel']['Latency']
+        solution_data = json.load((directory / "solution1_data.json").open())
+        latency = solution_data['ModuleInfo']['Metrics']['kernel']['Latency']
 
-    total_row = find_row(summary_table, 'Name', 'Total')
-    s_axi_row = find_row(instance_table, 'Instance', 'kernel_control_s_axi_U')
+        total_row = find_row(summary_table, 'Name', 'Total')
+        s_axi_row = find_row(instance_table, 'Instance', 'kernel_control_s_axi_U')
 
-    return {
-        'TOTAL_LUT': to_int(total_row['LUT']),
-        'INSTANCE_LUT': to_int(s_axi_row['LUT']),
-        'LUT': to_int(total_row['LUT']) - to_int(s_axi_row['LUT']),
-        'DSP': to_int(total_row['DSP48E']) - to_int(s_axi_row['DSP48E']),
-        'AVG_LATENCY': latency['LatencyAvg'],
-        'BEST_LATENCY': latency['LatencyBest'],
-        'WORST_LATENCY': latency['LatencyWorst'],
-    }
+        return {
+            'TOTAL_LUT': to_int(total_row['LUT']),
+            'INSTANCE_LUT': to_int(s_axi_row['LUT']),
+            'LUT': to_int(total_row['LUT']) - to_int(s_axi_row['LUT']),
+            'DSP': to_int(total_row['DSP48E']) - to_int(s_axi_row['DSP48E']),
+            'AVG_LATENCY': latency['LatencyAvg'],
+            'BEST_LATENCY': latency['LatencyBest'],
+            'WORST_LATENCY': latency['LatencyWorst'],
+        }
+    except:
+        print("HLS files weren't found, skipping.", file=sys.stderr)
 
 if __name__ == "__main__":
     directory = sys.argv[1]
