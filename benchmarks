@@ -1,1 +1,9 @@
-/home/samthomas/Research/futil/benchmarks/linear-algebra-syr2k.fuse
+/home/samthomas/Research/futil/benchmarks/unrolled/linear-algebra-2mm.fuse
+/home/samthomas/Research/futil/benchmarks/unrolled/linear-algebra-atax.fuse
+/home/samthomas/Research/futil/benchmarks/unrolled/linear-algebra-gemm.fuse
+/home/samthomas/Research/futil/benchmarks/unrolled/linear-algebra-gemver.fuse
+/home/samthomas/Research/futil/benchmarks/unrolled/linear-algebra-gesummv.fuse
+/home/samthomas/Research/futil/benchmarks/unrolled/linear-algebra-gramschmidt.fuse
+/home/samthomas/Research/futil/benchmarks/unrolled/linear-algebra-mvt.fuse
+/home/samthomas/Research/futil/benchmarks/unrolled/linear-algebra-syr2k.fuse
+/home/samthomas/Research/futil/benchmarks/unrolled/linear-algebra-syrk.fuse

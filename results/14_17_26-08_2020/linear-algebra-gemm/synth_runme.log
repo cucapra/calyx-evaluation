@@ -1,0 +1,1414 @@
+
+*** Running vivado
+    with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source main.tcl -notrace
+Command: synth_design -top main -part xczu3eg-sbva484-1-e -mode out_of_context -flatten_hierarchy rebuilt
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 24911 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2332.535 ; gain = 0.000 ; free physical = 12456 ; free virtual = 27129
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:137]
+INFO: [Synth 8-6157] synthesizing module 'std_reg' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:28]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg' (1#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:28]
+INFO: [Synth 8-6157] synthesizing module 'std_slice' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:128]
+	Parameter IN_WIDTH bound to: 4 - type: integer 
+	Parameter OUT_WIDTH bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_slice' (2#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:128]
+INFO: [Synth 8-6157] synthesizing module 'std_rsh' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:120]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_rsh' (3#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:120]
+INFO: [Synth 8-6157] synthesizing module 'std_mult_pipe' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:85]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_mult_pipe' (4#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:85]
+INFO: [Synth 8-6157] synthesizing module 'std_le' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:77]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_le' (5#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:77]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized0' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:28]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized0' (5#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:28]
+INFO: [Synth 8-6157] synthesizing module 'std_eq' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:69]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_eq' (6#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:69]
+INFO: [Synth 8-6157] synthesizing module 'std_const' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:62]
+	Parameter width bound to: 4 - type: integer 
+	Parameter value bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const' (7#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:62]
+INFO: [Synth 8-6157] synthesizing module 'std_const__parameterized0' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:62]
+	Parameter width bound to: 4 - type: integer 
+	Parameter value bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const__parameterized0' (7#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:62]
+INFO: [Synth 8-6157] synthesizing module 'std_const__parameterized1' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:62]
+	Parameter width bound to: 4 - type: integer 
+	Parameter value bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const__parameterized1' (7#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:62]
+INFO: [Synth 8-6157] synthesizing module 'std_const__parameterized2' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:62]
+	Parameter width bound to: 4 - type: integer 
+	Parameter value bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const__parameterized2' (7#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:62]
+INFO: [Synth 8-6157] synthesizing module 'std_const__parameterized3' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:62]
+	Parameter width bound to: 1 - type: integer 
+	Parameter value bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const__parameterized3' (7#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:62]
+INFO: [Synth 8-6157] synthesizing module 'std_and' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:54]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_and' (8#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:54]
+INFO: [Synth 8-6157] synthesizing module 'std_and__parameterized0' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:54]
+	Parameter width bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_and__parameterized0' (8#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:54]
+INFO: [Synth 8-6157] synthesizing module 'std_add' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:46]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_add' (9#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:46]
+INFO: [Synth 8-6157] synthesizing module 'std_add__parameterized0' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:46]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_add__parameterized0' (9#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:46]
+INFO: [Synth 8-6157] synthesizing module 'std_mem_d2' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:2]
+	Parameter width bound to: 32 - type: integer 
+	Parameter d0_size bound to: 4 - type: integer 
+	Parameter d1_size bound to: 4 - type: integer 
+	Parameter d0_idx_size bound to: 3 - type: integer 
+	Parameter d1_idx_size bound to: 3 - type: integer 
+WARNING: [Synth 8-5856] 3D RAM mem_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-6155] done synthesizing module 'std_mem_d2' (10#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized1' [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:28]
+	Parameter width bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized1' (10#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:28]
+WARNING: [Synth 8-3848] Net beta_int0_write_data in module/entity main does not have driver. [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:152]
+WARNING: [Synth 8-3848] Net beta_int0_write_en in module/entity main does not have driver. [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:153]
+WARNING: [Synth 8-3848] Net alpha_int0_write_data in module/entity main does not have driver. [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:155]
+WARNING: [Synth 8-3848] Net alpha_int0_write_en in module/entity main does not have driver. [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:156]
+WARNING: [Synth 8-3848] Net B_int0_0_write_data in module/entity main does not have driver. [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:163]
+WARNING: [Synth 8-3848] Net B_int0_0_write_en in module/entity main does not have driver. [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:164]
+WARNING: [Synth 8-3848] Net A_int0_0_write_data in module/entity main does not have driver. [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:167]
+WARNING: [Synth 8-3848] Net A_int0_0_write_en in module/entity main does not have driver. [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:168]
+INFO: [Synth 8-6155] done synthesizing module 'main' (11#1) [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:137]
+WARNING: [Synth 8-3331] design std_slice has unconnected port in[3]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[31]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[30]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[29]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[28]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[27]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[26]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[25]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[24]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[23]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[22]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[21]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[20]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[19]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[18]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[17]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[16]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[15]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[14]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[13]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[12]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[11]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[10]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[9]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[8]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[7]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[6]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[5]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[4]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[3]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[2]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[1]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_data[0]
+WARNING: [Synth 8-3331] design main has unconnected port beta_int0_write_en
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[31]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[30]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[29]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[28]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[27]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[26]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[25]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[24]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[23]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[22]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[21]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[20]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[19]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[18]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[17]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[16]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[15]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[14]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[13]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[12]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[11]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[10]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[9]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[8]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[7]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[6]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[5]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[4]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[3]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[2]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[1]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_data[0]
+WARNING: [Synth 8-3331] design main has unconnected port alpha_int0_write_en
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[31]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[30]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[29]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[28]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[27]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[26]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[25]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[24]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[23]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[22]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[21]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[20]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[19]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[18]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[17]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[16]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[15]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[14]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[13]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[12]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[11]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[10]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[9]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[8]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[7]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[6]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[5]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[4]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[3]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[2]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[1]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_data[0]
+WARNING: [Synth 8-3331] design main has unconnected port B_int0_0_write_en
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 2357.535 ; gain = 25.000 ; free physical = 12146 ; free virtual = 26836
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2375.344 ; gain = 42.809 ; free physical = 12078 ; free virtual = 26761
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2375.344 ; gain = 42.809 ; free physical = 12078 ; free virtual = 26761
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/tmp/tmp.fRmS2r1bcl/device.xdc]
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2551.031 ; gain = 2.969 ; free physical = 11520 ; free virtual = 26210
+Finished Parsing XDC File [/tmp/tmp.fRmS2r1bcl/device.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2551.031 ; gain = 0.000 ; free physical = 11516 ; free virtual = 26209
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.61 ; elapsed = 00:00:00.24 . Memory (MB): peak = 2554.000 ; gain = 2.969 ; free physical = 11554 ; free virtual = 26269
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 2554.000 ; gain = 221.465 ; free physical = 11389 ; free virtual = 26123
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 2554.000 ; gain = 221.465 ; free physical = 11388 ; free virtual = 26123
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 2554.000 ; gain = 221.465 ; free physical = 11386 ; free virtual = 26120
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:43 . Memory (MB): peak = 2554.000 ; gain = 221.465 ; free physical = 11207 ; free virtual = 25929
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'slice87' (std_slice) to 'slice85'
+INFO: [Synth 8-223] decloning instance 'slice86' (std_slice) to 'slice84'
+INFO: [Synth 8-223] decloning instance 'slice83' (std_slice) to 'slice81'
+INFO: [Synth 8-223] decloning instance 'slice82' (std_slice) to 'slice80'
+INFO: [Synth 8-223] decloning instance 'slice79' (std_slice) to 'slice77'
+INFO: [Synth 8-223] decloning instance 'slice78' (std_slice) to 'slice76'
+INFO: [Synth 8-223] decloning instance 'slice75' (std_slice) to 'slice73'
+INFO: [Synth 8-223] decloning instance 'slice74' (std_slice) to 'slice72'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const97'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const94'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const92'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const9'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const87'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const85'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const82'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const80'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const7'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const67'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const63'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const57'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const55'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const43'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const4'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const39'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const33'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const31'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const2'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const19'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const15'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const109'
+INFO: [Synth 8-223] decloning instance 'const99' (std_const) to 'const105'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const96'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const91'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const90'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const89'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const84'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const8'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const79'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const78'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const77'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const76'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const75'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const74'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const73'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const72'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const71'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const70'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const69'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const68'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const66'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const65'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const64'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const62'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const61'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const60'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const6'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const59'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const58'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const56'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const54'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const53'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const52'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const51'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const50'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const49'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const48'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const47'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const46'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const45'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const44'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const42'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const41'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const40'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const38'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const37'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const36'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const35'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const34'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const32'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const30'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const29'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const28'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const27'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const26'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const25'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const24'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const23'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const22'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const21'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const20'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const18'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const17'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const16'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const14'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const13'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const121'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const120'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const12'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const119'
+INFO: [Synth 8-223] decloning instance 'const98' (std_const__parameterized0) to 'const118'
+INFO: [Common 17-14] Message 'Synth 8-223' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 8     
+	   2 Input      4 Bit       Adders := 8     
++---Registers : 
+	               32 Bit    Registers := 347   
+	                4 Bit    Registers := 8     
+	                1 Bit    Registers := 423   
++---Multipliers : 
+	                32x32  Multipliers := 20    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 170   
+	   4 Input     32 Bit        Muxes := 60    
+	   2 Input      4 Bit        Muxes := 336   
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 49    
+	   6 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 30    
+	   2 Input      1 Bit        Muxes := 274   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module main 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 130   
+	   2 Input      4 Bit        Muxes := 336   
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 49    
+	   6 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 30    
+	   2 Input      1 Bit        Muxes := 34    
+Module std_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_mult_pipe 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module std_reg__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_add 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module std_add__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+Module std_mem_d2 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 16    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 5     
+	   2 Input      1 Bit        Muxes := 20    
+Module std_reg__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.fRmS2r1bcl/linear-algebra-gemm.sv:101]
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register rtmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register ltmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (A2*B2)'.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B2.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[31]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[30]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[28]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[29]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[24]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[25]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[26]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[27]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[18]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[19]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[16]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[17]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[22]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[23]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[20]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[21]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[6]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[7]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[4]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[5]' (FDE) to 'fsm0/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[3]' (FDE) to 'fsm0/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[14]' (FDE) to 'fsm0/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[15]' (FDE) to 'fsm0/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[12]' (FDE) to 'fsm0/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[13]' (FDE) to 'fsm0/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[8]' (FDE) to 'fsm0/out_reg[9]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[9]' (FDE) to 'fsm0/out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'fsm0/out_reg[10]' (FDE) to 'fsm0/out_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fsm0/out_reg[11] )
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[47]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[46]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[45]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[44]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[43]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[42]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[41]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[40]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[39]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[38]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[37]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[36]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[35]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[34]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[33]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[32]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[31]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[30]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[29]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[28]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[27]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[26]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[25]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[24]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[23]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[22]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[21]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[20]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[19]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[18]) is unused and will be removed from module std_mult_pipe.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[17]) is unused and will be removed from module std_mult_pipe.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:01:01 . Memory (MB): peak = 2554.000 ; gain = 221.465 ; free physical = 11305 ; free virtual = 26087
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++--------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping      | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|std_mult_pipe | A2*B             | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A*B   | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B  | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | (A2*B2)'         | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|std_mult_pipe | A2*B2            | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B2 | 18     | 16     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 1    | 
++--------------+------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:13 ; elapsed = 00:02:57 . Memory (MB): peak = 2941.344 ; gain = 608.809 ; free physical = 3282 ; free virtual = 18059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:28 ; elapsed = 00:03:13 . Memory (MB): peak = 3087.910 ; gain = 755.375 ; free physical = 4128 ; free virtual = 18913
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:38 ; elapsed = 00:03:24 . Memory (MB): peak = 3137.348 ; gain = 804.812 ; free physical = 7292 ; free virtual = 22046
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:41 ; elapsed = 00:03:26 . Memory (MB): peak = 3137.352 ; gain = 804.816 ; free physical = 8804 ; free virtual = 23569
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:41 ; elapsed = 00:03:26 . Memory (MB): peak = 3137.352 ; gain = 804.816 ; free physical = 8788 ; free virtual = 23554
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:45 ; elapsed = 00:03:31 . Memory (MB): peak = 3137.352 ; gain = 804.816 ; free physical = 10080 ; free virtual = 24824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:45 ; elapsed = 00:03:31 . Memory (MB): peak = 3137.352 ; gain = 804.816 ; free physical = 10065 ; free virtual = 24808
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:45 ; elapsed = 00:03:31 . Memory (MB): peak = 3137.352 ; gain = 804.816 ; free physical = 10037 ; free virtual = 24781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:46 ; elapsed = 00:03:31 . Memory (MB): peak = 3137.352 ; gain = 804.816 ; free physical = 10039 ; free virtual = 24783
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |    72|
+|2     |DSP_ALU_1       |    60|
+|3     |DSP_A_B_DATA    |    40|
+|4     |DSP_A_B_DATA_1  |    20|
+|5     |DSP_C_DATA      |    40|
+|6     |DSP_C_DATA_1    |    20|
+|7     |DSP_MULTIPLIER  |    60|
+|8     |DSP_M_DATA_1    |    60|
+|9     |DSP_OUTPUT      |    20|
+|10    |DSP_OUTPUT_1    |    40|
+|11    |DSP_PREADD      |    60|
+|12    |DSP_PREADD_DATA |    60|
+|13    |LUT1            |    13|
+|14    |LUT2            |   698|
+|15    |LUT3            |  1585|
+|16    |LUT4            |   161|
+|17    |LUT5            |   274|
+|18    |LUT6            |  2178|
+|19    |MUXF7           |   672|
+|20    |MUXF8           |   320|
+|21    |FDRE            |  9199|
++------+----------------+------+
+
+Report Instance Areas: 
++------+-------------------+----------------------------------------+------+
+|      |Instance           |Module                                  |Cells |
++------+-------------------+----------------------------------------+------+
+|1     |top                |                                        | 15652|
+|2     |  B0_0             |std_mem_d2_11                           |   737|
+|3     |  A0_0             |std_mem_d2                              |   737|
+|4     |  A0_1             |std_mem_d2_0                            |   737|
+|5     |  A1_0             |std_mem_d2_1                            |   737|
+|6     |  A1_1             |std_mem_d2_2                            |   737|
+|7     |  A_int_read0_0    |std_reg                                 |    33|
+|8     |  A_read0_0_0_00   |std_reg_3                               |    57|
+|9     |  A_read0_0_0_10   |std_reg_4                               |    57|
+|10    |  A_read0_0_1_00   |std_reg_5                               |    33|
+|11    |  A_read0_0_1_10   |std_reg_6                               |    33|
+|12    |  A_read0_1_0_00   |std_reg_7                               |    57|
+|13    |  A_read0_1_0_10   |std_reg_8                               |    34|
+|14    |  A_read0_1_1_00   |std_reg_9                               |    33|
+|15    |  A_read0_1_1_10   |std_reg_10                              |    33|
+|16    |  B0_1             |std_mem_d2_12                           |   737|
+|17    |  B1_0             |std_mem_d2_13                           |   737|
+|18    |  B1_1             |std_mem_d2_14                           |   737|
+|19    |  B_int_read0_0    |std_reg_15                              |    33|
+|20    |  B_read0_0_0_00   |std_reg_16                              |    35|
+|21    |  B_read0_0_0_10   |std_reg_17                              |    57|
+|22    |  B_read0_0_1_00   |std_reg_18                              |    57|
+|23    |  B_read0_0_1_10   |std_reg_19                              |    57|
+|24    |  B_read0_1_0_00   |std_reg_20                              |    33|
+|25    |  B_read0_1_0_10   |std_reg_21                              |    33|
+|26    |  B_read0_1_1_00   |std_reg_22                              |    33|
+|27    |  B_read0_1_1_10   |std_reg_23                              |    33|
+|28    |  C0_0             |std_mem_d2_24                           |   801|
+|29    |  C0_1             |std_mem_d2_25                           |   801|
+|30    |  C1_0             |std_mem_d2_26                           |   735|
+|31    |  C1_1             |std_mem_d2_27                           |   770|
+|32    |  C_i_j_0_00       |std_reg_28                              |    33|
+|33    |  C_i_j_0_10       |std_reg_29                              |    33|
+|34    |  C_i_j_1_00       |std_reg_30                              |    33|
+|35    |  C_i_j_1_10       |std_reg_31                              |    33|
+|36    |  C_int_read0_0    |std_reg_32                              |    33|
+|37    |  C_sh_read0_0     |std_reg_33                              |    66|
+|38    |  add10            |std_add                                 |    36|
+|39    |  add3             |std_add_34                              |    36|
+|40    |  add4             |std_add_35                              |    36|
+|41    |  add5             |std_add_36                              |    36|
+|42    |  add6             |std_add_37                              |    36|
+|43    |  add7             |std_add_38                              |    36|
+|44    |  add8             |std_add_39                              |    36|
+|45    |  add9             |std_add_40                              |    36|
+|46    |  alpha__0         |std_reg_41                              |    33|
+|47    |  beta__0          |std_reg_42                              |    33|
+|48    |  bin_read0_0      |std_reg_43                              |    65|
+|49    |  bin_read10_0     |std_reg_44                              |    33|
+|50    |  bin_read11_0     |std_reg_45                              |    33|
+|51    |  bin_read12_0     |std_reg_46                              |    33|
+|52    |  bin_read13_0     |std_reg_47                              |    33|
+|53    |  bin_read14_0     |std_reg_48                              |    33|
+|54    |  bin_read15_0     |std_reg_49                              |    33|
+|55    |  bin_read16_0     |std_reg_50                              |    33|
+|56    |  bin_read17_0     |std_reg_51                              |    33|
+|57    |  bin_read18_0     |std_reg_52                              |    33|
+|58    |  bin_read19_0     |std_reg_53                              |    33|
+|59    |  bin_read1_0      |std_reg_54                              |    33|
+|60    |  bin_read2_0      |std_reg_55                              |    65|
+|61    |  bin_read3_0      |std_reg_56                              |    35|
+|62    |  bin_read4_0      |std_reg_57                              |    33|
+|63    |  bin_read5_0      |std_reg_58                              |    33|
+|64    |  bin_read6_0      |std_reg_59                              |    33|
+|65    |  bin_read7_0      |std_reg_60                              |    33|
+|66    |  bin_read8_0      |std_reg_61                              |    33|
+|67    |  bin_read9_0      |std_reg_62                              |    33|
+|68    |  cond_computed0   |std_reg__parameterized1                 |     2|
+|69    |  cond_computed1   |std_reg__parameterized1_63              |     2|
+|70    |  cond_computed10  |std_reg__parameterized1_64              |     2|
+|71    |  cond_computed11  |std_reg__parameterized1_65              |     4|
+|72    |  cond_computed12  |std_reg__parameterized1_66              |     1|
+|73    |  cond_computed13  |std_reg__parameterized1_67              |     3|
+|74    |  cond_computed14  |std_reg__parameterized1_68              |     1|
+|75    |  cond_computed15  |std_reg__parameterized1_69              |     1|
+|76    |  cond_computed16  |std_reg__parameterized1_70              |     1|
+|77    |  cond_computed17  |std_reg__parameterized1_71              |     4|
+|78    |  cond_computed18  |std_reg__parameterized1_72              |     1|
+|79    |  cond_computed19  |std_reg__parameterized1_73              |     2|
+|80    |  cond_computed2   |std_reg__parameterized1_74              |     2|
+|81    |  cond_computed20  |std_reg__parameterized1_75              |     2|
+|82    |  cond_computed21  |std_reg__parameterized1_76              |     1|
+|83    |  cond_computed22  |std_reg__parameterized1_77              |     1|
+|84    |  cond_computed23  |std_reg__parameterized1_78              |     1|
+|85    |  cond_computed3   |std_reg__parameterized1_79              |     2|
+|86    |  cond_computed4   |std_reg__parameterized1_80              |     2|
+|87    |  cond_computed5   |std_reg__parameterized1_81              |     4|
+|88    |  cond_computed6   |std_reg__parameterized1_82              |     4|
+|89    |  cond_computed7   |std_reg__parameterized1_83              |     4|
+|90    |  cond_computed8   |std_reg__parameterized1_84              |     3|
+|91    |  cond_computed9   |std_reg__parameterized1_85              |     3|
+|92    |  cond_stored0     |std_reg__parameterized1_86              |     3|
+|93    |  cond_stored1     |std_reg__parameterized1_87              |     3|
+|94    |  cond_stored10    |std_reg__parameterized1_88              |     1|
+|95    |  cond_stored11    |std_reg__parameterized1_89              |     1|
+|96    |  cond_stored12    |std_reg__parameterized1_90              |     2|
+|97    |  cond_stored13    |std_reg__parameterized1_91              |     1|
+|98    |  cond_stored14    |std_reg__parameterized1_92              |     2|
+|99    |  cond_stored15    |std_reg__parameterized1_93              |     2|
+|100   |  cond_stored16    |std_reg__parameterized1_94              |     2|
+|101   |  cond_stored17    |std_reg__parameterized1_95              |     3|
+|102   |  cond_stored18    |std_reg__parameterized1_96              |     2|
+|103   |  cond_stored19    |std_reg__parameterized1_97              |     1|
+|104   |  cond_stored2     |std_reg__parameterized1_98              |     3|
+|105   |  cond_stored20    |std_reg__parameterized1_99              |     1|
+|106   |  cond_stored21    |std_reg__parameterized1_100             |     4|
+|107   |  cond_stored22    |std_reg__parameterized1_101             |     1|
+|108   |  cond_stored23    |std_reg__parameterized1_102             |     1|
+|109   |  cond_stored3     |std_reg__parameterized1_103             |     3|
+|110   |  cond_stored4     |std_reg__parameterized1_104             |     1|
+|111   |  cond_stored5     |std_reg__parameterized1_105             |     2|
+|112   |  cond_stored6     |std_reg__parameterized1_106             |     2|
+|113   |  cond_stored7     |std_reg__parameterized1_107             |     2|
+|114   |  cond_stored8     |std_reg__parameterized1_108             |     1|
+|115   |  cond_stored9     |std_reg__parameterized1_109             |     1|
+|116   |  done_reg0        |std_reg__parameterized1_110             |     2|
+|117   |  done_reg1        |std_reg__parameterized1_111             |     2|
+|118   |  done_reg10       |std_reg__parameterized1_112             |     2|
+|119   |  done_reg11       |std_reg__parameterized1_113             |     2|
+|120   |  done_reg12       |std_reg__parameterized1_114             |     1|
+|121   |  done_reg13       |std_reg__parameterized1_115             |     1|
+|122   |  done_reg14       |std_reg__parameterized1_116             |     1|
+|123   |  done_reg15       |std_reg__parameterized1_117             |     1|
+|124   |  done_reg16       |std_reg__parameterized1_118             |     1|
+|125   |  done_reg17       |std_reg__parameterized1_119             |     1|
+|126   |  done_reg18       |std_reg__parameterized1_120             |     4|
+|127   |  done_reg19       |std_reg__parameterized1_121             |     5|
+|128   |  done_reg2        |std_reg__parameterized1_122             |     2|
+|129   |  done_reg20       |std_reg__parameterized1_123             |     2|
+|130   |  done_reg21       |std_reg__parameterized1_124             |     4|
+|131   |  done_reg22       |std_reg__parameterized1_125             |     1|
+|132   |  done_reg23       |std_reg__parameterized1_126             |     2|
+|133   |  done_reg3        |std_reg__parameterized1_127             |     2|
+|134   |  done_reg4        |std_reg__parameterized1_128             |     2|
+|135   |  done_reg5        |std_reg__parameterized1_129             |     1|
+|136   |  done_reg6        |std_reg__parameterized1_130             |     1|
+|137   |  done_reg7        |std_reg__parameterized1_131             |     1|
+|138   |  done_reg8        |std_reg__parameterized1_132             |     2|
+|139   |  done_reg9        |std_reg__parameterized1_133             |     2|
+|140   |  fsm0             |std_reg_134                             |    67|
+|141   |  fsm1             |std_reg_135                             |    25|
+|142   |  fsm10            |std_reg_136                             |    12|
+|143   |  fsm11            |std_reg_137                             |    12|
+|144   |  fsm12            |std_reg_138                             |    12|
+|145   |  fsm13            |std_reg_139                             |    12|
+|146   |  fsm14            |std_reg_140                             |    12|
+|147   |  fsm15            |std_reg_141                             |    35|
+|148   |  fsm16            |std_reg_142                             |    13|
+|149   |  fsm17            |std_reg_143                             |    73|
+|150   |  fsm18            |std_reg_144                             |    16|
+|151   |  fsm19            |std_reg_145                             |    60|
+|152   |  fsm2             |std_reg_146                             |     7|
+|153   |  fsm20            |std_reg_147                             |    43|
+|154   |  fsm3             |std_reg_148                             |     7|
+|155   |  fsm4             |std_reg_149                             |     7|
+|156   |  fsm5             |std_reg_150                             |     7|
+|157   |  fsm6             |std_reg_151                             |    25|
+|158   |  fsm7             |std_reg_152                             |    12|
+|159   |  fsm8             |std_reg_153                             |    12|
+|160   |  fsm9             |std_reg_154                             |    12|
+|161   |  i0               |std_reg__parameterized0                 |    31|
+|162   |  i1               |std_reg__parameterized0_155             |    22|
+|163   |  i2               |std_reg__parameterized0_156             |    10|
+|164   |  j0               |std_reg__parameterized0_157             |    26|
+|165   |  j1               |std_reg__parameterized0_158             |    11|
+|166   |  j2               |std_reg__parameterized0_159             |    11|
+|167   |  j3               |std_reg__parameterized0_160             |    10|
+|168   |  k0               |std_reg__parameterized0_161             |    20|
+|169   |  mult_pipe0       |std_mult_pipe                           |   160|
+|170   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__14     |     8|
+|171   |    out_tmp0       |out_tmp0_funnel__25                     |     8|
+|172   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__6   |     8|
+|173   |  mult_pipe1       |std_mult_pipe_162                       |   160|
+|174   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__10     |     8|
+|175   |    out_tmp0       |out_tmp0_funnel__38                     |     8|
+|176   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__19  |     8|
+|177   |  mult_pipe10      |std_mult_pipe_163                       |   159|
+|178   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__11     |     8|
+|179   |    out_tmp0       |out_tmp0_funnel__20                     |     8|
+|180   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel      |     8|
+|181   |  mult_pipe11      |std_mult_pipe_164                       |   159|
+|182   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__13     |     8|
+|183   |    out_tmp0       |out_tmp0_funnel__22                     |     8|
+|184   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__2   |     8|
+|185   |  mult_pipe12      |std_mult_pipe_165                       |   159|
+|186   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__5      |     8|
+|187   |    out_tmp0       |out_tmp0_funnel__33                     |     8|
+|188   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__14  |     8|
+|189   |  mult_pipe13      |std_mult_pipe_166                       |   159|
+|190   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__16     |     8|
+|191   |    out_tmp0       |out_tmp0_funnel__24                     |     8|
+|192   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__4   |     8|
+|193   |  mult_pipe14      |std_mult_pipe_167                       |   159|
+|194   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__3      |     8|
+|195   |    out_tmp0       |out_tmp0_funnel__31                     |     8|
+|196   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__12  |     8|
+|197   |  mult_pipe15      |std_mult_pipe_168                       |   159|
+|198   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__18     |     8|
+|199   |    out_tmp0       |out_tmp0_funnel__27                     |     8|
+|200   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__7   |     8|
+|201   |  mult_pipe16      |std_mult_pipe_169                       |   159|
+|202   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel         |     8|
+|203   |    out_tmp0       |out_tmp0_funnel__29                     |     8|
+|204   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__9   |     8|
+|205   |  mult_pipe17      |std_mult_pipe_170                       |   159|
+|206   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__7      |     8|
+|207   |    out_tmp0       |out_tmp0_funnel__35                     |     8|
+|208   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__17  |     8|
+|209   |  mult_pipe18      |std_mult_pipe_171                       |   159|
+|210   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__1      |     8|
+|211   |    out_tmp0       |out_tmp0_funnel__30                     |     8|
+|212   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__10  |     8|
+|213   |  mult_pipe19      |std_mult_pipe_172                       |   159|
+|214   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__12     |     8|
+|215   |    out_tmp0       |out_tmp0_funnel__21                     |     8|
+|216   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__1   |     8|
+|217   |  mult_pipe2       |std_mult_pipe_173                       |   160|
+|218   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__4      |     8|
+|219   |    out_tmp0       |out_tmp0_funnel__32                     |     8|
+|220   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__13  |     8|
+|221   |  mult_pipe3       |std_mult_pipe_174                       |   160|
+|222   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__8      |     8|
+|223   |    out_tmp0       |out_tmp0_funnel__36                     |     8|
+|224   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__18  |     8|
+|225   |  mult_pipe4       |std_mult_pipe_175                       |   159|
+|226   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__6      |     8|
+|227   |    out_tmp0       |out_tmp0_funnel__34                     |     8|
+|228   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__16  |     8|
+|229   |  mult_pipe5       |std_mult_pipe_176                       |   159|
+|230   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__9      |     8|
+|231   |    out_tmp0       |out_tmp0_funnel__37                     |     8|
+|232   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__15  |     8|
+|233   |  mult_pipe6       |std_mult_pipe_177                       |   159|
+|234   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__19     |     8|
+|235   |    out_tmp0       |out_tmp0_funnel__28                     |     8|
+|236   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__8   |     8|
+|237   |  mult_pipe7       |std_mult_pipe_178                       |   159|
+|238   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__17     |     8|
+|239   |    out_tmp0       |out_tmp0_funnel__26                     |     8|
+|240   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__5   |     8|
+|241   |  mult_pipe8       |std_mult_pipe_179                       |   159|
+|242   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__15     |     8|
+|243   |    out_tmp0       |out_tmp0_funnel__23                     |     8|
+|244   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__3   |     8|
+|245   |  mult_pipe9       |std_mult_pipe_180                       |   159|
+|246   |    out_tmp_reg    |\mult_pipe16/out_tmp_reg_funnel__2      |     8|
+|247   |    out_tmp0       |out_tmp0_funnel                         |     8|
+|248   |    out_tmp_reg__0 |\mult_pipe10/out_tmp_reg__0_funnel__11  |     8|
+|249   |  par_done_reg0    |std_reg__parameterized1_181             |     3|
+|250   |  par_done_reg1    |std_reg__parameterized1_182             |     4|
+|251   |  par_done_reg10   |std_reg__parameterized1_183             |     3|
+|252   |  par_done_reg11   |std_reg__parameterized1_184             |     1|
+|253   |  par_done_reg12   |std_reg__parameterized1_185             |     1|
+|254   |  par_done_reg13   |std_reg__parameterized1_186             |     1|
+|255   |  par_done_reg14   |std_reg__parameterized1_187             |     1|
+|256   |  par_done_reg15   |std_reg__parameterized1_188             |     2|
+|257   |  par_done_reg16   |std_reg__parameterized1_189             |     1|
+|258   |  par_done_reg17   |std_reg__parameterized1_190             |     2|
+|259   |  par_done_reg18   |std_reg__parameterized1_191             |     1|
+|260   |  par_done_reg19   |std_reg__parameterized1_192             |     1|
+|261   |  par_done_reg2    |std_reg__parameterized1_193             |     3|
+|262   |  par_done_reg20   |std_reg__parameterized1_194             |     1|
+|263   |  par_done_reg21   |std_reg__parameterized1_195             |     2|
+|264   |  par_done_reg22   |std_reg__parameterized1_196             |     1|
+|265   |  par_done_reg23   |std_reg__parameterized1_197             |     1|
+|266   |  par_done_reg24   |std_reg__parameterized1_198             |     1|
+|267   |  par_done_reg25   |std_reg__parameterized1_199             |     1|
+|268   |  par_done_reg26   |std_reg__parameterized1_200             |     1|
+|269   |  par_done_reg27   |std_reg__parameterized1_201             |     1|
+|270   |  par_done_reg28   |std_reg__parameterized1_202             |     2|
+|271   |  par_done_reg29   |std_reg__parameterized1_203             |     1|
+|272   |  par_done_reg3    |std_reg__parameterized1_204             |     3|
+|273   |  par_done_reg30   |std_reg__parameterized1_205             |     1|
+|274   |  par_done_reg31   |std_reg__parameterized1_206             |     1|
+|275   |  par_done_reg32   |std_reg__parameterized1_207             |     1|
+|276   |  par_done_reg33   |std_reg__parameterized1_208             |     1|
+|277   |  par_done_reg34   |std_reg__parameterized1_209             |     1|
+|278   |  par_done_reg35   |std_reg__parameterized1_210             |     1|
+|279   |  par_done_reg36   |std_reg__parameterized1_211             |     2|
+|280   |  par_done_reg37   |std_reg__parameterized1_212             |     2|
+|281   |  par_done_reg38   |std_reg__parameterized1_213             |     2|
+|282   |  par_done_reg39   |std_reg__parameterized1_214             |     2|
+|283   |  par_done_reg4    |std_reg__parameterized1_215             |     2|
+|284   |  par_done_reg40   |std_reg__parameterized1_216             |     3|
+|285   |  par_done_reg41   |std_reg__parameterized1_217             |     2|
+|286   |  par_done_reg42   |std_reg__parameterized1_218             |     2|
+|287   |  par_done_reg43   |std_reg__parameterized1_219             |     2|
+|288   |  par_done_reg44   |std_reg__parameterized1_220             |     1|
+|289   |  par_done_reg45   |std_reg__parameterized1_221             |     1|
+|290   |  par_done_reg46   |std_reg__parameterized1_222             |     1|
+|291   |  par_done_reg47   |std_reg__parameterized1_223             |     2|
+|292   |  par_done_reg48   |std_reg__parameterized1_224             |     5|
+|293   |  par_done_reg49   |std_reg__parameterized1_225             |     1|
+|294   |  par_done_reg5    |std_reg__parameterized1_226             |     3|
+|295   |  par_done_reg50   |std_reg__parameterized1_227             |     1|
+|296   |  par_done_reg51   |std_reg__parameterized1_228             |     1|
+|297   |  par_done_reg6    |std_reg__parameterized1_229             |     3|
+|298   |  par_done_reg7    |std_reg__parameterized1_230             |     3|
+|299   |  par_done_reg8    |std_reg__parameterized1_231             |     2|
+|300   |  par_done_reg9    |std_reg__parameterized1_232             |     1|
+|301   |  par_reset0       |std_reg__parameterized1_233             |     5|
+|302   |  par_reset1       |std_reg__parameterized1_234             |     5|
+|303   |  par_reset2       |std_reg__parameterized1_235             |    20|
+|304   |  par_reset3       |std_reg__parameterized1_236             |     5|
+|305   |  par_reset4       |std_reg__parameterized1_237             |     1|
+|306   |  par_reset5       |std_reg__parameterized1_238             |    10|
+|307   |  par_reset6       |std_reg__parameterized1_239             |    10|
+|308   |  par_reset7       |std_reg__parameterized1_240             |     1|
+|309   |  par_reset8       |std_reg__parameterized1_241             |   112|
+|310   |  par_reset9       |std_reg__parameterized1_242             |     2|
+|311   |  v_0_0_00         |std_reg_243                             |    64|
+|312   |  v_0_0_10         |std_reg_244                             |    33|
+|313   |  v_0_1_00         |std_reg_245                             |    64|
+|314   |  v_0_1_10         |std_reg_246                             |    33|
+|315   |  v_1_0_00         |std_reg_247                             |    64|
+|316   |  v_1_0_10         |std_reg_248                             |    33|
+|317   |  v_1_1_00         |std_reg_249                             |    64|
+|318   |  v_1_1_10         |std_reg_250                             |    33|
++------+-------------------+----------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:46 ; elapsed = 00:03:31 . Memory (MB): peak = 3137.352 ; gain = 804.816 ; free physical = 10039 ; free virtual = 24783
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 167 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:35 ; elapsed = 00:03:13 . Memory (MB): peak = 3137.352 ; gain = 626.160 ; free physical = 10074 ; free virtual = 24817
+Synthesis Optimization Complete : Time (s): cpu = 00:01:46 ; elapsed = 00:03:31 . Memory (MB): peak = 3137.355 ; gain = 804.816 ; free physical = 10074 ; free virtual = 24817
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1124 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3177.367 ; gain = 0.000 ; free physical = 9669 ; free virtual = 24413
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 60 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 60 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+182 Infos, 140 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:03 ; elapsed = 00:04:17 . Memory (MB): peak = 3177.367 ; gain = 1688.172 ; free physical = 9789 ; free virtual = 24533
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3177.367 ; gain = 0.000 ; free physical = 9785 ; free virtual = 24529
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/tmp/tmp.fRmS2r1bcl/out/FutilBuild.runs/synth_1/main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 14 20:32:02 2020...
