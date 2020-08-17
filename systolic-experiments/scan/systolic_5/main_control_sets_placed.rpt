@@ -1,0 +1,206 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Mon Aug 17 13:37:51 2020
+| Host         : gorgonzola.cs.cornell.edu running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xczu3eg
+-----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   128 |
+|    Minimum number of control sets                        |   128 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   119 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   128 |
+| >= 0 to < 4        |    51 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    76 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             680 |          228 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |            1275 |          278 |
+| Yes          | No                    | No                     |            1718 |          355 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+-----------------------------------+------------------+------------------+----------------+
+| Clock Signal |           Enable Signal           | Set/Reset Signal | Slice Load Count | Bel Load Count |
++--------------+-----------------------------------+------------------+------------------+----------------+
+|  clk         | pe_10/fsm0/down_10_write_write_en |                  |                2 |              2 |
+|  clk         | pe_31/fsm0/down_31_write_write_en |                  |                2 |              2 |
+|  clk         | pe_40/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_20/fsm0/down_20_write_write_en |                  |                2 |              2 |
+|  clk         | pe_20/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_30/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_03/fsm0/down_03_write_write_en |                  |                2 |              2 |
+|  clk         | pe_00/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_30/fsm0/down_30_write_write_en |                  |                2 |              2 |
+|  clk         | pe_14/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_04/fsm0/fsm0_write_en          |                  |                1 |              2 |
+|  clk         | pe_11/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_10/fsm0/fsm0_write_en          |                  |                1 |              2 |
+|  clk         | pe_00/fsm0/down_00_write_write_en |                  |                1 |              2 |
+|  clk         | pe_03/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_11/fsm0/down_11_write_write_en |                  |                2 |              2 |
+|  clk         | pe_02/fsm0/down_02_write_write_en |                  |                2 |              2 |
+|  clk         | pe_13/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_13/fsm0/down_13_write_write_en |                  |                2 |              2 |
+|  clk         | pe_02/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_12/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_12/fsm0/down_12_write_write_en |                  |                2 |              2 |
+|  clk         | pe_21/fsm0/fsm0_write_en          |                  |                1 |              2 |
+|  clk         | pe_01/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_21/fsm0/down_21_write_write_en |                  |                2 |              2 |
+|  clk         | pe_33/fsm0/down_33_write_write_en |                  |                1 |              2 |
+|  clk         | pe_22/fsm0/down_22_write_write_en |                  |                2 |              2 |
+|  clk         | pe_01/fsm0/down_01_write_write_en |                  |                2 |              2 |
+|  clk         | pe_22/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_43/fsm0/fsm0_write_en          |                  |                1 |              2 |
+|  clk         | pe_34/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_42/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_23/fsm0/down_23_write_write_en |                  |                1 |              2 |
+|  clk         | pe_33/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_41/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_32/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_32/fsm0/down_32_write_write_en |                  |                1 |              2 |
+|  clk         | pe_23/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_44/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | pe_24/fsm0/fsm0_write_en          |                  |                1 |              2 |
+|  clk         | pe_31/fsm0/fsm0_write_en          |                  |                2 |              2 |
+|  clk         | fsm0/done_reg_32[0]               |                  |                2 |              3 |
+|  clk         | fsm0/done_reg_36[0]               |                  |                1 |              3 |
+|  clk         | fsm0/E[0]                         |                  |                1 |              3 |
+|  clk         | fsm0/done_reg_10[0]               |                  |                1 |              3 |
+|  clk         | fsm0/done_reg_12[0]               |                  |                2 |              3 |
+|  clk         | fsm0/done_reg_35[0]               |                  |                1 |              3 |
+|  clk         | fsm0/done_reg_13[0]               |                  |                2 |              3 |
+|  clk         | fsm0/done_reg_15[0]               |                  |                1 |              3 |
+|  clk         | fsm0/done_reg_33[0]               |                  |                2 |              3 |
+|  clk         | fsm0/done_reg_16[0]               |                  |                2 |              3 |
+|  clk         | fsm0/fsm0_write_en                |                  |                4 |              6 |
+|  clk         | pe_44/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_24/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_32/fsm0/mul_reg_write_en       |                  |                6 |             32 |
+|  clk         | pe_24/fsm0/mul_reg_write_en       |                  |               10 |             32 |
+|  clk         | pe_23/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_23/fsm0/mul_reg_write_en       |                  |                4 |             32 |
+|  clk         | pe_22/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_22/fsm0/mul_reg_write_en       |                  |               10 |             32 |
+|  clk         | pe_34/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_34/fsm0/mul_reg_write_en       |                  |                8 |             32 |
+|  clk         | pe_33/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_33/fsm0/mul_reg_write_en       |                  |                9 |             32 |
+|  clk         | pe_32/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_21/fsm0/mul_reg_write_en       |                  |                8 |             32 |
+|  clk         | pe_31/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_31/fsm0/mul_reg_write_en       |                  |                7 |             32 |
+|  clk         | pe_30/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_30/fsm0/mul_reg_write_en       |                  |                8 |             32 |
+|  clk         | pe_04/fsm0/mul_reg_write_en       |                  |               10 |             32 |
+|  clk         | pe_04/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_03/fsm0/mul_reg_write_en       |                  |                9 |             32 |
+|  clk         | pe_03/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_21/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_43/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_00/fsm0/mul_reg_write_en       |                  |                8 |             32 |
+|  clk         | pe_14/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_10/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_20/fsm0/mul_reg_write_en       |                  |                6 |             32 |
+|  clk         | pe_14/fsm0/mul_reg_write_en       |                  |                7 |             32 |
+|  clk         | pe_20/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_11/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_10/fsm0/mul_reg_write_en       |                  |                8 |             32 |
+|  clk         | pe_00/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_13/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_13/fsm0/mul_reg_write_en       |                  |                8 |             32 |
+|  clk         | pe_12/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_12/fsm0/mul_reg_write_en       |                  |                7 |             32 |
+|  clk         | pe_42/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_01/fsm0/mul_reg_write_en       |                  |                8 |             32 |
+|  clk         | pe_44/fsm0/mul_reg_write_en       |                  |                6 |             32 |
+|  clk         | pe_43/fsm0/mul_reg_write_en       |                  |                4 |             32 |
+|  clk         | pe_42/fsm0/mul_reg_write_en       |                  |                8 |             32 |
+|  clk         | pe_41/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_41/fsm0/mul_reg_write_en       |                  |               11 |             32 |
+|  clk         | pe_40/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_40/fsm0/mul_reg_write_en       |                  |                8 |             32 |
+|  clk         | pe_11/fsm0/mul_reg_write_en       |                  |                9 |             32 |
+|  clk         | pe_01/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         | pe_02/fsm0/mul_reg_write_en       |                  |                5 |             32 |
+|  clk         | pe_02/fsm0/E[0]                   |                  |                4 |             32 |
+|  clk         |                                   | pe_42/fsm0/SR[0] |               13 |             51 |
+|  clk         |                                   | pe_31/fsm0/SR[0] |                9 |             51 |
+|  clk         |                                   | pe_41/fsm0/SR[0] |                8 |             51 |
+|  clk         |                                   | pe_40/fsm0/SR[0] |                9 |             51 |
+|  clk         |                                   | pe_01/fsm0/SR[0] |               17 |             51 |
+|  clk         |                                   | pe_02/fsm0/SR[0] |               15 |             51 |
+|  clk         |                                   | pe_12/fsm0/SR[0] |               12 |             51 |
+|  clk         |                                   | pe_13/fsm0/SR[0] |               13 |             51 |
+|  clk         |                                   | pe_20/fsm0/SR[0] |               11 |             51 |
+|  clk         |                                   | pe_00/fsm0/SR[0] |               13 |             51 |
+|  clk         |                                   | pe_10/fsm0/SR[0] |               18 |             51 |
+|  clk         |                                   | pe_14/fsm0/SR[0] |                9 |             51 |
+|  clk         |                                   | pe_11/fsm0/SR[0] |               11 |             51 |
+|  clk         |                                   | pe_43/fsm0/SR[0] |               10 |             51 |
+|  clk         |                                   | pe_44/fsm0/SR[0] |                9 |             51 |
+|  clk         |                                   | pe_21/fsm0/SR[0] |                8 |             51 |
+|  clk         |                                   | pe_03/fsm0/SR[0] |               16 |             51 |
+|  clk         |                                   | pe_04/fsm0/SR[0] |               12 |             51 |
+|  clk         |                                   | pe_30/fsm0/SR[0] |                9 |             51 |
+|  clk         |                                   | pe_32/fsm0/SR[0] |                9 |             51 |
+|  clk         |                                   | pe_33/fsm0/SR[0] |                8 |             51 |
+|  clk         |                                   | pe_34/fsm0/SR[0] |               14 |             51 |
+|  clk         |                                   | pe_22/fsm0/SR[0] |                8 |             51 |
+|  clk         |                                   | pe_23/fsm0/SR[0] |               12 |             51 |
+|  clk         |                                   | pe_24/fsm0/SR[0] |               13 |             51 |
+|  clk         |                                   |                  |              235 |            690 |
++--------------+-----------------------------------+------------------+------------------+----------------+
+
+
