@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Aug 17 13:35:55 2020
+# Process ID: 21484
+# Current directory: /tmp/tmp.8jXnFTNrka/out/FutilBuild.runs/impl_1
+# Command line: vivado -log main.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source main.tcl -notrace
+# Log file: /tmp/tmp.8jXnFTNrka/out/FutilBuild.runs/impl_1/main.vdi
+# Journal file: /tmp/tmp.8jXnFTNrka/out/FutilBuild.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source main.tcl -notrace

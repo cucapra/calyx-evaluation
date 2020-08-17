@@ -1,0 +1,112 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Mon Aug 17 13:00:25 2020
+| Host         : gorgonzola.cs.cornell.edu running 64-bit CentOS Linux release 7.6.1810 (Core)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xczu3eg
+-----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    34 |
+|    Minimum number of control sets                        |    34 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    18 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    34 |
+| >= 0 to < 4        |     8 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    22 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              74 |           31 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             166 |           30 |
+| Yes          | No                    | No                     |             467 |           81 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             127 |           21 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+---------------------------------+-------------------------------+------------------+----------------+
+| Clock Signal |          Enable Signal          |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++--------------+---------------------------------+-------------------------------+------------------+----------------+
+|  clk         | fsm7/fsm7_write_en              |                               |                1 |              2 |
+|  clk         | fsm5/fsm5_write_en              |                               |                1 |              2 |
+|  clk         | fsm2/fsm2_write_en              |                               |                1 |              2 |
+|  clk         | fsm4/fsm4_write_en              |                               |                1 |              2 |
+|  clk         | fsm0/fsm0_write_en              |                               |                1 |              2 |
+|  clk         | fsm3/fsm3_write_en              |                               |                1 |              3 |
+|  clk         | fsm6/fsm6_write_en              |                               |                1 |              3 |
+|  clk         | fsm1/fsm1_write_en              |                               |                1 |              3 |
+|  clk         | fsm7/E[0]                       |                               |                1 |              4 |
+|  clk         | fsm6/out_reg[0]_7[0]            |                               |                1 |              4 |
+|  clk         | fsm6/out_reg[0]_6[0]            |                               |                2 |              4 |
+|  clk         | fsm6/E[0]                       |                               |                1 |              4 |
+|  clk         | sqrt0/out[15]_i_1_n_0           |                               |                5 |             16 |
+|  clk         | div_pipe0/quotient_msk_reg[3]_0 | div_pipe0/divisor[30]_i_1_n_0 |                5 |             31 |
+|  clk         | fsm1/A_i_k_0_write_en           |                               |                7 |             32 |
+|  clk         | fsm6/A_i_i_1_write_en           |                               |                6 |             32 |
+|  clk         | fsm5/A_i_k_1_write_en           |                               |                8 |             32 |
+|  clk         | A_i_j_1/quotient_msk_reg[3]     | A_i_j_1/out_reg[28]_0         |               12 |             32 |
+|  clk         | fsm3/A_j_j_0_write_en           |                               |                6 |             32 |
+|  clk         | div_pipe0/dividend              | div_pipe0/running_reg_0       |               11 |             32 |
+|  clk         | mult_pipe1/bin_read2_0_write_en |                               |                7 |             32 |
+|  clk         | div_pipe0/bin_read1_0_write_en  |                               |               10 |             32 |
+|  clk         | div_pipe0/dividend[31]_i_1_n_0  |                               |                4 |             32 |
+|  clk         | div_pipe0/quotient_msk_reg[3]_0 | div_pipe0/running_reg_0       |                7 |             32 |
+|  clk         | div_pipe0/quotient_msk_reg[3]_0 |                               |                6 |             32 |
+|  clk         | fsm5/A_i_i_0_write_en           |                               |                8 |             32 |
+|  clk         | mult_pipe0/bin_read0_0_write_en |                               |               10 |             32 |
+|  clk         | fsm3/A_i_j_1_write_en           |                               |                5 |             32 |
+|  clk         | fsm1/A_j_k_0_write_en           |                               |                8 |             32 |
+|  clk         | fsm1/A_i_j_0_write_en           |                               |                4 |             32 |
+|  clk         |                                 | mult_pipe1/p_0_in             |                8 |             51 |
+|  clk         |                                 | fsm0/mult_pipe0_go            |               11 |             51 |
+|  clk         |                                 | sqrt0/i[31]_i_1_n_0           |               11 |             64 |
+|  clk         |                                 |                               |               31 |             74 |
++--------------+---------------------------------+-------------------------------+------------------+----------------+
+
+
