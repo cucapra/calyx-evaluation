@@ -63,7 +63,7 @@ dahlia $fuse_file --memory-interface ap_memory > $workdir/"$benchmark_name.cpp"
 
 # generate system verilog file
 dahlia $fuse_file -b futil --lower -l error \
-    | futil -p external -d static-timing -b verilog -l "$FUTIL_DIR" \
+    | futil -p external -b verilog -l "$FUTIL_DIR" \
           > "$workdir/$benchmark_name.sv"
 
 #### Synthesis ####
