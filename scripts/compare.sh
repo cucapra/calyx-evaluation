@@ -62,18 +62,18 @@ trap cleanup EXIT
 dahlia $fuse_file --memory-interface ap_memory > $workdir/"$benchmark_name.cpp"
 
 # generate system verilog file
-# dahlia $fuse_file -b futil --lower -l error \
-#     | futil -p external -b verilog -l "$FUTIL_DIR" \
-#           > "$workdir/$benchmark_name.sv"
+dahlia $fuse_file -b futil --lower -l error \
+    | futil -p external -b verilog -l "$FUTIL_DIR" \
+          > "$workdir/$benchmark_name.sv"
 
 #### Synthesis ####
 # run futil and then hls synthesis
-# $script_dir/vivado.sh 'futil' "$workdir/$benchmark_name.sv" "$workdir/futil"
+$script_dir/vivado.sh 'futil' "$workdir/$benchmark_name.sv" "$workdir/futil"
 $script_dir/vivado.sh 'hls' "$workdir/$benchmark_name.cpp" "$workdir/hls"
 
 #### Process Results ####
 # copy back the files we need
-# $script_dir/futil_copy.sh "$workdir/futil" "$result_dir"
+$script_dir/futil_copy.sh "$workdir/futil" "$result_dir"
 $script_dir/hls_copy.sh "$workdir/hls" "$result_dir"
 
 $script_dir/extract.py "$result_dir" > "$result_dir/data.json"
