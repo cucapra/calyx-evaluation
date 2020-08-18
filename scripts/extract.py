@@ -25,17 +25,18 @@ def file_contains(regex, filename):
 def futil_extract(directory):
     try:
         parser = rpt.RPTParser(directory / "main_utilization_placed.rpt")
-    except err:
-        print("Synthesis files weren't found, skipping.", file=sys.stderr)
-    slice_logic = parser.get_table(re.compile(r'1\. CLB Logic'), 2)
-    dsp_table = parser.get_table(re.compile(r'4\. ARITHMETIC'), 2)
-    meet_timing = file_contains(r'Timing constraints are not met.', directory / "main_timing_summary_routed.rpt")
+        slice_logic = parser.get_table(re.compile(r'1\. CLB Logic'), 2)
+        dsp_table = parser.get_table(re.compile(r'4\. ARITHMETIC'), 2)
+        meet_timing = file_contains(r'Timing constraints are not met.', directory / "main_timing_summary_routed.rpt")
 
-    return {
-        'LUT': find_row(slice_logic, 'Site Type', 'CLB LUTs')['Used'],
-        'DSP': find_row(dsp_table, 'Site Type', 'DSPs')['Used'],
-        'MEET_TIMING': int(meet_timing)
-    }
+        return {
+            'LUT': find_row(slice_logic, 'Site Type', 'CLB LUTs')['Used'],
+            'DSP': find_row(dsp_table, 'Site Type', 'DSPs')['Used'],
+            'MEET_TIMING': int(meet_timing)
+        }
+    except:
+        print("Synthesis files weren't found, skipping.", file=sys.stderr)
+        return {}
 
 def hls_extract(directory):
     try:
@@ -60,6 +61,7 @@ def hls_extract(directory):
         }
     except:
         print("HLS files weren't found, skipping.", file=sys.stderr)
+        return {}
 
 if __name__ == "__main__":
     directory = sys.argv[1]

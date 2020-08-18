@@ -1,0 +1,17 @@
+benchmark,type,lut,dsp,latency,meet_timing,source
+systolic_3,hls,1466.0,27.0,158,1.0,results/17_21_55-08_2020
+systolic_3,hls_total,1506.0,27.0,158,1.0,results/17_21_55-08_2020
+systolic_3,futil,,,0,,results/17_21_55-08_2020
+systolic_8,hls,8443.0,192.0,2210,1.0,results/17_21_55-08_2020
+systolic_8,hls_total,8483.0,192.0,2210,1.0,results/17_21_55-08_2020
+systolic_8,futil,,,0,,results/17_21_55-08_2020
+systolic_2,hls,808.0,12.0,62,1.0,results/17_21_55-08_2020
+systolic_2,hls_total,848.0,12.0,62,1.0,results/17_21_55-08_2020
+systolic_2,futil,,,0,,results/17_21_55-08_2020
+systolic_6,hls,4909.0,108.0,926,1.0,results/17_21_55-08_2020
+systolic_6,hls_total,4949.0,108.0,926,1.0,results/17_21_55-08_2020
+systolic_6,futil,,,0,,results/17_21_55-08_2020
+systolic_4,hls,2387.0,48.0,322,1.0,results/17_21_55-08_2020
+systolic_4,hls_total,2427.0,48.0,322,1.0,results/17_21_55-08_2020
+systolic_4,futil,,,0,,results/17_21_55-08_2020
+
