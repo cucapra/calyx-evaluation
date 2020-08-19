@@ -66,7 +66,7 @@ dahlia $fuse_file -b futil --lower -l error \
     | futil -p external -b verilog -l "$FUTIL_DIR" \
           > "$workdir/$benchmark_name.sv"
 
-#### Synthesis ####
+#### synthesis ####
 # run futil and then hls synthesis
 $script_dir/vivado.sh 'futil' "$workdir/$benchmark_name.sv" "$workdir/futil"
 $script_dir/vivado.sh 'hls' "$workdir/$benchmark_name.cpp" "$workdir/hls"

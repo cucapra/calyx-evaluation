@@ -1,0 +1,8 @@
+benchmark,type,lut,dsp,latency,meet_timing,source
+linear-algebra-3mm,hls,4658,72,3305,1,results/18_15_12-08_2020/
+linear-algebra-3mm,hls_total,4698,72,3305,1,results/18_15_12-08_2020/
+linear-algebra-3mm,futil,8526,72,0,1,results/18_15_12-08_2020/
+linear-algebra-gramschmidt,hls,3355,36,3205,1,results/18_15_12-08_2020/
+linear-algebra-gramschmidt,hls_total,3395,36,3205,1,results/18_15_12-08_2020/
+linear-algebra-gramschmidt,futil,7086,36,0,1,results/18_15_12-08_2020/
+
