@@ -1,0 +1,24 @@
+// broken because of compilation bug in Verilator
+
+decl A_int: ubit<32>[NR][NQ][NP];
+decl C4_int: ubit<32>[NP][NP];
+decl sum_int: ubit<32>[NP];
+
+for (let r: ubit<4> = 0..NR) {
+  for (let q: ubit<4> = 0..NQ) {
+
+    for (let p: ubit<4> = 0..NP) {
+      sum_int[p] := 0;
+      ---
+      for (let s: ubit<4> = 0..NP) {
+        let v: ubit<32> = A_int[r][q][s] * C4_int[s][p];
+      } combine {
+        sum_int[p] += v;
+      }
+    }
+    ---
+    for (let p: ubit<4> = 0..NP) {
+      A_int[r][q][p] := sum_int[p];
+    }
+  }
+}

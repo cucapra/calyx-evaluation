@@ -1,0 +1,25 @@
+
+decl A_int: ubit<32>[N][M];
+decl s_int: ubit<32>[M];
+decl q_int: ubit<32>[N];
+decl p_int: ubit<32>[M];
+decl r_int: ubit<32>[N];
+
+for (let i: M_bw = 0..M) {
+  s_int[i] := 0;
+}
+
+---
+
+for (let i: N_bw = 0..N) {
+  q_int[i] := 0;
+  ---
+  for (let j: M_bw = 0..M) {
+    let s0: ubit<32> = s_int[j];
+    let q0: ubit<32> = q_int[i];
+    let A_i_j: ubit<32> = A_int[i][j];
+    ---
+    s_int[j] := s0 + r_int[i] * A_i_j;
+    q_int[i] := q0 + A_i_j * p_int[j];
+  }
+}

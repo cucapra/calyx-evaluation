@@ -1,0 +1,80 @@
+
+import SQRT_HEADER {
+  def sqrt(x: ubit<32>): ubit<32>;
+}
+
+decl A_int: ubit<32>[M][N];
+decl R_int: ubit<32>[N][N];
+decl Q_int: ubit<32>[M][N];
+
+let A: ubit<32>[M][N];
+let R: ubit<32>[N][N];
+let Q: ubit<32>[M][N];
+
+view A_sh = A[_: bank 1][_: bank 1];
+view Q_sh = Q[_: bank 1][_: bank 1];
+view R_sh = R[_: bank 1][_: bank 1];
+
+for (let init0: N_bw = 0..N) {
+  for (let init1: N_bw = 0..N) {
+    R_sh[init0][init1] := R_int[init0][init1];
+  }
+}
+
+for (let i0: M_bw = 0..M) {
+  for (let j0: N_bw = 0..N) {
+    A_sh[i0][j0] := A_int[i0][j0];
+    Q_sh[i0][j0] := Q_int[i0][j0];
+  }
+}
+
+---
+
+for (let k: N_bw = 0..N) {
+  let nrm: ubit<32> = 0;
+
+  for (let i: M_bw = 0..M) {
+    let A_i_k = A[i][k];
+  } combine {
+    nrm += A_i_k * A_i_k;
+  }
+
+  R[k][k] := sqrt(nrm);
+  ---
+  for (let i: M_bw = 0..M) {
+    Q[i][k] := A[i][k] / R[k][k];
+  }
+  ---
+  let j: N_bw = k + (1 as ubit<4>);
+  while (j < N) {
+    decor "#pragma HLS loop_tripcount WHILE0"
+    R[k][j] := 0;
+    ---
+    for (let i: M_bw = 0..M) {
+      let v: ubit<32> = Q[i][k] * A[i][j];
+    } combine {
+      R[k][j] += v;
+    }
+    ---
+    for (let i: M_bw = 0..M) {
+      let A_i_j = A[i][j];
+      ---
+      A[i][j] := A_i_j - Q[i][k] * R[k][j];
+    }
+    // Update loop counter
+    j := j + (1 as ubit<4>);
+  }
+}
+---
+for (let init0: N_bw = 0..N) {
+  for (let init1: N_bw = 0..N) {
+    R_int[init0][init1] := R_sh[init0][init1];
+  }
+}
+
+for (let i0: M_bw = 0..M) {
+  for (let j0: N_bw = 0..N) {
+    A_int[i0][j0] := A_sh[i0][j0];
+    Q_int[i0][j0] := Q_sh[i0][j0];
+  }
+}

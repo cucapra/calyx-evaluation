@@ -1,0 +1,50 @@
+
+decl r_int: ubit<32>[N];
+decl y_int: ubit<32>[N];
+
+// XXX(rachit): This should be a local array.
+decl z_int: ubit<32>[N];
+
+let alpha: ubit<32> = 0 - r_int[0];
+let beta: ubit<32> = 1;
+y_int[0] := alpha;
+---
+for (let k: N_bw = 1..N) {
+  beta := (1 - alpha * alpha) * beta;
+
+  let sum: ubit<32> = 0;
+  let i: N_bw = 0;
+  while (i < k) {
+    decor "#pragma HLS loop_tripcount WHILE0"
+    sum := sum + r_int[k-i-1] * y_int[i];
+    // Update loop counter
+    i := i + 1;
+  }
+  ---
+  // modification to prevent div by 0
+  if (beta != 0) {
+    alpha := 0 - (r_int[k] + sum)/beta;
+  } else {
+    alpha := 0;
+  }
+
+  i := 0;
+  while(i < k) {
+    decor "#pragma HLS loop_tripcount WHILE1"
+    let y_i: ubit<32> = y_int[i];
+    ---
+    z_int[i] := y_i + alpha * y_int[k-i-1];
+    // Update loop counter
+    i := i + 1;
+  }
+  ---
+  i := 0;
+  while(i < k) {
+    decor "#pragma HLS loop_tripcount WHILE2"
+    y_int[i] := z_int[i];
+    // Update loop counter
+    i := i + 1;
+  }
+  ---
+  y_int[k] := alpha;
+}
