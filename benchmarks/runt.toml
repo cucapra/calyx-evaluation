@@ -1,0 +1,11 @@
+ver = "0.2.7"
+
+[[tests]]
+name = "Correctness"
+paths = [ "small_polybench/*.fuse" ]
+cmd = """
+fud exec -s verilog.data {}.data \
+         {} --to dat \
+         -q
+"""
+expect_dir = "small_simulation/"
