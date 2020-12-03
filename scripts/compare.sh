@@ -4,7 +4,7 @@
 # -u: fail on unset variable.
 set -eu
 
-usage="$(basename $0) [-h -d] <fuse src> <benchmark name> <result dir>
+usage="$(basename $0) [-h -d] <fuse src> <benchmark name> <result dir> <futil passes to disable>
 Generates synthesis results from <fuse src> using both 'vivado_hls'
 and 'vivado' and stores the results in <result dir>"
 
@@ -27,6 +27,7 @@ done
 fuse_file="$1"
 benchmark_name="$2"
 result_dir="$3"
+futil_passes="$4"
 script_dir=$(dirname "$0")
 
 # get Futil project directory
@@ -37,6 +38,7 @@ fi
 
 # temporary directory
 workdir=$(mktemp -d)
+echo "Working in $workdir"
 
 # register cleanup function
 cleanup() {
@@ -49,10 +51,10 @@ cleanup() {
         if [ -d "$workdir/hls" ]; then
             cp -r "$workdir/hls" "_debug/$benchmark_name/"
         fi
+    else
+        echo "Cleaning up $workdir"
+        rm -rf "$workdir"
     fi
-
-    echo "Cleaning up $workdir"
-    rm -rf "$workdir"
 }
 trap cleanup EXIT
 
@@ -63,7 +65,7 @@ dahlia $fuse_file --memory-interface ap_memory > $workdir/"$benchmark_name.cpp"
 
 # generate system verilog file
 dahlia $fuse_file -b futil --lower -l error \
-    | futil -p external -b verilog -l "$FUTIL_DIR" \
+    | futil -p external $futil_passes -b verilog -l "$FUTIL_DIR" --synthesis \
           > "$workdir/$benchmark_name.sv"
 
 #### synthesis ####

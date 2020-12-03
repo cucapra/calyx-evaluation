@@ -1,0 +1,11 @@
+benchmarks/unrolled/linear-algebra-2mm.fuse
+benchmarks/unrolled/linear-algebra-3mm.fuse
+benchmarks/unrolled/linear-algebra-atax.fuse
+benchmarks/unrolled/linear-algebra-doitgen.fuse
+benchmarks/unrolled/linear-algebra-gemm.fuse
+benchmarks/unrolled/linear-algebra-gemver.fuse
+benchmarks/unrolled/linear-algebra-gesummv.fuse
+benchmarks/unrolled/linear-algebra-gramschmidt.fuse
+benchmarks/unrolled/linear-algebra-mvt.fuse
+benchmarks/unrolled/linear-algebra-syr2k.fuse
+benchmarks/unrolled/linear-algebra-syrk.fuse

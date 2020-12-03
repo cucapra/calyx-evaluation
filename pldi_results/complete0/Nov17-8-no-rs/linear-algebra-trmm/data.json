@@ -1,0 +1,1 @@
+{"futil": {"LUT": "286", "DSP": "6", "MEET_TIMING": 1}, "hls": {"TOTAL_LUT": 359, "INSTANCE_LUT": 40, "LUT": 319, "DSP": 6, "AVG_LATENCY": "1553", "BEST_LATENCY": "401", "WORST_LATENCY": "2417"}}

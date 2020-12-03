@@ -1,0 +1,304 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+| Date         : Wed Nov 18 11:57:49 2020
+| Host         : gorgonzola.cs.cornell.edu running 64-bit CentOS Linux release 7.8.2003 (Core)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xczu3eg
+-----------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   226 |
+|    Minimum number of control sets                        |   226 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    49 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   226 |
+| >= 0 to < 4        |    22 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |   199 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             284 |           90 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             612 |          120 |
+| Yes          | No                    | No                     |            5816 |         1163 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              15 |            3 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------+--------------------------------------+---------------------+------------------+----------------+
+| Clock Signal |             Enable Signal            |   Set/Reset Signal  | Slice Load Count | Bel Load Count |
++--------------+--------------------------------------+---------------------+------------------+----------------+
+|  clk         | fsm16/j01_write_en                   |                     |                1 |              1 |
+|  clk         | fsm16/fsm16_write_en                 |                     |                2 |              2 |
+|  clk         | fsm2/out[1]_i_1__9_n_0               |                     |                2 |              2 |
+|  clk         | fsm3/fsm3_write_en                   |                     |                1 |              2 |
+|  clk         | fsm4/fsm4_write_en                   |                     |                1 |              2 |
+|  clk         | fsm5/fsm5_write_en                   |                     |                1 |              2 |
+|  clk         | fsm0/fsm0_write_en                   |                     |                1 |              2 |
+|  clk         | fsm6/fsm6_write_en                   |                     |                1 |              2 |
+|  clk         | fsm7/out[1]_i_1__19_n_0              |                     |                1 |              2 |
+|  clk         | fsm12/fsm12_write_en                 |                     |                1 |              2 |
+|  clk         | fsm13/fsm13_write_en                 |                     |                1 |              2 |
+|  clk         | fsm10/fsm10_write_en                 |                     |                1 |              2 |
+|  clk         | fsm8/fsm8_write_en                   |                     |                2 |              2 |
+|  clk         | fsm9/fsm9_write_en                   |                     |                1 |              2 |
+|  clk         | fsm11/fsm11_write_en                 |                     |                1 |              3 |
+|  clk         | fsm1/fsm1_write_en                   |                     |                1 |              3 |
+|  clk         | fsm/out[2]_i_1__10_n_0               |                     |                2 |              3 |
+|  clk         | fsm15/fsm15_write_en                 |                     |                1 |              3 |
+|  clk         | fsm14/fsm14_write_en                 |                     |                1 |              3 |
+|  clk         | fsm18/fsm18_write_en                 |                     |                1 |              3 |
+|  clk         | fsm16/j01_write_en                   | fsm16/out_reg[0]_17 |                1 |              3 |
+|  clk         | fsm17/fsm17_write_en                 |                     |                1 |              3 |
+|  clk         | fsm18/i01_write_en                   | fsm18/done_reg      |                1 |              4 |
+|  clk         | fsm14/E[0]                           |                     |                3 |              4 |
+|  clk         | fsm0/E[0]                            |                     |                2 |              4 |
+|  clk         | fsm2/done_reg_0                      | fsm2/done_reg       |                1 |              4 |
+|  clk         | fsm18/i0_write_en                    | fsm18/done_reg_0    |                1 |              4 |
+|  clk         | j00/out_reg[0]_11                    |                     |               25 |             32 |
+|  clk         | j00/out_reg[0]_8                     |                     |               27 |             32 |
+|  clk         | j00/out_reg[0]_12                    |                     |               26 |             32 |
+|  clk         | j00/out_reg[0]_10                    |                     |               26 |             32 |
+|  clk         | x_read1_1_10/x_read1_1_10_write_en   |                     |                9 |             32 |
+|  clk         | x_read1_1_00/x_read1_1_00_write_en   |                     |                9 |             32 |
+|  clk         | j00/out_reg[0]_7                     |                     |               27 |             32 |
+|  clk         | fsm5/t1_0_10_write_en                |                     |                8 |             32 |
+|  clk         | j00/out_reg[0]_13                    |                     |               27 |             32 |
+|  clk         | j00/out_reg[0]_14                    |                     |               26 |             32 |
+|  clk         | j00/out_reg[0]_15                    |                     |               29 |             32 |
+|  clk         | j00/out_reg[0]_6                     |                     |               27 |             32 |
+|  clk         | j00/out_reg[0]_5                     |                     |               28 |             32 |
+|  clk         | j00/out_reg[0]_16                    |                     |               24 |             32 |
+|  clk         | j00/out_reg[0]_4                     |                     |               27 |             32 |
+|  clk         | j00/out_reg[0]_17                    |                     |               28 |             32 |
+|  clk         | j00/out_reg[0]_3                     |                     |               28 |             32 |
+|  clk         | j00/out_reg[0]_18                    |                     |               28 |             32 |
+|  clk         | fsm4/t1_1_00_write_en                |                     |                9 |             32 |
+|  clk         | fsm14/y_i_00_write_en                |                     |                6 |             32 |
+|  clk         | fsm14/y_i_10_write_en                |                     |               12 |             32 |
+|  clk         | fsm17/E[0]                           |                     |               14 |             32 |
+|  clk         | fsm17/out_reg[0]_7[0]                |                     |               10 |             32 |
+|  clk         | fsm17/out_reg[0]_9[0]                |                     |               12 |             32 |
+|  clk         | fsm18/alpha__0_write_en              |                     |               12 |             32 |
+|  clk         | fsm18/beta__0_write_en               |                     |                8 |             32 |
+|  clk         | fsm3/t1_0_00_write_en                |                     |                8 |             32 |
+|  clk         | x_read1_0_10/x_read1_0_10_write_en   |                     |                9 |             32 |
+|  clk         | j00/out_reg[1]_10                    |                     |               25 |             32 |
+|  clk         | fsm6/t1_1_10_write_en                |                     |                9 |             32 |
+|  clk         | fsm7/t2_0_00_write_en                |                     |                9 |             32 |
+|  clk         | fsm8/t2_1_00_write_en                |                     |                9 |             32 |
+|  clk         | fsm9/t2_0_10_write_en                |                     |                9 |             32 |
+|  clk         | x_read0_0_00/x_read0_0_00_write_en   |                     |               13 |             32 |
+|  clk         | x_read0_1_10/x_read0_1_10_write_en   |                     |               11 |             32 |
+|  clk         | cond_stored30/out_reg[1]_0           |                     |               21 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_4          |                     |               16 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_5          |                     |               19 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_6          |                     |               17 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_7          |                     |               20 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_8          |                     |               22 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_9          |                     |               20 |             32 |
+|  clk         | par_done_reg20/tmp0_write_en         |                     |                2 |             32 |
+|  clk         | par_done_reg24/A_read0_0_00_write_en |                     |               32 |             32 |
+|  clk         | par_done_reg36/B_read0_0_00_write_en |                     |               32 |             32 |
+|  clk         | cond_stored24/E[0]                   |                     |               28 |             32 |
+|  clk         | cond_stored29/E[0]                   |                     |               19 |             32 |
+|  clk         | cond_stored3/y0_write_en             |                     |                2 |             32 |
+|  clk         | cond_stored30/out_reg[1]             |                     |               22 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_3          |                     |               18 |             32 |
+|  clk         | cond_stored30/out_reg[1]_1           |                     |               20 |             32 |
+|  clk         | cond_stored30/out_reg[1]_10          |                     |               18 |             32 |
+|  clk         | cond_stored30/out_reg[1]_11          |                     |               19 |             32 |
+|  clk         | cond_stored30/out_reg[1]_12          |                     |               22 |             32 |
+|  clk         | cond_stored30/out_reg[1]_13          |                     |               21 |             32 |
+|  clk         | cond_stored30/out_reg[1]_14          |                     |               23 |             32 |
+|  clk         | cond_stored30/out_reg[1]_2           |                     |               22 |             32 |
+|  clk         | cond_stored30/out_reg[1]_3           |                     |               21 |             32 |
+|  clk         | cond_stored30/out_reg[1]_4           |                     |               21 |             32 |
+|  clk         | cond_stored30/out_reg[1]_5           |                     |               18 |             32 |
+|  clk         | cond_stored30/out_reg[1]_6           |                     |               20 |             32 |
+|  clk         | cond_stored30/out_reg[1]_7           |                     |               19 |             32 |
+|  clk         | cond_stored30/out_reg[1]_8           |                     |               20 |             32 |
+|  clk         | j00/out_reg[1]_7                     |                     |               27 |             32 |
+|  clk         | j00/out_reg[1]_0                     |                     |               28 |             32 |
+|  clk         | j00/out_reg[1]_1                     |                     |               28 |             32 |
+|  clk         | cond_stored30/out_reg[1]_9           |                     |               18 |             32 |
+|  clk         | j00/out_reg[1]_11                    |                     |               27 |             32 |
+|  clk         | j00/out_reg[1]_12                    |                     |               27 |             32 |
+|  clk         | j00/out_reg[1]_13                    |                     |               26 |             32 |
+|  clk         | j00/out_reg[1]_14                    |                     |               28 |             32 |
+|  clk         | j00/out_reg[1]_15                    |                     |               26 |             32 |
+|  clk         | j00/out_reg[1]_2                     |                     |               28 |             32 |
+|  clk         | j00/out_reg[1]_3                     |                     |               27 |             32 |
+|  clk         | j00/out_reg[1]_4                     |                     |               28 |             32 |
+|  clk         | j00/out_reg[1]_5                     |                     |               22 |             32 |
+|  clk         | j00/out_reg[1]_6                     |                     |               28 |             32 |
+|  clk         | j00/out_reg[0]_9                     |                     |               28 |             32 |
+|  clk         | j00/out_reg[1]_8                     |                     |               27 |             32 |
+|  clk         | j00/out_reg[1]_9                     |                     |               26 |             32 |
+|  clk         | cond_stored4/y1_write_en             |                     |                2 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_1          |                     |               22 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_10         |                     |               24 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_11         |                     |               16 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_12         |                     |               22 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_13         |                     |               22 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_14         |                     |               16 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_15         |                     |               18 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_16         |                     |               19 |             32 |
+|  clk         | par_done_reg10/out_reg[0]_2          |                     |               21 |             32 |
+|  clk         | fsm11/out_reg[0]_29                  |                     |               28 |             32 |
+|  clk         | fsm11/B_read0_1_00_write_en          |                     |               32 |             32 |
+|  clk         | fsm11/B_read0_1_10_write_en          |                     |               14 |             32 |
+|  clk         | fsm11/mem                            |                     |               19 |             32 |
+|  clk         | fsm11/out_reg[0]_21                  |                     |               29 |             32 |
+|  clk         | fsm11/out_reg[0]_22                  |                     |               26 |             32 |
+|  clk         | fsm11/out_reg[0]_23                  |                     |               28 |             32 |
+|  clk         | fsm11/out_reg[0]_24                  |                     |               28 |             32 |
+|  clk         | fsm11/out_reg[0]_25                  |                     |               29 |             32 |
+|  clk         | fsm11/out_reg[0]_26                  |                     |               29 |             32 |
+|  clk         | fsm11/out_reg[0]_27                  |                     |               28 |             32 |
+|  clk         | fsm11/out_reg[0]_28                  |                     |               27 |             32 |
+|  clk         | fsm11/B_read0_0_10_write_en          |                     |               32 |             32 |
+|  clk         | fsm11/out_reg[0]_30                  |                     |               28 |             32 |
+|  clk         | fsm11/out_reg[0]_31                  |                     |               29 |             32 |
+|  clk         | fsm11/out_reg[0]_32                  |                     |               29 |             32 |
+|  clk         | fsm11/out_reg[0]_33                  |                     |               28 |             32 |
+|  clk         | fsm11/out_reg[0]_34                  |                     |               28 |             32 |
+|  clk         | fsm11/out_reg[0]_35                  |                     |               26 |             32 |
+|  clk         | fsm11/out_reg[0]_36                  |                     |               29 |             32 |
+|  clk         | fsm11/out_reg[0]_37                  |                     |               17 |             32 |
+|  clk         | fsm11/out_reg[0]_38                  |                     |               22 |             32 |
+|  clk         | fsm11/out_reg[0]_39                  |                     |               21 |             32 |
+|  clk         | fsm11/out_reg[0]_40                  |                     |               21 |             32 |
+|  clk         | mult_pipe9/bin_read9_0_write_en      |                     |                7 |             32 |
+|  clk         | mult_pipe0/bin_read0_0_write_en      |                     |               13 |             32 |
+|  clk         | mult_pipe1/bin_read1_0_write_en      |                     |                8 |             32 |
+|  clk         | mult_pipe10/bin_read10_0_write_en    |                     |                9 |             32 |
+|  clk         | mult_pipe11/bin_read11_0_write_en    |                     |                9 |             32 |
+|  clk         | mult_pipe2/bin_read2_0_write_en      |                     |               10 |             32 |
+|  clk         | mult_pipe3/bin_read3_0_write_en      |                     |               10 |             32 |
+|  clk         | mult_pipe4/bin_read4_0_write_en      |                     |               10 |             32 |
+|  clk         | mult_pipe5/bin_read5_0_write_en      |                     |               10 |             32 |
+|  clk         | mult_pipe6/bin_read6_0_write_en      |                     |                9 |             32 |
+|  clk         | mult_pipe7/bin_read7_0_write_en      |                     |                9 |             32 |
+|  clk         | mult_pipe8/bin_read8_0_write_en      |                     |               10 |             32 |
+|  clk         | fsm14/tmp_read0_00_write_en          |                     |               11 |             32 |
+|  clk         | fsm/A_int_read0_0_write_en           |                     |               17 |             32 |
+|  clk         | fsm/B_int_read0_0_write_en           |                     |                9 |             32 |
+|  clk         | fsm1/tmp_int_read0_0_write_en        |                     |                8 |             32 |
+|  clk         | fsm1/x0_write_en                     |                     |                2 |             32 |
+|  clk         | fsm1/x1_write_en                     |                     |                2 |             32 |
+|  clk         | fsm1/x_int_read0_0_write_en          |                     |                5 |             32 |
+|  clk         | fsm1/y_int_read0_0_write_en          |                     |               10 |             32 |
+|  clk         | fsm10/t2_1_10_write_en               |                     |                9 |             32 |
+|  clk         | fsm11/A_read0_0_10_write_en          |                     |               32 |             32 |
+|  clk         | fsm11/A_read0_1_00_write_en          |                     |               32 |             32 |
+|  clk         | fsm11/A_read0_1_10_write_en          |                     |               15 |             32 |
+|  clk         | fsm11/out_reg[2]_37                  |                     |               25 |             32 |
+|  clk         | fsm11/out_reg[2]_26                  |                     |               24 |             32 |
+|  clk         | fsm11/out_reg[2]_27                  |                     |               24 |             32 |
+|  clk         | fsm11/out_reg[2]_28                  |                     |               23 |             32 |
+|  clk         | fsm11/out_reg[2]_29                  |                     |               23 |             32 |
+|  clk         | fsm11/out_reg[2]_30                  |                     |               25 |             32 |
+|  clk         | fsm11/out_reg[2]_31                  |                     |               24 |             32 |
+|  clk         | fsm11/out_reg[2]_32                  |                     |               27 |             32 |
+|  clk         | fsm11/out_reg[2]_33                  |                     |               23 |             32 |
+|  clk         | fsm11/out_reg[2]_34                  |                     |               26 |             32 |
+|  clk         | fsm11/out_reg[2]_35                  |                     |               24 |             32 |
+|  clk         | fsm11/out_reg[2]_36                  |                     |               27 |             32 |
+|  clk         | fsm11/out_reg[0]_42                  |                     |               22 |             32 |
+|  clk         | fsm11/out_reg[2]_38                  |                     |               27 |             32 |
+|  clk         | fsm11/out_reg[2]_4                   |                     |               20 |             32 |
+|  clk         | fsm11/out_reg[2]_6                   |                     |               22 |             32 |
+|  clk         | fsm11/out_reg[2]_7                   |                     |               20 |             32 |
+|  clk         | fsm11/out_reg[2]_8                   |                     |               18 |             32 |
+|  clk         | fsm11/out_reg[2]_9                   |                     |               20 |             32 |
+|  clk         | fsm11/x_read0_0_10_write_en          |                     |                8 |             32 |
+|  clk         | fsm11/x_read0_1_00_write_en          |                     |               12 |             32 |
+|  clk         | fsm11/x_read1_0_00_write_en          |                     |                7 |             32 |
+|  clk         | fsm14/I247                           |                     |                2 |             32 |
+|  clk         | fsm14/tmp_read0_10_write_en          |                     |                8 |             32 |
+|  clk         | fsm11/out_reg[2]_24                  |                     |               27 |             32 |
+|  clk         | fsm11/out_reg[0]_41                  |                     |               20 |             32 |
+|  clk         | fsm11/out_reg[0]_43                  |                     |               17 |             32 |
+|  clk         | fsm11/out_reg[0]_44                  |                     |               23 |             32 |
+|  clk         | fsm11/out_reg[0]_45                  |                     |               25 |             32 |
+|  clk         | fsm11/out_reg[0]_46                  |                     |               24 |             32 |
+|  clk         | fsm11/out_reg[0]_47                  |                     |               22 |             32 |
+|  clk         | fsm11/out_reg[0]_48                  |                     |               21 |             32 |
+|  clk         | fsm11/out_reg[0]_49                  |                     |               23 |             32 |
+|  clk         | fsm11/out_reg[0]_50                  |                     |               21 |             32 |
+|  clk         | fsm11/out_reg[0]_51                  |                     |               20 |             32 |
+|  clk         | fsm11/out_reg[0]_52                  |                     |               22 |             32 |
+|  clk         | fsm11/out_reg[2]_11                  |                     |               19 |             32 |
+|  clk         | fsm11/out_reg[2]_10                  |                     |               18 |             32 |
+|  clk         | fsm11/out_reg[2]_25                  |                     |               23 |             32 |
+|  clk         | fsm11/out_reg[2]_23                  |                     |               26 |             32 |
+|  clk         | fsm11/out_reg[2]_2                   |                     |               17 |             32 |
+|  clk         | fsm11/out_reg[2]_18                  |                     |               17 |             32 |
+|  clk         | fsm11/out_reg[2]_17                  |                     |               19 |             32 |
+|  clk         | fsm11/out_reg[2]_16                  |                     |               17 |             32 |
+|  clk         | fsm11/out_reg[2]_15                  |                     |               20 |             32 |
+|  clk         | fsm11/out_reg[2]_14                  |                     |               21 |             32 |
+|  clk         | fsm11/out_reg[2]_13                  |                     |               18 |             32 |
+|  clk         | fsm11/out_reg[2]_12                  |                     |               21 |             32 |
+|  clk         |                                      | mult_pipe9/p_0_in   |                8 |             51 |
+|  clk         |                                      | mult_pipe0/p_0_in   |               11 |             51 |
+|  clk         |                                      | mult_pipe1/p_0_in   |               10 |             51 |
+|  clk         |                                      | mult_pipe10/p_0_in  |                8 |             51 |
+|  clk         |                                      | mult_pipe11/p_0_in  |                9 |             51 |
+|  clk         |                                      | mult_pipe2/p_0_in   |               10 |             51 |
+|  clk         |                                      | mult_pipe3/p_0_in   |               10 |             51 |
+|  clk         |                                      | mult_pipe4/p_0_in   |               11 |             51 |
+|  clk         |                                      | mult_pipe5/p_0_in   |                9 |             51 |
+|  clk         |                                      | mult_pipe6/p_0_in   |               12 |             51 |
+|  clk         |                                      | mult_pipe7/p_0_in   |               11 |             51 |
+|  clk         |                                      | mult_pipe8/p_0_in   |               11 |             51 |
+|  clk         |                                      |                     |               90 |            284 |
++--------------+--------------------------------------+---------------------+------------------+----------------+
+
+

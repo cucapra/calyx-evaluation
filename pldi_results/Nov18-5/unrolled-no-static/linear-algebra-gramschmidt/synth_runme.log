@@ -1,0 +1,2670 @@
+
+*** Running vivado
+    with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source main.tcl -notrace
+Command: synth_design -top main -part xczu3eg-sbva484-1-e -mode out_of_context -flatten_hierarchy rebuilt
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 30495 
+WARNING: [Synth 8-6901] identifier 'running' is used before its declaration [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:31]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2333.168 ; gain = 0.000 ; free physical = 20809 ; free virtual = 40895
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:236]
+INFO: [Synth 8-6157] synthesizing module 'std_mem_d2' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:90]
+	Parameter width bound to: 32 - type: integer 
+	Parameter d0_size bound to: 2 - type: integer 
+	Parameter d1_size bound to: 12 - type: integer 
+	Parameter d0_idx_size bound to: 2 - type: integer 
+	Parameter d1_idx_size bound to: 4 - type: integer 
+WARNING: [Synth 8-5856] 3D RAM mem_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-6155] done synthesizing module 'std_mem_d2' (1#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:90]
+INFO: [Synth 8-6157] synthesizing module 'std_reg' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:150]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg' (2#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:150]
+INFO: [Synth 8-6157] synthesizing module 'std_mem_d2__parameterized0' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:90]
+	Parameter width bound to: 32 - type: integer 
+	Parameter d0_size bound to: 12 - type: integer 
+	Parameter d1_size bound to: 12 - type: integer 
+	Parameter d0_idx_size bound to: 4 - type: integer 
+	Parameter d1_idx_size bound to: 4 - type: integer 
+WARNING: [Synth 8-5856] 3D RAM mem_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+INFO: [Synth 8-6155] done synthesizing module 'std_mem_d2__parameterized0' (2#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:90]
+INFO: [Synth 8-6157] synthesizing module 'std_add' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:1]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_add' (3#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'std_add__parameterized0' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:1]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_add__parameterized0' (3#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'std_and' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:8]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_and' (4#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'std_and__parameterized0' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:8]
+	Parameter width bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_and__parameterized0' (4#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'std_const' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+	Parameter width bound to: 4 - type: integer 
+	Parameter value bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const' (5#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'std_const__parameterized0' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+	Parameter width bound to: 4 - type: integer 
+	Parameter value bound to: 11 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const__parameterized0' (5#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'std_const__parameterized1' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+	Parameter width bound to: 4 - type: integer 
+	Parameter value bound to: 3 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const__parameterized1' (5#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'std_const__parameterized2' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+	Parameter width bound to: 4 - type: integer 
+	Parameter value bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const__parameterized2' (5#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'std_const__parameterized3' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+	Parameter width bound to: 4 - type: integer 
+	Parameter value bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const__parameterized3' (5#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'std_const__parameterized4' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+	Parameter width bound to: 32 - type: integer 
+	Parameter value bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const__parameterized4' (5#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'std_const__parameterized5' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+	Parameter width bound to: 4 - type: integer 
+	Parameter value bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const__parameterized5' (5#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'std_const__parameterized6' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+	Parameter width bound to: 4 - type: integer 
+	Parameter value bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const__parameterized6' (5#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:15]
+INFO: [Synth 8-6157] synthesizing module 'std_div_pipe' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:22]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_div_pipe' (6#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'std_eq' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:69]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_eq' (7#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:69]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized0' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:150]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized0' (7#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:150]
+INFO: [Synth 8-6157] synthesizing module 'std_le' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:76]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_le' (8#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:76]
+INFO: [Synth 8-6157] synthesizing module 'std_lt' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:83]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_lt' (9#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:83]
+INFO: [Synth 8-6157] synthesizing module 'std_mult_pipe' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:116]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_mult_pipe' (10#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:116]
+INFO: [Synth 8-6157] synthesizing module 'std_rsh' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:167]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_rsh' (11#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:167]
+INFO: [Synth 8-6157] synthesizing module 'std_slice' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:174]
+	Parameter in_width bound to: 4 - type: integer 
+	Parameter out_width bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_slice' (12#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:174]
+INFO: [Synth 8-6157] synthesizing module 'std_sqrt' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:181]
+WARNING: [Synth 8-6014] Unused sequential element left_reg was removed.  [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:198]
+WARNING: [Synth 8-6014] Unused sequential element right_reg was removed.  [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:199]
+INFO: [Synth 8-6155] done synthesizing module 'std_sqrt' (13#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:181]
+INFO: [Synth 8-6157] synthesizing module 'std_sub' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:229]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_sub' (14#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:229]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized1' [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:150]
+	Parameter width bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized1' (14#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:150]
+WARNING: [Synth 8-3848] Net div_pipe0_reset in module/entity main does not have driver. [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:602]
+WARNING: [Synth 8-3848] Net div_pipe1_reset in module/entity main does not have driver. [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:609]
+WARNING: [Synth 8-3848] Net div_pipe2_reset in module/entity main does not have driver. [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:616]
+WARNING: [Synth 8-3848] Net div_pipe3_reset in module/entity main does not have driver. [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:623]
+INFO: [Synth 8-6155] done synthesizing module 'main' (15#1) [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:236]
+WARNING: [Synth 8-3331] design std_slice has unconnected port in[3]
+WARNING: [Synth 8-3331] design std_slice has unconnected port in[2]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 2344.168 ; gain = 11.000 ; free physical = 20054 ; free virtual = 40152
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2364.977 ; gain = 31.809 ; free physical = 20026 ; free virtual = 40126
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 2364.977 ; gain = 31.809 ; free physical = 20026 ; free virtual = 40126
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/tmp/tmp.8f1FjC4Sv4/device.xdc]
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2541.664 ; gain = 0.000 ; free physical = 19592 ; free virtual = 39696
+Finished Parsing XDC File [/tmp/tmp.8f1FjC4Sv4/device.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2541.664 ; gain = 0.000 ; free physical = 19591 ; free virtual = 39695
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.92 ; elapsed = 00:00:00.32 . Memory (MB): peak = 2545.633 ; gain = 3.969 ; free physical = 19583 ; free virtual = 39688
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 2545.633 ; gain = 212.465 ; free physical = 19727 ; free virtual = 39842
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 2545.633 ; gain = 212.465 ; free physical = 19729 ; free virtual = 39843
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 2545.633 ; gain = 212.465 ; free physical = 19734 ; free virtual = 39849
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:206]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 2545.633 ; gain = 212.465 ; free physical = 19723 ; free virtual = 39854
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'const0' (std_const) to 'const10'
+INFO: [Synth 8-223] decloning instance 'const0' (std_const) to 'const100'
+INFO: [Synth 8-223] decloning instance 'const0' (std_const) to 'const101'
+INFO: [Synth 8-223] decloning instance 'const0' (std_const) to 'const105'
+INFO: [Synth 8-223] decloning instance 'const0' (std_const) to 'const106'
+INFO: [Synth 8-223] decloning instance 'const0' (std_const) to 'const107'
+INFO: [Synth 8-223] decloning instance 'const0' (std_const) to 'const111'
+INFO: [Synth 8-223] decloning instance 'const0' (std_const) to 'const112'
+INFO: [Synth 8-223] decloning instance 'const0' (std_const) to 'const113'
+INFO: [Synth 8-223] decloning instance 'const0' (std_const) to 'const117'
+INFO: [Synth 8-223] decloning instance 'const1' (std_const__parameterized0) to 'const11'
+INFO: [Synth 8-223] decloning instance 'const102' (std_const__parameterized1) to 'const108'
+INFO: [Synth 8-223] decloning instance 'const102' (std_const__parameterized1) to 'const114'
+INFO: [Synth 8-223] decloning instance 'const102' (std_const__parameterized1) to 'const115'
+INFO: [Synth 8-223] decloning instance 'const102' (std_const__parameterized1) to 'const120'
+INFO: [Synth 8-223] decloning instance 'const103' (std_const__parameterized2) to 'const127'
+INFO: [Synth 8-223] decloning instance 'const104' (std_const__parameterized3) to 'const109'
+INFO: [Synth 8-223] decloning instance 'const104' (std_const__parameterized3) to 'const110'
+INFO: [Synth 8-223] decloning instance 'const104' (std_const__parameterized3) to 'const116'
+
+Report RTL Partitions: 
++------+---------------------------+------------+----------+
+|      |RTL Partition              |Replication |Instances |
++------+---------------------------+------------+----------+
+|1     |main__GB0                  |           1|     42174|
+|2     |std_mem_d2__parameterized0 |           1|     10065|
++------+---------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 5     
+	   3 Input     32 Bit       Adders := 4     
+	   3 Input     18 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               63 Bit    Registers := 4     
+	               32 Bit    Registers := 479   
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 7     
+	                1 Bit    Registers := 483   
++---Multipliers : 
+	                32x32  Multipliers := 12    
++---Muxes : 
+	   2 Input     63 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 253   
+	   3 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 78    
+	   5 Input      4 Bit        Muxes := 49    
+	  12 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 5     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 25    
+	   3 Input      2 Bit        Muxes := 17    
+	   8 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 754   
+	   5 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 17    
+	   8 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 6     
+	   6 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module main 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 122   
+	   2 Input      4 Bit        Muxes := 78    
+	   5 Input      4 Bit        Muxes := 49    
+	  12 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	  14 Input      4 Bit        Muxes := 1     
+	   5 Input      3 Bit        Muxes := 5     
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 24    
+	   3 Input      2 Bit        Muxes := 17    
+	   8 Input      2 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 2     
+	   6 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 264   
+	   5 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 17    
+	   8 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 6     
+	   6 Input      1 Bit        Muxes := 4     
+Module std_mem_d2__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 144   
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 156   
+Module std_mem_d2__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 24    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 36    
+Module std_mem_d2__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 24    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 36    
+Module std_mem_d2__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 24    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 36    
+Module std_mem_d2__4 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 24    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 36    
+Module std_reg__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__4 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__5 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__6 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__7 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__8 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__9 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__10 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__11 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__12 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__13 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__14 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__15 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__16 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__17 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_mem_d2__5 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 24    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 36    
+Module std_mem_d2__6 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 24    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 36    
+Module std_mem_d2__7 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 24    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 36    
+Module std_mem_d2 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 24    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 12    
+	   2 Input      1 Bit        Muxes := 36    
+Module std_reg__18 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__19 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__20 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__21 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__22 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__23 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__24 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__25 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__26 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__27 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__28 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__29 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__30 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__31 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__32 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__33 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__34 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__35 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_add__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+Module std_add 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+Module std_add__parameterized0__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module std_add__parameterized0__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module std_add__parameterized0__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module std_add__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module std_reg__36 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__37 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__38 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__39 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_div_pipe__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               63 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     63 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 11    
+Module std_div_pipe__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               63 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     63 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 11    
+Module std_div_pipe__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               63 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     63 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 11    
+Module std_div_pipe 
+Detailed RTL Component Info : 
++---Registers : 
+	               63 Bit    Registers := 1     
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     63 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 11    
+Module std_reg__parameterized0__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized0__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized0__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized0__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized0__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized0__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_mult_pipe__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module std_mult_pipe__2 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module std_mult_pipe__3 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module std_mult_pipe__4 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module std_mult_pipe__5 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module std_mult_pipe__6 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module std_mult_pipe__7 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module std_mult_pipe__8 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module std_mult_pipe__9 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module std_mult_pipe__10 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module std_mult_pipe__11 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module std_mult_pipe 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module std_reg__40 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_sqrt 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     18 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 3     
+	               18 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   3 Input     32 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     18 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module std_sub__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+Module std_sub__2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+Module std_sub__3 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+Module std_sub 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+Module std_reg__41 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__42 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__43 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__44 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__45 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__2 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__3 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__46 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__4 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__5 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__6 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__47 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__7 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__8 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__9 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__10 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__11 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__12 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__13 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__14 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__15 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__16 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__17 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__18 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__19 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__20 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__21 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__22 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__23 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__24 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__25 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__26 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__27 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__28 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__29 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__30 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__31 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__32 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__33 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__34 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__35 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__36 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__37 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__38 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__39 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__40 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__41 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__48 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__42 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__43 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__44 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__49 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__45 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__46 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__47 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__50 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__48 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__49 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__50 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__51 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__52 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__53 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__54 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__55 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__51 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__56 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__57 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__58 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__52 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__59 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__60 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__61 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__62 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__63 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__64 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__65 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__66 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__67 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__68 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__69 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__70 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__53 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__54 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__55 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__56 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__71 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__72 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__73 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__74 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__75 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__57 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__76 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__77 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__78 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__79 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__80 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__81 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__82 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__83 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__84 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__85 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__86 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__87 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__58 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__59 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__60 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__61 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__88 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__89 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__90 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__91 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__92 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__62 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__93 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__94 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__95 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__96 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__97 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__98 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__99 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__100 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__101 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__102 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__103 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__104 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__105 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__106 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__107 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__108 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__109 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__63 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__64 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__65 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__66 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__110 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__111 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__112 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__113 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__114 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__67 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__115 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__116 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__117 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__68 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__118 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__119 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__120 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__69 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__121 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__122 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__123 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__70 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__124 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__125 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__126 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__71 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__127 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__128 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__129 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__72 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__130 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__131 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__132 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__133 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__134 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__135 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__136 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__137 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__138 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__139 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__140 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__141 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__142 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__143 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__144 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__145 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__146 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__147 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__148 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__149 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__150 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__151 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__152 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__153 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__154 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__155 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__156 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__157 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__158 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__159 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__160 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__161 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__162 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__163 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__164 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__73 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__165 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__166 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__167 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__74 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__168 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__169 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__170 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__75 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_reg__parameterized1__171 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1__172 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module std_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:132]
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:132]
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:132]
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:132]
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:132]
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:132]
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:132]
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:132]
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:132]
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:132]
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:132]
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.8f1FjC4Sv4/linear-algebra-gramschmidt.sv:132]
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: Generating DSP out_tmp0, operation Mode is: A2*B2.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: register out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp0.
+DSP Report: Generating DSP out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: register out_tmp_reg is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+DSP Report: operator out_tmp0 is absorbed into DSP out_tmp_reg.
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[16]' (FDRE) to 'i_0/sqrt0/out_reg[17]'
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[17]' (FDRE) to 'i_0/sqrt0/out_reg[18]'
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[18]' (FDRE) to 'i_0/sqrt0/out_reg[19]'
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[19]' (FDRE) to 'i_0/sqrt0/out_reg[20]'
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[20]' (FDRE) to 'i_0/sqrt0/out_reg[21]'
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[21]' (FDRE) to 'i_0/sqrt0/out_reg[22]'
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[22]' (FDRE) to 'i_0/sqrt0/out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[23]' (FDRE) to 'i_0/sqrt0/out_reg[24]'
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[24]' (FDRE) to 'i_0/sqrt0/out_reg[25]'
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[25]' (FDRE) to 'i_0/sqrt0/out_reg[26]'
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[26]' (FDRE) to 'i_0/sqrt0/out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[27]' (FDRE) to 'i_0/sqrt0/out_reg[28]'
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[28]' (FDRE) to 'i_0/sqrt0/out_reg[29]'
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[29]' (FDRE) to 'i_0/sqrt0/out_reg[30]'
+INFO: [Synth 8-3886] merging instance 'i_0/sqrt0/out_reg[30]' (FDRE) to 'i_0/sqrt0/out_reg[31]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[31]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[30]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[28]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[29]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[24]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[25]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[26]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[27]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[18]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[19]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[16]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[17]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[22]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[23]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[20]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[21]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[6]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[7]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[4]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[5]' (FDE) to 'i_0/fsm5/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[3]' (FDE) to 'i_0/fsm5/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[14]' (FDE) to 'i_0/fsm5/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[15]' (FDE) to 'i_0/fsm5/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[12]' (FDE) to 'i_0/fsm5/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[13]' (FDE) to 'i_0/fsm5/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[8]' (FDE) to 'i_0/fsm5/out_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[9]' (FDE) to 'i_0/fsm5/out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm5/out_reg[10]' (FDE) to 'i_0/fsm5/out_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\fsm5/out_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/sqrt0/\out_reg[31] )
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[31]' (FDE) to 'i_0/fsm22/out_reg[30]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[30]' (FDE) to 'i_0/fsm22/out_reg[29]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[28]' (FDE) to 'i_0/fsm22/out_reg[29]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[29]' (FDE) to 'i_0/fsm22/out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[24]' (FDE) to 'i_0/fsm22/out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[25]' (FDE) to 'i_0/fsm22/out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[26]' (FDE) to 'i_0/fsm22/out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[27]' (FDE) to 'i_0/fsm22/out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[18]' (FDE) to 'i_0/fsm22/out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[19]' (FDE) to 'i_0/fsm22/out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[16]' (FDE) to 'i_0/fsm22/out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[17]' (FDE) to 'i_0/fsm22/out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[22]' (FDE) to 'i_0/fsm22/out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[23]' (FDE) to 'i_0/fsm22/out_reg[21]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[20]' (FDE) to 'i_0/fsm22/out_reg[21]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[21]' (FDE) to 'i_0/fsm22/out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[6]' (FDE) to 'i_0/fsm22/out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[7]' (FDE) to 'i_0/fsm22/out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[4]' (FDE) to 'i_0/fsm22/out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[5]' (FDE) to 'i_0/fsm22/out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[3]' (FDE) to 'i_0/fsm22/out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[14]' (FDE) to 'i_0/fsm22/out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[15]' (FDE) to 'i_0/fsm22/out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[12]' (FDE) to 'i_0/fsm22/out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[13]' (FDE) to 'i_0/fsm22/out_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[8]' (FDE) to 'i_0/fsm22/out_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[9]' (FDE) to 'i_0/fsm22/out_reg[11]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm22/out_reg[10]' (FDE) to 'i_0/fsm22/out_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\fsm22/out_reg[11] )
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[31]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[30]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[28]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[29]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[24]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[25]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[26]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[27]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[18]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[19]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[16]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[17]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[22]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[23]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[20]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[21]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[6]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[7]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[4]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[5]' (FDE) to 'i_0/fsm23/out_reg[3]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[3]' (FDE) to 'i_0/fsm23/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[14]' (FDE) to 'i_0/fsm23/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[15]' (FDE) to 'i_0/fsm23/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[12]' (FDE) to 'i_0/fsm23/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[13]' (FDE) to 'i_0/fsm23/out_reg[8]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[8]' (FDE) to 'i_0/fsm23/out_reg[9]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[9]' (FDE) to 'i_0/fsm23/out_reg[10]'
+INFO: [Synth 8-3886] merging instance 'i_0/fsm23/out_reg[10]' (FDE) to 'i_0/fsm23/out_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (i_0/\fsm23/out_reg[11] )
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[47]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[46]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[45]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[44]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[43]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[42]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[41]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[40]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[39]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[38]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[37]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[36]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[35]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[34]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[33]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[32]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[31]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[30]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[29]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[28]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[27]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[26]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[25]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[24]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[23]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[22]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[21]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[20]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[19]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[18]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[17]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[16]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[15]) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[47]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[46]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[45]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[44]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[43]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[42]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[41]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[40]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[39]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[38]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[37]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[36]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[35]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[34]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[33]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[32]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[31]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[30]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[29]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[28]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[27]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[26]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[25]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[24]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[23]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[22]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[21]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[20]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[19]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[18]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[17]__0) is unused and will be removed from module std_mult_pipe__1.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[47]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[46]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[45]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[44]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[43]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[42]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[41]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[40]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[39]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[38]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[37]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[36]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[35]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[34]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[33]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[32]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[31]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[30]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[29]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[28]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[27]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[26]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[25]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[24]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[23]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[22]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[21]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[20]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[19]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[18]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[17]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[16]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[15]) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[47]__0) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[46]__0) is unused and will be removed from module std_mult_pipe__2.
+WARNING: [Synth 8-3332] Sequential element (out_tmp_reg[45]__0) is unused and will be removed from module std_mult_pipe__2.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:23 . Memory (MB): peak = 2545.633 ; gain = 212.465 ; free physical = 19116 ; free virtual = 39336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++--------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name   | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++--------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|std_mult_pipe | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|std_mult_pipe | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|std_mult_pipe | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
++--------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------------------+------------+----------+
+|      |RTL Partition              |Replication |Instances |
++------+---------------------------+------------+----------+
+|1     |main__GB0                  |           1|     28267|
+|2     |std_mem_d2__parameterized0 |           1|      9822|
++------+---------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:35 ; elapsed = 00:03:19 . Memory (MB): peak = 2959.984 ; gain = 626.816 ; free physical = 16243 ; free virtual = 36457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:55 ; elapsed = 00:03:40 . Memory (MB): peak = 3118.082 ; gain = 784.914 ; free physical = 15682 ; free virtual = 35896
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+---------------------------+------------+----------+
+|      |RTL Partition              |Replication |Instances |
++------+---------------------------+------------+----------+
+|1     |main__GB0                  |           1|     28202|
+|2     |std_mem_d2__parameterized0 |           1|      9822|
++------+---------------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:10 ; elapsed = 00:03:55 . Memory (MB): peak = 3158.020 ; gain = 824.852 ; free physical = 18843 ; free virtual = 39043
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5365] Flop sqrt0/a_reg[31] is being inverted and renamed to sqrt0/a_reg[31]_inv.
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:13 ; elapsed = 00:03:58 . Memory (MB): peak = 3158.023 ; gain = 824.855 ; free physical = 18876 ; free virtual = 39114
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:13 ; elapsed = 00:03:59 . Memory (MB): peak = 3158.023 ; gain = 824.855 ; free physical = 18872 ; free virtual = 39111
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:16 ; elapsed = 00:04:01 . Memory (MB): peak = 3158.023 ; gain = 824.855 ; free physical = 20386 ; free virtual = 40599
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:16 ; elapsed = 00:04:02 . Memory (MB): peak = 3158.023 ; gain = 824.855 ; free physical = 20377 ; free virtual = 40589
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:16 ; elapsed = 00:04:02 . Memory (MB): peak = 3158.023 ; gain = 824.855 ; free physical = 20342 ; free virtual = 40557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:17 ; elapsed = 00:04:02 . Memory (MB): peak = 3158.023 ; gain = 824.855 ; free physical = 20332 ; free virtual = 40524
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |    97|
+|2     |DSP_ALU         |    36|
+|3     |DSP_A_B_DATA    |    36|
+|4     |DSP_C_DATA      |    36|
+|5     |DSP_MULTIPLIER  |    36|
+|6     |DSP_M_DATA      |    36|
+|7     |DSP_OUTPUT      |    24|
+|8     |DSP_OUTPUT_1    |    12|
+|9     |DSP_PREADD      |    36|
+|10    |DSP_PREADD_DATA |    36|
+|11    |LUT1            |    14|
+|12    |LUT2            |   868|
+|13    |LUT3            |   921|
+|14    |LUT4            |   959|
+|15    |LUT5            |   900|
+|16    |LUT6            |  4107|
+|17    |MUXF7           |  1248|
+|18    |FDRE            | 13999|
+|19    |FDSE            |     4|
++------+----------------+------+
+
+Report Instance Areas: 
++------+------------------+----------------------------+------+
+|      |Instance          |Module                      |Cells |
++------+------------------+----------------------------+------+
+|1     |top               |                            | 23405|
+|2     |  A2_0            |std_mem_d2_1                |  1089|
+|3     |  A3_0            |std_mem_d2_2                |  1089|
+|4     |  A0_0            |std_mem_d2                  |  1122|
+|5     |  A1_0            |std_mem_d2_0                |  1102|
+|6     |  A_i_j_00        |std_reg                     |   145|
+|7     |  A_i_j_10        |std_reg_3                   |   164|
+|8     |  A_i_j_20        |std_reg_4                   |   116|
+|9     |  A_i_j_30        |std_reg_5                   |   132|
+|10    |  A_i_k_00        |std_reg_6                   |    33|
+|11    |  A_i_k_10        |std_reg_7                   |    33|
+|12    |  A_i_k_20        |std_reg_8                   |   133|
+|13    |  A_i_k_30        |std_reg_9                   |   133|
+|14    |  A_read0_00      |std_reg_10                  |    43|
+|15    |  A_read0_10      |std_reg_11                  |    43|
+|16    |  A_read0_20      |std_reg_12                  |    43|
+|17    |  A_read0_30      |std_reg_13                  |    43|
+|18    |  A_read1_00      |std_reg_14                  |    34|
+|19    |  A_read1_10      |std_reg_15                  |    33|
+|20    |  A_read1_20      |std_reg_16                  |    33|
+|21    |  A_read1_30      |std_reg_17                  |    33|
+|22    |  A_sh_read0_0    |std_reg_18                  |    36|
+|23    |  Q0_0            |std_mem_d2_19               |  1153|
+|24    |  Q1_0            |std_mem_d2_20               |  1121|
+|25    |  Q2_0            |std_mem_d2_21               |  1121|
+|26    |  Q3_0            |std_mem_d2_22               |  1124|
+|27    |  Q_read0_00      |std_reg_23                  |    33|
+|28    |  Q_read0_10      |std_reg_24                  |    33|
+|29    |  Q_read0_20      |std_reg_25                  |    33|
+|30    |  Q_read0_30      |std_reg_26                  |    33|
+|31    |  Q_read1_00      |std_reg_27                  |    33|
+|32    |  Q_read1_10      |std_reg_28                  |    33|
+|33    |  Q_read1_20      |std_reg_29                  |    33|
+|34    |  Q_read1_30      |std_reg_30                  |    33|
+|35    |  Q_sh_read0_0    |std_reg_31                  |    68|
+|36    |  R0_0            |std_mem_d2__parameterized0  |  6465|
+|37    |  R_read0_00      |std_reg_32                  |    33|
+|38    |  R_read0_10      |std_reg_33                  |    33|
+|39    |  R_read0_20      |std_reg_34                  |    33|
+|40    |  R_read0_30      |std_reg_35                  |    33|
+|41    |  R_read1_00      |std_reg_36                  |    33|
+|42    |  R_read1_10      |std_reg_37                  |    33|
+|43    |  R_read1_20      |std_reg_38                  |    33|
+|44    |  R_read1_30      |std_reg_39                  |    33|
+|45    |  R_sh_read0_0    |std_reg_40                  |    65|
+|46    |  add11           |std_add__parameterized0     |    36|
+|47    |  add12           |std_add__parameterized0_41  |    36|
+|48    |  add13           |std_add__parameterized0_42  |    36|
+|49    |  add14           |std_add__parameterized0_43  |    44|
+|50    |  bin_read0_0     |std_reg_44                  |    33|
+|51    |  bin_read1_0     |std_reg_45                  |    33|
+|52    |  bin_read2_0     |std_reg_46                  |    33|
+|53    |  bin_read3_0     |std_reg_47                  |    33|
+|54    |  cond_computed   |std_reg__parameterized1     |     2|
+|55    |  cond_computed0  |std_reg__parameterized1_48  |     1|
+|56    |  cond_computed1  |std_reg__parameterized1_49  |     2|
+|57    |  cond_computed10 |std_reg__parameterized1_50  |     1|
+|58    |  cond_computed11 |std_reg__parameterized1_51  |     2|
+|59    |  cond_computed12 |std_reg__parameterized1_52  |     1|
+|60    |  cond_computed13 |std_reg__parameterized1_53  |     1|
+|61    |  cond_computed14 |std_reg__parameterized1_54  |     4|
+|62    |  cond_computed15 |std_reg__parameterized1_55  |     1|
+|63    |  cond_computed16 |std_reg__parameterized1_56  |     2|
+|64    |  cond_computed17 |std_reg__parameterized1_57  |     1|
+|65    |  cond_computed18 |std_reg__parameterized1_58  |     1|
+|66    |  cond_computed19 |std_reg__parameterized1_59  |     2|
+|67    |  cond_computed2  |std_reg__parameterized1_60  |     2|
+|68    |  cond_computed20 |std_reg__parameterized1_61  |     2|
+|69    |  cond_computed21 |std_reg__parameterized1_62  |     2|
+|70    |  cond_computed22 |std_reg__parameterized1_63  |     2|
+|71    |  cond_computed23 |std_reg__parameterized1_64  |     2|
+|72    |  cond_computed24 |std_reg__parameterized1_65  |     2|
+|73    |  cond_computed25 |std_reg__parameterized1_66  |     3|
+|74    |  cond_computed26 |std_reg__parameterized1_67  |     3|
+|75    |  cond_computed27 |std_reg__parameterized1_68  |     1|
+|76    |  cond_computed28 |std_reg__parameterized1_69  |     1|
+|77    |  cond_computed3  |std_reg__parameterized1_70  |     1|
+|78    |  cond_computed4  |std_reg__parameterized1_71  |     1|
+|79    |  cond_computed5  |std_reg__parameterized1_72  |     2|
+|80    |  cond_computed6  |std_reg__parameterized1_73  |     2|
+|81    |  cond_computed7  |std_reg__parameterized1_74  |     2|
+|82    |  cond_computed8  |std_reg__parameterized1_75  |     2|
+|83    |  cond_computed9  |std_reg__parameterized1_76  |     2|
+|84    |  cond_stored     |std_reg__parameterized1_77  |     1|
+|85    |  cond_stored0    |std_reg__parameterized1_78  |     2|
+|86    |  cond_stored1    |std_reg__parameterized1_79  |     1|
+|87    |  cond_stored10   |std_reg__parameterized1_80  |     1|
+|88    |  cond_stored11   |std_reg__parameterized1_81  |     1|
+|89    |  cond_stored12   |std_reg__parameterized1_82  |     1|
+|90    |  cond_stored13   |std_reg__parameterized1_83  |     1|
+|91    |  cond_stored14   |std_reg__parameterized1_84  |     3|
+|92    |  cond_stored15   |std_reg__parameterized1_85  |     1|
+|93    |  cond_stored16   |std_reg__parameterized1_86  |     1|
+|94    |  cond_stored17   |std_reg__parameterized1_87  |     1|
+|95    |  cond_stored18   |std_reg__parameterized1_88  |     2|
+|96    |  cond_stored19   |std_reg__parameterized1_89  |     9|
+|97    |  cond_stored2    |std_reg__parameterized1_90  |     2|
+|98    |  cond_stored20   |std_reg__parameterized1_91  |     1|
+|99    |  cond_stored21   |std_reg__parameterized1_92  |     1|
+|100   |  cond_stored22   |std_reg__parameterized1_93  |     1|
+|101   |  cond_stored23   |std_reg__parameterized1_94  |     4|
+|102   |  cond_stored24   |std_reg__parameterized1_95  |     5|
+|103   |  cond_stored25   |std_reg__parameterized1_96  |     1|
+|104   |  cond_stored26   |std_reg__parameterized1_97  |     1|
+|105   |  cond_stored27   |std_reg__parameterized1_98  |     1|
+|106   |  cond_stored28   |std_reg__parameterized1_99  |     2|
+|107   |  cond_stored3    |std_reg__parameterized1_100 |     4|
+|108   |  cond_stored4    |std_reg__parameterized1_101 |    20|
+|109   |  cond_stored5    |std_reg__parameterized1_102 |     2|
+|110   |  cond_stored6    |std_reg__parameterized1_103 |     3|
+|111   |  cond_stored7    |std_reg__parameterized1_104 |     7|
+|112   |  cond_stored8    |std_reg__parameterized1_105 |    35|
+|113   |  cond_stored9    |std_reg__parameterized1_106 |     1|
+|114   |  div_pipe0       |std_div_pipe                |   423|
+|115   |  div_pipe1       |std_div_pipe_107            |   391|
+|116   |  div_pipe2       |std_div_pipe_108            |   391|
+|117   |  div_pipe3       |std_div_pipe_109            |   392|
+|118   |  done_reg        |std_reg__parameterized1_110 |     1|
+|119   |  done_reg0       |std_reg__parameterized1_111 |     1|
+|120   |  done_reg1       |std_reg__parameterized1_112 |     1|
+|121   |  done_reg10      |std_reg__parameterized1_113 |     1|
+|122   |  done_reg11      |std_reg__parameterized1_114 |     1|
+|123   |  done_reg12      |std_reg__parameterized1_115 |     1|
+|124   |  done_reg13      |std_reg__parameterized1_116 |     1|
+|125   |  done_reg14      |std_reg__parameterized1_117 |     1|
+|126   |  done_reg15      |std_reg__parameterized1_118 |     1|
+|127   |  done_reg16      |std_reg__parameterized1_119 |     1|
+|128   |  done_reg17      |std_reg__parameterized1_120 |     1|
+|129   |  done_reg18      |std_reg__parameterized1_121 |     1|
+|130   |  done_reg19      |std_reg__parameterized1_122 |     1|
+|131   |  done_reg2       |std_reg__parameterized1_123 |     1|
+|132   |  done_reg20      |std_reg__parameterized1_124 |     1|
+|133   |  done_reg21      |std_reg__parameterized1_125 |     1|
+|134   |  done_reg22      |std_reg__parameterized1_126 |     1|
+|135   |  done_reg23      |std_reg__parameterized1_127 |     1|
+|136   |  done_reg24      |std_reg__parameterized1_128 |     1|
+|137   |  done_reg25      |std_reg__parameterized1_129 |     1|
+|138   |  done_reg26      |std_reg__parameterized1_130 |     1|
+|139   |  done_reg27      |std_reg__parameterized1_131 |     1|
+|140   |  done_reg28      |std_reg__parameterized1_132 |     1|
+|141   |  done_reg3       |std_reg__parameterized1_133 |     1|
+|142   |  done_reg4       |std_reg__parameterized1_134 |     1|
+|143   |  done_reg5       |std_reg__parameterized1_135 |     1|
+|144   |  done_reg6       |std_reg__parameterized1_136 |     1|
+|145   |  done_reg7       |std_reg__parameterized1_137 |     1|
+|146   |  done_reg8       |std_reg__parameterized1_138 |     1|
+|147   |  done_reg9       |std_reg__parameterized1_139 |     1|
+|148   |  fsm             |std_reg_140                 |    16|
+|149   |  fsm0            |std_reg_141                 |    12|
+|150   |  fsm1            |std_reg_142                 |     9|
+|151   |  fsm10           |std_reg_143                 |     7|
+|152   |  fsm11           |std_reg_144                 |    82|
+|153   |  fsm12           |std_reg_145                 |    10|
+|154   |  fsm13           |std_reg_146                 |    10|
+|155   |  fsm14           |std_reg_147                 |    41|
+|156   |  fsm15           |std_reg_148                 |    41|
+|157   |  fsm16           |std_reg_149                 |    47|
+|158   |  fsm17           |std_reg_150                 |    37|
+|159   |  fsm18           |std_reg_151                 |    88|
+|160   |  fsm19           |std_reg_152                 |    25|
+|161   |  fsm2            |std_reg_153                 |    98|
+|162   |  fsm20           |std_reg_154                 |    28|
+|163   |  fsm21           |std_reg_155                 |   131|
+|164   |  fsm22           |std_reg_156                 |    58|
+|165   |  fsm23           |std_reg_157                 |    37|
+|166   |  fsm24           |std_reg_158                 |   175|
+|167   |  fsm25           |std_reg_159                 |    13|
+|168   |  fsm26           |std_reg_160                 |    14|
+|169   |  fsm27           |std_reg_161                 |   144|
+|170   |  fsm28           |std_reg_162                 |    17|
+|171   |  fsm29           |std_reg_163                 |    10|
+|172   |  fsm3            |std_reg_164                 |    14|
+|173   |  fsm30           |std_reg_165                 |    17|
+|174   |  fsm4            |std_reg_166                 |    12|
+|175   |  fsm5            |std_reg_167                 |   188|
+|176   |  fsm6            |std_reg_168                 |    10|
+|177   |  fsm7            |std_reg_169                 |    10|
+|178   |  fsm8            |std_reg_170                 |    46|
+|179   |  fsm9            |std_reg_171                 |    29|
+|180   |  i0              |std_reg__parameterized0     |    52|
+|181   |  i2              |std_reg__parameterized0_172 |    20|
+|182   |  i3              |std_reg__parameterized0_173 |    45|
+|183   |  init11          |std_reg__parameterized0_174 |   151|
+|184   |  j01             |std_reg__parameterized0_175 |     7|
+|185   |  j_0             |std_reg__parameterized0_176 |    24|
+|186   |  k0              |std_reg__parameterized0_177 |    15|
+|187   |  mult_pipe0      |std_mult_pipe               |   128|
+|188   |    out_tmp0      |out_tmp0_funnel             |     8|
+|189   |    out_tmp0__0   |out_tmp0__0_funnel          |     8|
+|190   |    out_tmp_reg   |out_tmp0_funnel__1          |     8|
+|191   |  mult_pipe1      |std_mult_pipe_178           |   128|
+|192   |    out_tmp0      |out_tmp0_funnel__2          |     8|
+|193   |    out_tmp0__0   |out_tmp0__0_funnel__1       |     8|
+|194   |    out_tmp_reg   |out_tmp0_funnel__3          |     8|
+|195   |  mult_pipe10     |std_mult_pipe_179           |    93|
+|196   |    out_tmp0      |out_tmp0_funnel__4          |     8|
+|197   |    out_tmp0__0   |out_tmp0__0_funnel__2       |     8|
+|198   |    out_tmp_reg   |out_tmp0_funnel__5          |     8|
+|199   |  mult_pipe11     |std_mult_pipe_180           |    93|
+|200   |    out_tmp0      |out_tmp0_funnel__6          |     8|
+|201   |    out_tmp0__0   |out_tmp0__0_funnel__3       |     8|
+|202   |    out_tmp_reg   |out_tmp0_funnel__7          |     8|
+|203   |  mult_pipe2      |std_mult_pipe_181           |   128|
+|204   |    out_tmp0      |out_tmp0_funnel__8          |     8|
+|205   |    out_tmp0__0   |out_tmp0__0_funnel__4       |     8|
+|206   |    out_tmp_reg   |out_tmp0_funnel__9          |     8|
+|207   |  mult_pipe3      |std_mult_pipe_182           |   128|
+|208   |    out_tmp0      |out_tmp0_funnel__10         |     8|
+|209   |    out_tmp0__0   |out_tmp0__0_funnel__5       |     8|
+|210   |    out_tmp_reg   |out_tmp0_funnel__11         |     8|
+|211   |  mult_pipe4      |std_mult_pipe_183           |   159|
+|212   |    out_tmp0      |out_tmp0_funnel__12         |     8|
+|213   |    out_tmp0__0   |out_tmp0__0_funnel__6       |     8|
+|214   |    out_tmp_reg   |out_tmp0_funnel__13         |     8|
+|215   |  mult_pipe5      |std_mult_pipe_184           |   159|
+|216   |    out_tmp0      |out_tmp0_funnel__14         |     8|
+|217   |    out_tmp0__0   |out_tmp0__0_funnel__7       |     8|
+|218   |    out_tmp_reg   |out_tmp0_funnel__15         |     8|
+|219   |  mult_pipe6      |std_mult_pipe_185           |   158|
+|220   |    out_tmp0      |out_tmp0_funnel__16         |     8|
+|221   |    out_tmp0__0   |out_tmp0__0_funnel__8       |     8|
+|222   |    out_tmp_reg   |out_tmp0_funnel__17         |     8|
+|223   |  mult_pipe7      |std_mult_pipe_186           |   158|
+|224   |    out_tmp0      |out_tmp0_funnel__18         |     8|
+|225   |    out_tmp0__0   |out_tmp0__0_funnel__9       |     8|
+|226   |    out_tmp_reg   |out_tmp0_funnel__19         |     8|
+|227   |  mult_pipe8      |std_mult_pipe_187           |   158|
+|228   |    out_tmp0      |out_tmp0_funnel__20         |     8|
+|229   |    out_tmp0__0   |out_tmp0__0_funnel__10      |     8|
+|230   |    out_tmp_reg   |out_tmp0_funnel__21         |     8|
+|231   |  mult_pipe9      |std_mult_pipe_188           |   158|
+|232   |    out_tmp0      |out_tmp0_funnel__22         |     8|
+|233   |    out_tmp0__0   |out_tmp0__0_funnel__11      |     8|
+|234   |    out_tmp_reg   |out_tmp0_funnel__23         |     8|
+|235   |  nrm_0           |std_reg_189                 |    33|
+|236   |  par_done_reg    |std_reg__parameterized1_190 |     1|
+|237   |  par_done_reg0   |std_reg__parameterized1_191 |     3|
+|238   |  par_done_reg1   |std_reg__parameterized1_192 |     3|
+|239   |  par_done_reg10  |std_reg__parameterized1_193 |     2|
+|240   |  par_done_reg11  |std_reg__parameterized1_194 |     1|
+|241   |  par_done_reg12  |std_reg__parameterized1_195 |     1|
+|242   |  par_done_reg13  |std_reg__parameterized1_196 |     1|
+|243   |  par_done_reg14  |std_reg__parameterized1_197 |     1|
+|244   |  par_done_reg15  |std_reg__parameterized1_198 |     1|
+|245   |  par_done_reg16  |std_reg__parameterized1_199 |     2|
+|246   |  par_done_reg17  |std_reg__parameterized1_200 |     1|
+|247   |  par_done_reg18  |std_reg__parameterized1_201 |     1|
+|248   |  par_done_reg19  |std_reg__parameterized1_202 |     2|
+|249   |  par_done_reg2   |std_reg__parameterized1_203 |     1|
+|250   |  par_done_reg20  |std_reg__parameterized1_204 |     1|
+|251   |  par_done_reg21  |std_reg__parameterized1_205 |     3|
+|252   |  par_done_reg22  |std_reg__parameterized1_206 |     1|
+|253   |  par_done_reg23  |std_reg__parameterized1_207 |     1|
+|254   |  par_done_reg24  |std_reg__parameterized1_208 |     1|
+|255   |  par_done_reg25  |std_reg__parameterized1_209 |     1|
+|256   |  par_done_reg26  |std_reg__parameterized1_210 |     1|
+|257   |  par_done_reg27  |std_reg__parameterized1_211 |     3|
+|258   |  par_done_reg28  |std_reg__parameterized1_212 |     2|
+|259   |  par_done_reg29  |std_reg__parameterized1_213 |     1|
+|260   |  par_done_reg3   |std_reg__parameterized1_214 |     1|
+|261   |  par_done_reg30  |std_reg__parameterized1_215 |     1|
+|262   |  par_done_reg31  |std_reg__parameterized1_216 |     2|
+|263   |  par_done_reg32  |std_reg__parameterized1_217 |     3|
+|264   |  par_done_reg33  |std_reg__parameterized1_218 |     2|
+|265   |  par_done_reg34  |std_reg__parameterized1_219 |     2|
+|266   |  par_done_reg35  |std_reg__parameterized1_220 |     1|
+|267   |  par_done_reg36  |std_reg__parameterized1_221 |     1|
+|268   |  par_done_reg37  |std_reg__parameterized1_222 |     2|
+|269   |  par_done_reg38  |std_reg__parameterized1_223 |     1|
+|270   |  par_done_reg39  |std_reg__parameterized1_224 |     1|
+|271   |  par_done_reg4   |std_reg__parameterized1_225 |     2|
+|272   |  par_done_reg40  |std_reg__parameterized1_226 |     1|
+|273   |  par_done_reg41  |std_reg__parameterized1_227 |     1|
+|274   |  par_done_reg42  |std_reg__parameterized1_228 |     1|
+|275   |  par_done_reg43  |std_reg__parameterized1_229 |     1|
+|276   |  par_done_reg44  |std_reg__parameterized1_230 |     5|
+|277   |  par_done_reg45  |std_reg__parameterized1_231 |     2|
+|278   |  par_done_reg46  |std_reg__parameterized1_232 |     2|
+|279   |  par_done_reg47  |std_reg__parameterized1_233 |     3|
+|280   |  par_done_reg48  |std_reg__parameterized1_234 |     1|
+|281   |  par_done_reg49  |std_reg__parameterized1_235 |     1|
+|282   |  par_done_reg5   |std_reg__parameterized1_236 |     2|
+|283   |  par_done_reg50  |std_reg__parameterized1_237 |     1|
+|284   |  par_done_reg51  |std_reg__parameterized1_238 |     1|
+|285   |  par_done_reg52  |std_reg__parameterized1_239 |     1|
+|286   |  par_done_reg53  |std_reg__parameterized1_240 |     1|
+|287   |  par_done_reg54  |std_reg__parameterized1_241 |     1|
+|288   |  par_done_reg55  |std_reg__parameterized1_242 |     1|
+|289   |  par_done_reg56  |std_reg__parameterized1_243 |     2|
+|290   |  par_done_reg57  |std_reg__parameterized1_244 |     3|
+|291   |  par_done_reg58  |std_reg__parameterized1_245 |     3|
+|292   |  par_done_reg59  |std_reg__parameterized1_246 |     3|
+|293   |  par_done_reg6   |std_reg__parameterized1_247 |     2|
+|294   |  par_done_reg60  |std_reg__parameterized1_248 |     2|
+|295   |  par_done_reg61  |std_reg__parameterized1_249 |     2|
+|296   |  par_done_reg62  |std_reg__parameterized1_250 |     2|
+|297   |  par_done_reg63  |std_reg__parameterized1_251 |     3|
+|298   |  par_done_reg64  |std_reg__parameterized1_252 |     1|
+|299   |  par_done_reg65  |std_reg__parameterized1_253 |     1|
+|300   |  par_done_reg66  |std_reg__parameterized1_254 |     3|
+|301   |  par_done_reg7   |std_reg__parameterized1_255 |     2|
+|302   |  par_done_reg8   |std_reg__parameterized1_256 |     1|
+|303   |  par_done_reg9   |std_reg__parameterized1_257 |     2|
+|304   |  par_reset       |std_reg__parameterized1_258 |     6|
+|305   |  par_reset0      |std_reg__parameterized1_259 |     5|
+|306   |  par_reset1      |std_reg__parameterized1_260 |     1|
+|307   |  par_reset10     |std_reg__parameterized1_261 |     1|
+|308   |  par_reset11     |std_reg__parameterized1_262 |     5|
+|309   |  par_reset12     |std_reg__parameterized1_263 |     6|
+|310   |  par_reset13     |std_reg__parameterized1_264 |     1|
+|311   |  par_reset2      |std_reg__parameterized1_265 |     5|
+|312   |  par_reset3      |std_reg__parameterized1_266 |     1|
+|313   |  par_reset4      |std_reg__parameterized1_267 |     9|
+|314   |  par_reset5      |std_reg__parameterized1_268 |     1|
+|315   |  par_reset6      |std_reg__parameterized1_269 |     9|
+|316   |  par_reset7      |std_reg__parameterized1_270 |     1|
+|317   |  par_reset8      |std_reg__parameterized1_271 |     5|
+|318   |  par_reset9      |std_reg__parameterized1_272 |     9|
+|319   |  sqrt0           |std_sqrt                    |   267|
+|320   |  v_00            |std_reg_273                 |    33|
+|321   |  v_10            |std_reg_274                 |    33|
+|322   |  v_20            |std_reg_275                 |    33|
+|323   |  v_30            |std_reg_276                 |    33|
++------+------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:17 ; elapsed = 00:04:02 . Memory (MB): peak = 3158.023 ; gain = 824.855 ; free physical = 20323 ; free virtual = 40515
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 768 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:05 ; elapsed = 00:03:43 . Memory (MB): peak = 3158.023 ; gain = 644.199 ; free physical = 20295 ; free virtual = 40487
+Synthesis Optimization Complete : Time (s): cpu = 00:02:17 ; elapsed = 00:04:03 . Memory (MB): peak = 3158.027 ; gain = 824.855 ; free physical = 20295 ; free virtual = 40487
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1381 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3198.039 ; gain = 0.000 ; free physical = 21391 ; free virtual = 41567
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 36 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 36 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+203 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:36 ; elapsed = 00:04:51 . Memory (MB): peak = 3198.039 ; gain = 1663.320 ; free physical = 21498 ; free virtual = 41674
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3198.039 ; gain = 0.000 ; free physical = 21491 ; free virtual = 41667
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/tmp/tmp.8f1FjC4Sv4/out/FutilBuild.runs/synth_1/main.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3222.055 ; gain = 24.016 ; free physical = 21051 ; free virtual = 41231
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 18 13:52:07 2020...

@@ -12,15 +12,31 @@ def find_row(table, colname, key):
             return row
     raise Exception(f"{key} was not found in column: {colname}")
 
+
 def to_int(s):
     if s == '-':
         return 0
     else:
         return int(s)
 
+
 def file_contains(regex, filename):
     strings = re.findall(regex, filename.open().read())
     return len(strings) == 0
+
+
+def rtl_component_extract(directory, name):
+    try:
+        with (directory / "synth_runme.log").open() as f:
+            log = f.read()
+            comp_usage = re.search(r'Start RTL Component Statistics(.*?)Finished RTL', log, re.DOTALL).group(1)
+            a = re.findall('{} := ([0-9]*).*$'.format(name), comp_usage, re.MULTILINE)
+            return sum(map(int, a))
+    except Exception as e:
+        print(e)
+        print("RTL component log not found")
+        return 0
+
 
 def futil_extract(directory):
     try:
@@ -32,11 +48,15 @@ def futil_extract(directory):
         return {
             'LUT': find_row(slice_logic, 'Site Type', 'CLB LUTs')['Used'],
             'DSP': find_row(dsp_table, 'Site Type', 'DSPs')['Used'],
-            'MEET_TIMING': int(meet_timing)
+            'MEET_TIMING': int(meet_timing),
+            'REGISTERS': rtl_component_extract(directory, 'Registers'),
+            'MUXES': rtl_component_extract(directory, 'Muxes')
         }
-    except:
+    except Exception as e:
+        print(e)
         print("Synthesis files weren't found, skipping.", file=sys.stderr)
         return {}
+
 
 def hls_extract(directory):
     try:
@@ -62,6 +82,7 @@ def hls_extract(directory):
     except:
         print("HLS files weren't found, skipping.", file=sys.stderr)
         return {}
+
 
 if __name__ == "__main__":
     directory = sys.argv[1]

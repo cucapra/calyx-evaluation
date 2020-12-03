@@ -1,0 +1,711 @@
+
+*** Running vivado
+    with args -log main.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+
+
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source main.tcl -notrace
+Command: synth_design -top main -part xczu3eg-sbva484-1-e -mode out_of_context -flatten_hierarchy rebuilt
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-e
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 30520 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2332.133 ; gain = 0.000 ; free physical = 10528 ; free virtual = 46120
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'main' [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:72]
+INFO: [Synth 8-6157] synthesizing module 'std_reg' [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:55]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg' (1#1) [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'std_add' [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:1]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_add' (2#1) [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'std_add__parameterized0' [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:1]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_add__parameterized0' (2#1) [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'std_const' [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:8]
+	Parameter width bound to: 4 - type: integer 
+	Parameter value bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const' (3#1) [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'std_const__parameterized0' [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:8]
+	Parameter width bound to: 4 - type: integer 
+	Parameter value bound to: 7 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const__parameterized0' (3#1) [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'std_const__parameterized1' [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:8]
+	Parameter width bound to: 4 - type: integer 
+	Parameter value bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const__parameterized1' (3#1) [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'std_const__parameterized2' [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:8]
+	Parameter width bound to: 32 - type: integer 
+	Parameter value bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_const__parameterized2' (3#1) [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized0' [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:55]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized0' (3#1) [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'std_le' [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:14]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_le' (4#1) [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'std_mult_pipe' [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:21]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_mult_pipe' (5#1) [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:21]
+INFO: [Synth 8-6157] synthesizing module 'std_reg__parameterized1' [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:55]
+	Parameter width bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'std_reg__parameterized1' (5#1) [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:55]
+WARNING: [Synth 8-3848] Net A_int0_0_write_data in module/entity main does not have driver. [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:78]
+WARNING: [Synth 8-3848] Net A_int0_0_write_en in module/entity main does not have driver. [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:79]
+WARNING: [Synth 8-3848] Net p_int0_write_data in module/entity main does not have driver. [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:84]
+WARNING: [Synth 8-3848] Net p_int0_write_en in module/entity main does not have driver. [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:85]
+WARNING: [Synth 8-3848] Net r_int0_write_data in module/entity main does not have driver. [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:96]
+WARNING: [Synth 8-3848] Net r_int0_write_en in module/entity main does not have driver. [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:97]
+INFO: [Synth 8-6155] done synthesizing module 'main' (6#1) [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:72]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[31]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[30]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[29]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[28]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[27]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[26]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[25]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[24]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[23]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[22]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[21]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[20]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[19]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[18]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[17]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[16]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[15]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[14]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[13]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[12]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[11]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[10]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[9]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[8]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[7]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[6]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[5]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[4]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[3]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[2]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[1]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_data[0]
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_write_en
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[31]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[30]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[29]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[28]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[27]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[26]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[25]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[24]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[23]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[22]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[21]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[20]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[19]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[18]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[17]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[16]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[15]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[14]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[13]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[12]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[11]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[10]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[9]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[8]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[7]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[6]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[5]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[4]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[3]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[2]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[1]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_data[0]
+WARNING: [Synth 8-3331] design main has unconnected port p_int0_write_en
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[31]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[30]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[29]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[28]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[27]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[26]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[25]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[24]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[23]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[22]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[21]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[20]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[19]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[18]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[17]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[16]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[15]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[14]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[13]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[12]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[11]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[10]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[9]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[8]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[7]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[6]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[5]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[4]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[3]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[2]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[1]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_data[0]
+WARNING: [Synth 8-3331] design main has unconnected port r_int0_write_en
+WARNING: [Synth 8-3331] design main has unconnected port A_int0_0_done
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2332.133 ; gain = 0.000 ; free physical = 10583 ; free virtual = 46178
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2332.133 ; gain = 0.000 ; free physical = 10708 ; free virtual = 46312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 2332.133 ; gain = 0.000 ; free physical = 10708 ; free virtual = 46312
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/tmp/tmp.w3cmU3KG3r/device.xdc]
+create_clock: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2482.973 ; gain = 0.000 ; free physical = 10296 ; free virtual = 45893
+Finished Parsing XDC File [/tmp/tmp.w3cmU3KG3r/device.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2482.973 ; gain = 0.000 ; free physical = 10296 ; free virtual = 45892
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2485.941 ; gain = 2.969 ; free physical = 10289 ; free virtual = 45885
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 2485.941 ; gain = 153.809 ; free physical = 10568 ; free virtual = 46173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 2485.941 ; gain = 153.809 ; free physical = 10568 ; free virtual = 46173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 2485.941 ; gain = 153.809 ; free physical = 10568 ; free virtual = 46173
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:32 . Memory (MB): peak = 2485.941 ; gain = 153.809 ; free physical = 10595 ; free virtual = 46201
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 20    
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 53    
++---Multipliers : 
+	                32x32  Multipliers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 23    
+	   2 Input      4 Bit        Muxes := 28    
+	   2 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 32    
+	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module main 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 19    
+	   2 Input      4 Bit        Muxes := 28    
+	   2 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 2     
+	   7 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 32    
+	   5 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+Module std_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_add 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
+Module std_add__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module std_reg__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module std_mult_pipe 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 4     
+	                1 Bit    Registers := 3     
++---Multipliers : 
+	                32x32  Multipliers := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+Module std_reg__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:37]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [/tmp/tmp.w3cmU3KG3r/linear-algebra-bicg.sv:37]
+DSP Report: Generating DSP mult_pipe1/out_tmp0, operation Mode is: A2*B.
+DSP Report: register mult_pipe1/out_tmp0 is absorbed into DSP mult_pipe1/out_tmp0.
+DSP Report: operator mult_pipe1/out_tmp0 is absorbed into DSP mult_pipe1/out_tmp0.
+DSP Report: operator mult_pipe1/out_tmp0 is absorbed into DSP mult_pipe1/out_tmp0.
+DSP Report: Generating DSP mult_pipe1/out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mult_pipe1/out_tmp_reg is absorbed into DSP mult_pipe1/out_tmp_reg.
+DSP Report: operator mult_pipe1/out_tmp0 is absorbed into DSP mult_pipe1/out_tmp_reg.
+DSP Report: operator mult_pipe1/out_tmp0 is absorbed into DSP mult_pipe1/out_tmp_reg.
+DSP Report: Generating DSP mult_pipe1/out_tmp0, operation Mode is: A2*B2.
+DSP Report: register mult_pipe1/out_tmp0 is absorbed into DSP mult_pipe1/out_tmp0.
+DSP Report: register mult_pipe1/out_tmp0 is absorbed into DSP mult_pipe1/out_tmp0.
+DSP Report: operator mult_pipe1/out_tmp0 is absorbed into DSP mult_pipe1/out_tmp0.
+DSP Report: operator mult_pipe1/out_tmp0 is absorbed into DSP mult_pipe1/out_tmp0.
+DSP Report: Generating DSP mult_pipe1/out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register mult_pipe1/out_tmp_reg is absorbed into DSP mult_pipe1/out_tmp_reg.
+DSP Report: register mult_pipe1/out_tmp_reg is absorbed into DSP mult_pipe1/out_tmp_reg.
+DSP Report: operator mult_pipe1/out_tmp0 is absorbed into DSP mult_pipe1/out_tmp_reg.
+DSP Report: operator mult_pipe1/out_tmp0 is absorbed into DSP mult_pipe1/out_tmp_reg.
+DSP Report: Generating DSP mult_pipe0/out_tmp0, operation Mode is: A2*B.
+DSP Report: register mult_pipe0/out_tmp0 is absorbed into DSP mult_pipe0/out_tmp0.
+DSP Report: operator mult_pipe0/out_tmp0 is absorbed into DSP mult_pipe0/out_tmp0.
+DSP Report: operator mult_pipe0/out_tmp0 is absorbed into DSP mult_pipe0/out_tmp0.
+DSP Report: Generating DSP mult_pipe0/out_tmp_reg, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: register mult_pipe0/out_tmp_reg is absorbed into DSP mult_pipe0/out_tmp_reg.
+DSP Report: operator mult_pipe0/out_tmp0 is absorbed into DSP mult_pipe0/out_tmp_reg.
+DSP Report: operator mult_pipe0/out_tmp0 is absorbed into DSP mult_pipe0/out_tmp_reg.
+DSP Report: Generating DSP mult_pipe0/out_tmp0, operation Mode is: A2*B2.
+DSP Report: register mult_pipe0/out_tmp0 is absorbed into DSP mult_pipe0/out_tmp0.
+DSP Report: register mult_pipe0/out_tmp0 is absorbed into DSP mult_pipe0/out_tmp0.
+DSP Report: operator mult_pipe0/out_tmp0 is absorbed into DSP mult_pipe0/out_tmp0.
+DSP Report: operator mult_pipe0/out_tmp0 is absorbed into DSP mult_pipe0/out_tmp0.
+DSP Report: Generating DSP mult_pipe0/out_tmp_reg, operation Mode is: (PCIN>>17)+A2*B.
+DSP Report: register mult_pipe0/out_tmp_reg is absorbed into DSP mult_pipe0/out_tmp_reg.
+DSP Report: register mult_pipe0/out_tmp_reg is absorbed into DSP mult_pipe0/out_tmp_reg.
+DSP Report: operator mult_pipe0/out_tmp0 is absorbed into DSP mult_pipe0/out_tmp_reg.
+DSP Report: operator mult_pipe0/out_tmp0 is absorbed into DSP mult_pipe0/out_tmp_reg.
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[31]' (FDE) to 'fsm1/out_reg[30]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[30]' (FDE) to 'fsm1/out_reg[29]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[28]' (FDE) to 'fsm1/out_reg[29]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[29]' (FDE) to 'fsm1/out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[24]' (FDE) to 'fsm1/out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[25]' (FDE) to 'fsm1/out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[26]' (FDE) to 'fsm1/out_reg[27]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[27]' (FDE) to 'fsm1/out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[18]' (FDE) to 'fsm1/out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[19]' (FDE) to 'fsm1/out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[16]' (FDE) to 'fsm1/out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[17]' (FDE) to 'fsm1/out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[22]' (FDE) to 'fsm1/out_reg[23]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[23]' (FDE) to 'fsm1/out_reg[21]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[20]' (FDE) to 'fsm1/out_reg[21]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[21]' (FDE) to 'fsm1/out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[6]' (FDE) to 'fsm1/out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[7]' (FDE) to 'fsm1/out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[4]' (FDE) to 'fsm1/out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[5]' (FDE) to 'fsm1/out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[3]' (FDE) to 'fsm1/out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[14]' (FDE) to 'fsm1/out_reg[15]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[15]' (FDE) to 'fsm1/out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[12]' (FDE) to 'fsm1/out_reg[13]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[13]' (FDE) to 'fsm1/out_reg[11]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[8]' (FDE) to 'fsm1/out_reg[11]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[9]' (FDE) to 'fsm1/out_reg[11]'
+INFO: [Synth 8-3886] merging instance 'fsm1/out_reg[10]' (FDE) to 'fsm1/out_reg[11]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fsm1/out_reg[11] )
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[47]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[46]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[45]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[44]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[43]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[42]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[41]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[40]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[39]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[38]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[37]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[36]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[35]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[34]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[33]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[32]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[31]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[30]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[29]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[28]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[27]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[26]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[25]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[24]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[23]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[22]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[21]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[20]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[19]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[18]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[17]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[16]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[15]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[47]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[46]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[45]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[44]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[43]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[42]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[41]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[40]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[39]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[38]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[37]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[36]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[35]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[34]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[33]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[32]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[31]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[30]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[29]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[28]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[27]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[26]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[25]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[24]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[23]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[22]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[21]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[20]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[19]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[18]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe1/out_tmp_reg[17]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[47]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[46]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[45]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[44]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[43]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[42]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[41]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[40]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[39]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[38]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[37]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[36]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[35]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[34]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[33]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[32]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[31]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[30]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[29]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[28]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[27]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[26]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[25]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[24]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[23]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[22]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[21]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[20]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[19]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[18]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[17]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[16]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[15]) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[47]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[46]__0) is unused and will be removed from module main.
+WARNING: [Synth 8-3332] Sequential element (mult_pipe0/out_tmp_reg[45]__0) is unused and will be removed from module main.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 2485.941 ; gain = 153.809 ; free physical = 10430 ; free virtual = 46055
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|main        | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|main        | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|main        | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|main        | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
+|main        | A2*B            | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|main        | (PCIN>>17)+A*B  | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|main        | A2*B2           | 18     | 18     | -      | -      | 48     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|main        | (PCIN>>17)+A2*B | 18     | 16     | -      | -      | 48     | 1    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:02:22 . Memory (MB): peak = 2901.199 ; gain = 569.066 ; free physical = 7320 ; free virtual = 42946
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:51 ; elapsed = 00:02:25 . Memory (MB): peak = 2942.219 ; gain = 610.086 ; free physical = 7212 ; free virtual = 42838
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:52 ; elapsed = 00:02:25 . Memory (MB): peak = 2950.227 ; gain = 618.094 ; free physical = 7197 ; free virtual = 42822
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:02:27 . Memory (MB): peak = 2950.230 ; gain = 618.098 ; free physical = 7166 ; free virtual = 42792
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:02:27 . Memory (MB): peak = 2950.230 ; gain = 618.098 ; free physical = 7163 ; free virtual = 42789
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:02:27 . Memory (MB): peak = 2950.230 ; gain = 618.098 ; free physical = 7141 ; free virtual = 42766
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:02:27 . Memory (MB): peak = 2950.230 ; gain = 618.098 ; free physical = 7137 ; free virtual = 42762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:02:27 . Memory (MB): peak = 2950.230 ; gain = 618.098 ; free physical = 7125 ; free virtual = 42751
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:02:27 . Memory (MB): peak = 2950.230 ; gain = 618.098 ; free physical = 7123 ; free virtual = 42748
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |CARRY8          |     8|
+|2     |DSP_ALU         |     6|
+|3     |DSP_A_B_DATA    |     6|
+|4     |DSP_C_DATA      |     6|
+|5     |DSP_MULTIPLIER  |     6|
+|6     |DSP_M_DATA      |     6|
+|7     |DSP_OUTPUT      |     4|
+|8     |DSP_OUTPUT_1    |     2|
+|9     |DSP_PREADD      |     6|
+|10    |DSP_PREADD_DATA |     6|
+|11    |LUT2            |    41|
+|12    |LUT3            |   145|
+|13    |LUT4            |    57|
+|14    |LUT5            |    26|
+|15    |LUT6            |   144|
+|16    |FDRE            |   379|
++------+----------------+------+
+
+Report Instance Areas: 
++------+-----------------+-----------------------------------+------+
+|      |Instance         |Module                             |Cells |
++------+-----------------+-----------------------------------+------+
+|1     |top              |                                   |   848|
+|2     |  add1           |std_add__parameterized0            |     4|
+|3     |  A_i_j_0        |std_reg                            |    37|
+|4     |  bin_read0_0    |std_reg_0                          |    33|
+|5     |  bin_read1_0    |std_reg_1                          |    33|
+|6     |  cond_computed  |std_reg__parameterized1            |     2|
+|7     |  cond_computed0 |std_reg__parameterized1_2          |     1|
+|8     |  cond_computed1 |std_reg__parameterized1_3          |     1|
+|9     |  cond_stored    |std_reg__parameterized1_4          |     2|
+|10    |  cond_stored0   |std_reg__parameterized1_5          |     1|
+|11    |  cond_stored1   |std_reg__parameterized1_6          |     2|
+|12    |  done_reg       |std_reg__parameterized1_7          |     1|
+|13    |  done_reg0      |std_reg__parameterized1_8          |     1|
+|14    |  done_reg1      |std_reg__parameterized1_9          |     1|
+|15    |  fsm            |std_reg_10                         |    10|
+|16    |  fsm0           |std_reg_11                         |    44|
+|17    |  fsm1           |std_reg_12                         |    73|
+|18    |  fsm2           |std_reg_13                         |    53|
+|19    |  fsm3           |std_reg_14                         |    20|
+|20    |  i0             |std_reg__parameterized0            |    11|
+|21    |  i1             |std_reg__parameterized0_15         |    10|
+|22    |  j0             |std_reg__parameterized0_16         |    14|
+|23    |  mult_pipe0     |std_mult_pipe                      |   157|
+|24    |    out_tmp0     |\mult_pipe1/out_tmp0_funnel__2     |     8|
+|25    |    out_tmp0__0  |\mult_pipe1/out_tmp0__0_funnel__1  |     8|
+|26    |    out_tmp_reg  |\mult_pipe1/out_tmp0_funnel__3     |     8|
+|27    |  mult_pipe1     |std_mult_pipe_17                   |   159|
+|28    |    out_tmp0     |\mult_pipe1/out_tmp0_funnel        |     8|
+|29    |    out_tmp0__0  |\mult_pipe1/out_tmp0__0_funnel     |     8|
+|30    |    out_tmp_reg  |\mult_pipe1/out_tmp0_funnel__1     |     8|
+|31    |  p_int_read0_0  |std_reg_18                         |    33|
+|32    |  par_done_reg   |std_reg__parameterized1_19         |     4|
+|33    |  par_done_reg0  |std_reg__parameterized1_20         |     1|
+|34    |  par_done_reg1  |std_reg__parameterized1_21         |     1|
+|35    |  par_done_reg2  |std_reg__parameterized1_22         |     2|
+|36    |  par_done_reg3  |std_reg__parameterized1_23         |     1|
+|37    |  par_reset      |std_reg__parameterized1_24         |     4|
+|38    |  par_reset0     |std_reg__parameterized1_25         |     2|
+|39    |  q0_0           |std_reg_26                         |    33|
+|40    |  r_int_read0_0  |std_reg_27                         |    33|
+|41    |  s0_0           |std_reg_28                         |    64|
++------+-----------------+-----------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:02:27 . Memory (MB): peak = 2950.230 ; gain = 618.098 ; free physical = 7121 ; free virtual = 42746
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 230 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:45 ; elapsed = 00:02:11 . Memory (MB): peak = 2950.230 ; gain = 464.289 ; free physical = 7138 ; free virtual = 42764
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:02:27 . Memory (MB): peak = 2950.234 ; gain = 618.098 ; free physical = 7138 ; free virtual = 42764
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2990.246 ; gain = 0.000 ; free physical = 8105 ; free virtual = 43727
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6 instances were transformed.
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD_DATA, DSP_PREADD): 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+69 Infos, 206 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:08 ; elapsed = 00:03:09 . Memory (MB): peak = 2990.246 ; gain = 1498.078 ; free physical = 8621 ; free virtual = 44243
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2990.246 ; gain = 0.000 ; free physical = 8621 ; free virtual = 44243
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/tmp/tmp.w3cmU3KG3r/out/FutilBuild.runs/synth_1/main.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 17 16:19:33 2020...

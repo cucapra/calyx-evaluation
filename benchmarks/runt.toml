@@ -9,3 +9,13 @@ fud exec -s verilog.data {}.data \
          -q
 """
 expect_dir = "small_simulation/"
+
+[[tests]]
+name = "Unrolled"
+paths = [ "unrolled/*.fuse" ]
+cmd = """
+fud exec -s verilog.data {}.data \
+         {} --to dat \
+         -q
+"""
+expect_dir = "small_simulation/"

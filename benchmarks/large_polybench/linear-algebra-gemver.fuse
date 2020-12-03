@@ -38,8 +38,8 @@ view y_sh = y[_: bank 1];
 view z_sh = z[_: bank 1];
 
 // Scalar inputs.
-let alpha_ = alpha_int[0];
-let beta_ = beta_int[0];
+let alpha_: ubit<32> = alpha_int[(0 as ubit<1>)];
+let beta_: ubit<32> = beta_int[(0 as ubit<1>)];
 
 // Input interfaces.
 for (let i: ubit<7> = 0..64) {
