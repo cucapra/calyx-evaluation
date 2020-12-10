@@ -1,5 +1,0 @@
-benchmark,type,lut,dsp,latency,meet_timing,source
-linear-algebra-syr2k,hls,630,12,6421,1,results/08_10_59-08_2020
-linear-algebra-syr2k,hls_total,670,12,6421,1,results/08_10_59-08_2020
-linear-algebra-syr2k,futil,834,15,0,0,results/08_10_59-08_2020
-

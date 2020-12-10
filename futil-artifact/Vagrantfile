@@ -50,7 +50,7 @@ Vagrant.configure("2") do |config|
     # system dependencies
     apt-get update
     DEBIAN_FRONTEND=noninteractive apt-get -y install xubuntu-core^
-    DEBIAN_FRONTEND=noninteractive apt-get install -y xauth libxrender1 libxtst6 libxi6 jq sbt default-jre default-jdk virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11 python3-distutils firefox
+    DEBIAN_FRONTEND=noninteractive apt-get install -y xauth libxrender1 libxtst6 libxi6 jq sbt default-jre default-jdk virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11 python3-distutils firefox autoconf flex bison
     sed -i 's/allowed_users=.*$/allowed_users=anybody/' /etc/X11/Xwrapper.config
   SHELL
 
@@ -108,9 +108,9 @@ Vagrant.configure("2") do |config|
     cat /vagrant/Xilinx_profile >> ~/.profile
 
     # move Xilinx installer to Desktop
-    cp /vagrant/Xilinx_Unified_2019.2_1106_2127_Lin64.bin ~/Desktop
+    cp /vagrant/Xilinx_Unified_2019.2_1106_2127_Lin64.bin ~/Desktop/
 
     # move benchmarks to virtual machine
-    cp -r /vagrant/benchmarks ~
+    cp -r /vagrant/benchmarks ~/
   SHELL
 end

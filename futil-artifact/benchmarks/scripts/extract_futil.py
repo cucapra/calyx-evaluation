@@ -3,7 +3,6 @@
 import rpt
 import sys
 import re
-import json
 from pathlib import Path
 
 def find_row(table, colname, key):
