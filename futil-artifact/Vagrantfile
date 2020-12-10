@@ -1,0 +1,116 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+  # The most common configuration options are documented and commented below.
+  # For a complete reference, please see the online documentation at
+  # https://docs.vagrantup.com.
+
+  # Every Vagrant development environment requires a box. You can search for
+  # boxes at https://vagrantcloud.com/search.
+  config.vm.box = "ubuntu/bionic64"
+  config.disksize.size = '100GB'
+
+  # configure X11 forwarding
+  config.ssh.forward_agent = true
+  config.ssh.forward_x11 = true
+
+  # Returns true if `GUI` environment variable is non empty.
+  # Defaults to false
+  def gui_enabled?
+    !ENV.fetch('GUI', '').empty?
+  end
+
+  # Provider-specific configuration so you can fine-tune various
+  # backing providers for Vagrant. These expose provider-specific options.
+  # Example for VirtualBox:
+  #
+  config.vm.provider "virtualbox" do |vb|
+    # Customize the amount of memory on the VM:
+    vb.memory = "4096"
+    vb.cpus = 2
+    vb.gui = gui_enabled?
+  end
+  #
+  # View the documentation for the provider you are using for more
+  # information on available options.
+
+  # Enable provisioning with a shell script. Additional provisioners such as
+  # Ansible, Chef, Docker, Puppet and Salt are also available. Please see the
+  # documentation for more information about their specific syntax and use.
+  config.vm.provision "shell", inline: <<-SHELL
+    # add scala source
+    echo "deb https://dl.bintray.com/sbt/debian /" | tee -a /etc/apt/sources.list.d/sbt.list
+    curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | apt-key add
+
+    # system dependencies
+    apt-get update
+    DEBIAN_FRONTEND=noninteractive apt-get -y install xubuntu-core^
+    DEBIAN_FRONTEND=noninteractive apt-get install -y xauth libxrender1 libxtst6 libxi6 jq sbt default-jre default-jdk virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11 python3-distutils firefox
+    sed -i 's/allowed_users=.*$/allowed_users=anybody/' /etc/X11/Xwrapper.config
+  SHELL
+
+  # install verilator
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
+    sudo apt-get install git make autoconf g++ flex bison libfl2 libfl-dev
+    git clone https://github.com/verilator/verilator
+    cd verilator
+    git checkout v4.038
+    autoconf
+    ./configure
+    make
+    sudo make install
+  SHELL
+
+  # user level installing
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
+    # new version of pip
+    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    python3 get-pip.py
+    rm get-pip.py
+    source ~/.profile
+
+     # python packages
+    pip install flit numpy
+
+    # rust and rust packages
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    source $HOME/.cargo/env
+    cargo install runt vcdump
+  SHELL
+
+  # user level provisioning
+  config.vm.provision "shell", privileged: false, inline: <<-SHELL
+    # install dahlia
+    git clone https://github.com/cucapra/dahlia.git
+    cd dahlia
+    sbt assembly
+    ln -s $(realpath fuse) ~/.local/bin/dahlia
+    cd ~
+
+    # install futil
+    git clone https://github.com/cucapra/futil.git
+    cd futil
+    cargo build
+    ln -s $(realpath ./target/debug/futil) ~/.local/bin/futil
+    cd fud
+    flit install
+    mkdir -p ~/.config
+    fud config global.futil_directory "/home/vagrant/futil"
+    fud config stages.futil.exec "futil"
+    cd ~
+
+    # add Xilinx tools to the path
+    cat /vagrant/Xilinx_profile >> ~/.profile
+
+    # move Xilinx installer to Desktop
+    cp /vagrant/Xilinx_Unified_2019.2_1106_2127_Lin64.bin ~/Desktop
+
+    # move benchmarks to virtual machine
+    cp -r /vagrant/benchmarks ~
+  SHELL
+end

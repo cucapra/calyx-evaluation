@@ -1,0 +1,11 @@
+unrolled/linear-algebra-2mm.fuse
+unrolled/linear-algebra-3mm.fuse
+unrolled/linear-algebra-atax.fuse
+unrolled/linear-algebra-doitgen.fuse
+unrolled/linear-algebra-gemm.fuse
+unrolled/linear-algebra-gemver.fuse
+unrolled/linear-algebra-gesummv.fuse
+unrolled/linear-algebra-gramschmidt.fuse
+unrolled/linear-algebra-mvt.fuse
+unrolled/linear-algebra-syr2k.fuse
+unrolled/linear-algebra-syrk.fuse

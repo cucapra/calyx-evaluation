@@ -2,3 +2,7 @@
 .out
 
 .ipynb_checkpoints
+.vagrant/
+futil-artifact/data/*
+*.pyc
+*.log
