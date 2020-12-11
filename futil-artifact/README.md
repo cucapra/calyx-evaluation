@@ -60,8 +60,21 @@ Open a Terminal (right click on desktop and select `Open Terminal Here`) and nav
  - `vivado -h` and `vivado_hls -h` should show output.
 
 #### Synthesizing Benchmarks
+
+```
+ls benchmarks/small_polybench/*.fuse | parallel --bar -j4 "fud e -q {} --to hls-estimate | jq '{ \"{.}\": ., \"type\": \"hls\"}' > {.}.json"
+```
+
+```
+ls benchmarks/small_polybench/*.fuse | parallel --bar -j4 "fud e -q {} --to resource-estimate | jq '{ \"{.}\": ., \"type\": \"synthesis\"}' > {.}.json"
+```
+
 To gather the resource and cycle count data for all the benchmarks, run `./scripts/run_all.sh scripts/benchmarks > results.csv`.
 This should take about 2.5 hrs to run completely.
 
 To gather the resource and cycle count data for all the unrolled benchmarks, run `./scripts/run_all.sh scripts/unrolled > unrolled.csv`.
 This will take about 1.5 hrs to complete.
+
+
+
+## XXX(SMA) explain why graphs are different than the ones in the paper
