@@ -115,6 +115,8 @@ the change in cycle count when enabling latency sensitive compilation (Section
 
 ### (Optional) Implementing a Compiler Pass (Estimated time: 15 minutes)
 
+---
+
 ## Scripts
 
 *vivado.sh*: Does the bulk of the work running `vivado` or `vivado_hls`. It has two modes,
