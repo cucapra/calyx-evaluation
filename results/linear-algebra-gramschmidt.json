@@ -1,0 +1,12 @@
+{
+  "benchmarks/small_polybench/linear-algebra-gramschmidt": {
+    "total_lut": 1702,
+    "instance_lut": 40,
+    "lut": 1662,
+    "dsp": 9,
+    "avg_latency": 8605,
+    "best_latency": 4933,
+    "worst_latency": 11665
+  },
+  "type": "hls"
+}

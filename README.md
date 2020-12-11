@@ -23,7 +23,7 @@ If you're using the VM image, skip to the next step.
   - (*Optional*) Run the Dahlia tests to ensure that the compiler is correctly installed.
 - Install the [Calyx compiler][calyx-install] and all of its [testing dependencies][calyx-install-testing] (`runt`, `vcdump`, `verilator`, `jq`).
   - (*Optional*) Run the tests to ensure that the Calyx compiler is installed correctly.
-- **TODO** Fud
+- Install our Calyx driver utility [Fud][fud].
 - Clone the [artifact evaluation repository][calyx-eval].
 
 ### Installing external tools (Estimated time: 2-4 hours)
@@ -53,7 +53,11 @@ The following instructions assume you're using the VM:
 
 ### Step-by-Step Guide
 
-**TODO**
+ - Polybench Benchmarks Calyx vs. Vivado HLS
+   - Standard designs
+   - Unrolled designs
+ - Polybench Benchmarks Latency Sensitive Compilation vs. Latency Insensitive Compilation
+ - Systolic Array Resource Usage
 
 ----
 
@@ -109,6 +113,7 @@ rather then printing the whole thing out at the end of the job.
 [calyx]: https://github.com/cucapra/futil
 [calyx-eval]: https://github.com/cucapra/futil-evaluation
 [calyx-install]: https://capra.cs.cornell.edu/calyx/
+[fud]: https://capra.cs.cornell.edu/calyx/tools/fud.html
 [dahlia]: https://github.com/cucapra/dahlia
 [calyx-install-testing]: https://capra.cs.cornell.edu/calyx/#testing-dependencies
 [vivado-webpack]: https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Unified_2019.2_1106_2127_Lin64.bin
