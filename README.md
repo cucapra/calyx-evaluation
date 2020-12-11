@@ -67,13 +67,17 @@ The following instructions assume you're using the VM:
 ### Playing with data and Generating figures
 **TODO**
 
-### Experiment: Vivado HLS vs. Calyx with Polybench (Estimated time: XXX)
+### Experiment: Vivado HLS vs. Calyx with Polybench (Estimated time: 4-5 hours)
 
 In this section, we will reproduce the following claims:
 > **TODO**
 
-### Experiment: Vivado HLS vs. Calyx with Polybench (Estimated time: XXX)
 
+
+### Experiment: Systolic Array (Estimated time: XXX)
+
+In this section, we will reproduce the following claims:
+> **TODO**
 
 ## Scripts
 
