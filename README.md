@@ -53,11 +53,21 @@ The following instructions assume you're using the VM:
 
 ### Step-by-Step Guide
 
- - Polybench Benchmarks Calyx vs. Vivado HLS
-   - Standard designs
-   - Unrolled designs
- - Polybench Benchmarks Latency Sensitive Compilation vs. Latency Insensitive Compilation
- - Systolic Array Resource Usage
+- **Experimental Data and graph generation**: Generate the graphs found in the paper using pre-supplied data.
+  - Play around with the data and generate graph using supplied jupyter notebeooks.
+  - **Cycle counts normalized to Vivado HLS**: TODO
+  - **LUT usage normalized to Vivado HLS**: TODO
+  - **Cycle counts normalized to latency-insensitive design**: TODO
+- **Regenerating Data**
+  - **Polybench experiments**: Compare the Calyx compiler to the Vivado HLS toolchain on the linear algebra polybench benchmarks.
+    - **Resource usage with Vivado HLS**
+    - **Resource usage with Calyx**
+    - **Cycle count with Calyx**
+  - **Systolic Array**: Compare the Calyx compiler to the Vivado HLS toolchain on systolic arrays of different sizes.
+    - **Resource usage with Vivado HLS**
+    - **Resource usage with Calyx**
+    - **Cycle count with Calyx**
+
 
 ----
 
