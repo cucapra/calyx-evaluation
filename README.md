@@ -45,7 +45,8 @@ The following instructions assume you're using the VM:
 4. When the box pops up asking you for a new version, click `Continue`.
 5. Enter your Xilinx credentials. If you don't have them, click `please create one` and create a Xilinx account.
 6. Agree to the contract and press `Next`.
-7. Choose `Vivado` and `Vivado HLS WebPACK`
+7. Choose `Vivado` and click `Next`.
+7. Choose `Vivado HLS WebPACK` and click `Next`.
 8. Leave the defaults for selecting devices and click `Next`.
 9. Change the install path from `/tools/Xilinx` to `/home/vagrant/Xilinx`.
 10. Install.  Depending on the speed of your connection, the whole process
