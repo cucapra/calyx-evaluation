@@ -54,7 +54,7 @@ The following instructions assume you're using the VM:
 
 ### Step-by-Step Guide
 
-- **Experimental Data and graph generation**: Generate the graphs found in the paper using pre-supplied data.
+- **Experimental data and graph generation**: Generate the graphs found in the paper using pre-supplied data.
   - Play around with the data and generate graph using supplied jupyter notebeooks.
   - **Cycle counts normalized to Vivado HLS**: TODO
   - **LUT usage normalized to Vivado HLS**: TODO
@@ -62,23 +62,58 @@ The following instructions assume you're using the VM:
 - **Regenerating Data**
   - **Polybench experiments**: Compare the Calyx compiler to the Vivado HLS toolchain on the linear algebra polybench benchmarks.
   - **Systolic Array**: Compare the Calyx compiler to the Vivado HLS toolchain on systolic arrays of different sizes.
+- *(Optional)* Using the Calyx compiler
+  - Implement a counter by writing Calyx IL.
+  - Implement a simple pass for the Calyx compiler.
 
 ----
 
-### Playing with data and Generating figures
+### Experimental Data and Graph Generation (Estimated time: 10 minutes)
+
+In this section, we will regenerate graphs presented in the paper using
+from **data already committed to the repository**.
+Since collecting the data relies on proprietary compilers and takes several
+hours, we provide this step as a quick sanity check.
+The next section will covers how to collect the data.
+
 **TODO**
 
-### Experiment: Vivado HLS vs. Calyx with Polybench (Estimated time: 4-5 hours)
+----
 
-In this section, we will reproduce the following claims:
-> **TODO**
+### HLS vs. Systolic Array (Estimated time: 1-2 hours)
 
+In this section, we will collect data to reproduce Figure 5a and 5b which
+compare the estimated cycle count and resource usage of HLS designs and
+Calyx-based systolic arrays.
 
+**TODO**
 
-### Experiment: Systolic Array (Estimated time: XXX)
+----
 
-In this section, we will reproduce the following claims:
-> **TODO**
+### HLS vs. Calyx (Estimated time: 4-5 hours)
+
+This section reproduces Figure 6a and 6b which compare the estimated cycle
+count and resource usage of HLS and Calyx-based designs.
+
+**TODO**
+
+----
+
+### Latency-Sensitive compilation (Estimated time: 30 minutes)
+
+In this section, we will collect data to reproduce Figure 6c which captures
+the change in cycle count when enabling latency sensitive compilation (Section
+4.4) with the Calyx compiler.
+
+**TODO**.
+
+----
+
+### (Optional) Writing a Calyx Program (Estimated time: 15 minutes)
+
+----
+
+### (Optional) Implementing a Compiler Pass (Estimated time: 15 minutes)
 
 ## Scripts
 
