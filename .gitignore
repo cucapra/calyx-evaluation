@@ -7,3 +7,5 @@ futil-artifact/data/*
 *.pyc
 *.log
 futil-artifact/Xilinx_Unified_2019.2_1106_2127_Lin64.bin
+
+__pycache__
