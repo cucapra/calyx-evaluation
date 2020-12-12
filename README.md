@@ -115,21 +115,14 @@ compare the estimated cycle count and resource usage of HLS designs and
 Calyx-based systolic arrays.
 
 **Vivado HLS (Estimate time: 1-2 minutes):**
+
 ```
-mkdir -p results/systolic/hls
-ls benchmarks/systolic-sources/*.fuse | parallel --bar -j4 "fud e -q {} --to hls-estimate > results/systolic/hls/{/.}.json"
+./scripts/systolic_hls.sh
 ```
 
-**Calyx (Estimated time: 15-20 minutes):**
+**Calyx (Estimated time: 30 minutes):**
 ```
-mkdir -p results/systolic/futil
-ls benchmarks/systolic-sources/*.systolic | parallel --bar -j4 "fud e -q --from systolic --to resource-estimate -s systolic.flags '\$(cat {})' > results/systolic/futil/{/.}.json"
-```
-
-**Calyx latency (Estimated time: 10 minute):**
-```
-mkdir -p results/systolic/futil-latency
-ls benchmarks/systolic-sources/*.futil | parallel --bar -j4 "fud e -q --from systolic --to vcd_json -s systolic.flags '\$(cat {})' -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/systolic/futil-latency/{/.}.json"
+./scripts/systolic_calyx.sh
 ```
 ----
 
@@ -138,44 +131,14 @@ ls benchmarks/systolic-sources/*.futil | parallel --bar -j4 "fud e -q --from sys
 This section reproduces Figure 6a and 6b which compare the estimated cycle
 count and resource usage of HLS and Calyx-based designs.
 
-#### Vivado HLS (Estimated time: 8 minutes)
-**TODO**: write words and scriptify
-Standard (Estimated time: 5 minutes):
+**Vivado HLS** (Estimated time: 8 minutes):
 ```
-mkdir -p results/standard/hls
-ls benchmarks/small_polybench/*.fuse | parallel --bar -j4 "fud e -q {} --to hls-estimate > results/standard/hls/{/.}.json"
+./scripts/polybench_hls.sh
 ```
 
-Unrolled (Estimated time: 3 minutes):
+**Calyx** (Estimated time: 75 minutes):
 ```
-mkdir -p results/unrolled/hls
-ls benchmarks/unrolled/*.fuse | parallel --bar -j4 "fud e -q {} --to hls-estimate > results/unrolled/hls/{/.}.json"
-```
-
-#### Calyx (Estimated time: 50 minutes)
-XXX: write words and scriptify
-Standard (Estimated time: 25 minutes):
-```
-mkdir -p results/standard/futil
-ls benchmarks/small_polybench/*.fuse | parallel --bar -j4 "fud e -q {} --to resource-estimate > results/standard/futil/{/.}.json"
-```
-
-Standard Latency (Estimated time: 7 minutes):
-```
-mkdir -p results/standard/futil-latency
-ls benchmarks/small_polybench/*.fuse | parallel --bar -j4 "fud e -q {} --to vcd_json -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/standard/futil-latency/{/.}.json"
-```
-
-Unrolled (Estimated time: 25 minutes):
-```
-mkdir -p results/unrolled/futil
-ls benchmarks/unrolled/*.fuse | parallel --bar -j4 "fud e -q {} --to resource-estimate > results/unrolled/futil/{/.}.json"
-```
-
-Unrolled Latency (Estimated time: 7 minutes):
-```
-mkdir -p results/unrolled/futil-latency
-ls benchmarks/unrolled/*.fuse | parallel --bar -j4 "fud e -q {} --to vcd_json -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/unrolled/futil-latency/{/.}.json"
+./scripts/polybench_calyx.sh
 ```
 
 ----
@@ -186,17 +149,8 @@ In this section, we will collect data to reproduce Figure 6c which captures
 the change in cycle count when enabling latency sensitive compilation (Section
 4.4) with the Calyx compiler.
 
-#### Static timing enabled (Estimated time: 7 minutes)
 ```
-mkdir -p results/latency-sensitive/with-static-timing
-ls benchmarks/small_polybench/*.fuse | parallel --bar -j4 "fud e -q {} --to vcd_json -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/latency-sensitive/with-static-timing/{/.}.json"
-```
-
-
-#### Static timing pass disabled (Estimated time: 9 minutes)
-```
-mkdir -p results/latency-sensitive/no-static-timing
-ls benchmarks/small_polybench/*.fuse | parallel --bar -j4 "fud e -q {} --to vcd_json -s futil.flags '-d static-timing' -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/latency-sensitive/no-static-timing/{/.}.json"
+./scripts/latency_sensitive.sh
 ```
 
 
