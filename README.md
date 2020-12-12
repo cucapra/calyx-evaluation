@@ -125,7 +125,7 @@ mkdir -p results/systolic/futil
 ls benchmarks/systolic-sources/*.futil | parallel --bar -j4 "fud e -q {} --to resource-estimate > results/systolic/futil/{/.}.json"
 ```
 
-**Calyx latency (Estimated time: XXX minutes):**
+**Calyx latency (Estimated time: 1 minute):**
 ```
 mkdir -p results/systolic/futil-latency
 ls benchmarks/systolic-sources/*.fuse | parallel --bar -j4 "fud e -q {} --to vcd_json -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/systolic/futil-latency/{/.}.json"

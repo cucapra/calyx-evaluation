@@ -1,0 +1,5 @@
+benchmark,type,key,value
+gemm_2,systolic-futil,latency,307
+gemm_8,systolic-futil,latency,9277
+gemm_4,systolic-futil,latency,1497
+gemm_6,systolic-futil,latency,4263
