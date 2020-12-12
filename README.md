@@ -200,6 +200,10 @@ To gather the Polybench Calyx data, run:
     </ul>
 </details>
 
+For those interested, the Polybench file sources for the above experiments are:
+ - The Dahlia gemm kernels are in `benchmarks/polybench/*.fuse`.
+ - The data files for simulation are in `benchmarks/polybench/*.fuse.data`
+
 ----
 
 ### Latency-Sensitive compilation (Estimated time: 15 minutes)
@@ -212,6 +216,10 @@ To gather the latency sensitive vs. latency insensitive data, run:
 ```
 ./scripts/latency_sensitive.sh
 ```
+
+For those interested, the Polybench file sources for the above experiments are:
+ - The Dahlia gemm kernels are in `benchmarks/polybench/*.fuse`.
+ - The data files for simulation are in `benchmarks/polybench/*.fuse.data`
 
 ### (Optional) Writing a Calyx Program (Estimated time: 15 minutes)
 
