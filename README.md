@@ -110,6 +110,13 @@ The graph generating is done in `analysis/artfact.ipynb`.
 
 ### Data Collection
 In this section, we will be collecting the data to reproduce all the figures in the paper.
+Start by moving the results directory somewhere else:
+```
+mv results result_provided
+```
+The rest of this section will be devoted to regenerating the results in that directory. Once you have
+completed gathering data, go back to the above section and try regenerating the graphs with the fresh data.
+
 Our tool `fud` automates the process of compilation, running synthesis for resource estimates, and
 simulation for cycle counts. However, running `fud` for each benchmark source file is tedious. We've
 automated the process with simple wrapper scripts that find the benchmark source files, call `fud`
@@ -128,7 +135,6 @@ For those interested, we've included the shape of the `fud` calls in expandable 
 </details>
 
 #### HLS vs. Systolic Array (Estimated time: ~30 minutes)
-
 In this section, we will collect data to reproduce Figure 5a and 5b which
 compare the estimated cycle count and resource usage of HLS designs and
 Calyx-based systolic arrays.
@@ -166,7 +172,6 @@ For those interested, the file sources for the above experiments are:
 ----
 
 #### HLS vs. Calyx (Estimated time: 4-5 hours)
-
 This section reproduces Figure 6a and 6b which compare the estimated cycle
 count and resource usage of HLS and Calyx-based designs.
 
@@ -197,18 +202,16 @@ To gather the Polybench Calyx data, run:
 
 ----
 
-### Latency-Sensitive compilation (Estimated time: 30 minutes)
-
+### Latency-Sensitive compilation (Estimated time: 15 minutes)
 In this section, we will collect data to reproduce Figure 6c which captures
 the change in cycle count when enabling latency sensitive compilation (Section
 4.4) with the Calyx compiler.
 
-**Data** (Estimated time: XXX minutes):
+**Data** (Estimated time: 15 minutes):
 To gather the latency sensitive vs. latency insensitive data, run:
 ```
 ./scripts/latency_sensitive.sh
 ```
-
 
 ### (Optional) Writing a Calyx Program (Estimated time: 15 minutes)
 
