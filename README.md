@@ -121,6 +121,7 @@ For those interested, we've included the shape of the `fud` calls in expandable 
     <ul>
         <li><code>--to hls-estimate</code>: Uses Vivado HLS to compile and estimate resource usage of an input Dahlia/C++ program.</li>
         <li><code>--to resource-estimate</code>: Uses Vivado to synthesis Verilog and estimate resource usage.</li>
+        <li><code>--to vcd_json</code>: Uses Verilator to simulate a Verilog program.</li>
         <li><code>-s systolic.flags {args}</code>: Passes in parameters to the systolic array frontend.</li>
         <li><code>-s verilog.data {data file}</code>: Passes in a json data file to be given to Verilator for simulation.</li>
     </ul>
@@ -170,14 +171,29 @@ This section reproduces Figure 6a and 6b which compare the estimated cycle
 count and resource usage of HLS and Calyx-based designs.
 
 **Vivado HLS** (Estimated time: 8 minutes):
+To gather the Polybench HLS data, run:
 ```
 ./scripts/polybench_hls.sh
 ```
+<details>
+<summary>The script is a simple wrapper over the following <code>fud</code> calls: [click to expand]</summary>
+    <ul>
+        <li><code>fud e {dahlia file} --to hls-estimate</code></li>
+    </ul>
+</details>
 
 **Calyx** (Estimated time: 75 minutes):
+To gather the Polybench Calyx data, run:
 ```
 ./scripts/polybench_calyx.sh
 ```
+<details>
+<summary>The script is a simple wrapper over the following <code>fud</code> calls: [click to expand]</summary>
+    <ul>
+        <li><code>fud e {dahlia file} --to resouce-estimate</code></li>
+        <li><code>fud e {dahlia file} --to vcd_json</code></li>
+    </ul>
+</details>
 
 ----
 
@@ -187,6 +203,8 @@ In this section, we will collect data to reproduce Figure 6c which captures
 the change in cycle count when enabling latency sensitive compilation (Section
 4.4) with the Calyx compiler.
 
+**Data** (Estimated time: XXX minutes):
+To gather the latency sensitive vs. latency insensitive data, run:
 ```
 ./scripts/latency_sensitive.sh
 ```
