@@ -202,6 +202,9 @@ ls benchmarks/small_polybench/*.fuse | parallel --bar -j4 "fud e -q {} --to vcd_
 
 ### (Optional) Writing a Calyx Program (Estimated time: 15 minutes)
 
+Check out our documentation for writing your first Calyx program: [hello-world][hello-world].
+XXX(sam). flesh this out a tiny bit.
+
 ----
 
 ### (Optional) Implementing a Compiler Pass (Estimated time: 15 minutes)
@@ -260,3 +263,4 @@ rather then printing the whole thing out at the end of the job.
 [calyx-install-testing]: https://capra.cs.cornell.edu/calyx/#testing-dependencies
 [vivado-webpack]: https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Unified_2019.2_1106_2127_Lin64.bin
 [verismith]: https://johnwickerson.github.io/papers/verismith_fpga20.pdf
+[hello-world]: https://capra.cs.cornell.edu/calyx/tutorial/langtut.html
