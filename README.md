@@ -109,6 +109,24 @@ The graph generating is done in `analysis/artfact.ipynb`.
 ----
 
 ### Data Collection
+In this section, we will be collecting the data to reproduce all the figures in the paper.
+Our tool `fud` automates the process of compilation, running synthesis for resource estimates, and
+simulation for cycle counts. However, running `fud` for each benchmark source file is tedious. We've
+automated the process with simple wrapper scripts that find the benchmark source files, call `fud`
+with the correct arguments, and create data files.
+
+For those interested, we've included the shape of the `fud` calls in expandable drop downs below each script.
+<details>
+<summary>Expand for a key for what different flags do:</summary>
+    <ol>
+        <li>
+            <code>--to hls-estimate</code>: Uses Vivado HLS to compile and estimate resource usage of an input Dahlia/C++ program.
+            <code>--to resource-estimate</code>: Uses Vivado to synthesis Verilog and estimate resource usage.
+            <code>-s systolic.flags {args}</code>: Passes in parameters to the systolic array frontend.
+            <code>-s verilog.data {data file}</code>: Passes in a json data file to be given to Verilator for simulation.
+        </li>
+    </ol>
+</details>
 
 #### HLS vs. Systolic Array (Estimated time: ~30 minutes)
 
@@ -116,19 +134,14 @@ In this section, we will collect data to reproduce Figure 5a and 5b which
 compare the estimated cycle count and resource usage of HLS designs and
 Calyx-based systolic arrays.
 
-**Sources:**
- - The Dahlia sources files are in `benchmarks/systolic_sources/*.fuse`.
- - The systolic array parameters are stored in `benchmarks/systolic_sources/*.systolic`
- - The systolic array data for Verilator simulation is in `benchmarks/systolic_sources/*.systolic.data`
-
 **Vivado HLS (Estimate time: 1-2 minutes):**
 To gather the Vivado HLS data, run:
 ```
 ./scripts/systolic_hls.sh
 ```
 <details>
-<summary>The script is a simple wrapper over the following `fud` calls: [click to expand]</summary>
- - `fud e {dahlia file} --to hls-estimate`: The `--to hls-estimate` flag uses Vivado HLS to compile and then estimate resource usage of an input program.
+<summary>The script is a simple wrapper over the following <code>fud</code> calls: [click to expand]</summary>
+    <code>fud e {dahlia file} --to hls-estimate</code>
 </details>
 
 **Calyx (Estimated time: 30 minutes):**
@@ -138,18 +151,16 @@ To gather the Calyx systolic array data, run:
 ```
 <details>
 <summary>The script is a simple wrapper over the following <code>fud</code> calls: [click to expand]</summary>
-<ol>
-    <li><code>fud e --from systolic --to resource-estimate -s systolic.flags {parameters}</code>:
-    The <code>--to resource-estimate</code> flag uses Verilator to simulate the input program.
-    We count the number of simulated cycles and return that.
-    The <code>-s</code> flags pass parameters to the underling tools that <code>fud</code> calls.</li>
-    <li><code>fud e --from systolic --to vcd_json -s systolic.flags {parameters} -s verilog.data {data}</code>:
-        The <code>--to vcd_json</code> flag uses Verilator to simulate the input program.
-        We count the number of simulated cycles and return that.
-        The <code>-s</code> flags pass parameters to the underling tools that <code>fud</code> calls.
-    </li>
-</ol>
+    <ol>
+        <li><code>fud e --from systolic --to resource-estimate -s systolic.flags {parameters}</code>:\
+        <li><code>fud e --from systolic --to vcd_json -s systolic.flags {parameters} -s verilog.data {data}</code></li>
+    </ol>
 </details>
+
+For those interested, the file sources for the above experiments are:
+ - The Dahlia gemm kernels are in `benchmarks/systolic_sources/*.fuse`.
+ - The systolic array parameters are stored in `benchmarks/systolic_sources/*.systolic`
+ - The systolic array data for Verilator simulation is in `benchmarks/systolic_sources/*.systolic.data`
 
 ----
 
