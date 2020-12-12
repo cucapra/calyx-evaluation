@@ -137,9 +137,18 @@ To gather the Calyx systolic array data, run:
 ./scripts/systolic_calyx.sh
 ```
 <details>
-<summary>The script is a simple wrapper over the following `fud` calls: [click to expand]</summary>
- - `fud e --from systolic --to resource-estimate -s systolic.flags {parameters}`: The `--to resource-estimate` flag uses Verilator to simulate the input program. We count the number of simulated cycles and return that. The `-s` flags pass parameters to the underling tools that `fud` calls.
- - `fud e --from systolic --to vcd_json -s systolic.flags {parameters} -s verilog.data {data}`: The `--to vcd_json` flag uses Verilator to simulate the input program. We count the number of simulated cycles and return that. The `-s` flags pass parameters to the underling tools that `fud` calls.
+<summary>The script is a simple wrapper over the following <code>fud</code> calls: [click to expand]</summary>
+<ol>
+    <li><code>fud e --from systolic --to resource-estimate -s systolic.flags {parameters}</code>:
+    The <code>--to resource-estimate</code> flag uses Verilator to simulate the input program.
+    We count the number of simulated cycles and return that.
+    The <code>-s</code> flags pass parameters to the underling tools that <code>fud</code> calls.</li>
+    <li><code>fud e --from systolic --to vcd_json -s systolic.flags {parameters} -s verilog.data {data}</code>:
+        The <code>--to vcd_json</code> flag uses Verilator to simulate the input program.
+        We count the number of simulated cycles and return that.
+        The <code>-s</code> flags pass parameters to the underling tools that <code>fud</code> calls.
+    </li>
+</ol>
 </details>
 
 ----
