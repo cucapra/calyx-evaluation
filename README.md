@@ -92,6 +92,10 @@ a json file for each benchmark.
 For easier processing, we transform the `json` files into `csv` files. This is done with
 the `analysis/data_format.ipynb` notebook file.
 
+ - Navigate to the `data_format` notebook.
+ - Click "Restart the kernel, then re-run the whole notebook" button (⏩).
+ - Check that a `data.csv` file has appeared in each of the data directories (`results/standard/hls/data.csv`, `results/standard/futil/data.csv`, ...).
+
 Run the notebook, and check to make sure that `data.csv` files have appeared in each of
 the data directories.
 
@@ -109,8 +113,23 @@ In this section, we will collect data to reproduce Figure 5a and 5b which
 compare the estimated cycle count and resource usage of HLS designs and
 Calyx-based systolic arrays.
 
-**TODO**
+**Vivado HLS (Estimate time: XXX minutes):**
+```
+mkdir -p results/systolic/hls
+ls benchmarks/systolic-sources/*.fuse | parallel --bar -j4 "fud e -q {} --to hls-estimate > results/systolic/hls/{/.}.json"
+```
 
+**Calyx (Estimated time: XXX minutes):**
+```
+mkdir -p results/systolic/futil
+ls benchmarks/systolic-sources/*.futil | parallel --bar -j4 "fud e -q {} --to resource-estimate > results/systolic/futil/{/.}.json"
+```
+
+**Calyx latency (Estimated time: XXX minutes):**
+```
+mkdir -p results/systolic/futil-latency
+ls benchmarks/systolic-sources/*.fuse | parallel --bar -j4 "fud e -q {} --to vcd_json -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/systolic/futil-latency/{/.}.json"
+```
 ----
 
 ### HLS vs. Calyx (Estimated time: 4-5 hours)
@@ -171,11 +190,6 @@ the change in cycle count when enabling latency sensitive compilation (Section
 
 **TODO**.
 
-**Calyx:**
-```
-mkdir -p results/systolic/futil
-ls benchmarks/systolic-sources/*.futil | parallel --bar -j4 "fud e -q {} --to resource-estimate > results/systolic/futil/{/.}.json"
-```
 
 ### (Optional) Writing a Calyx Program (Estimated time: 15 minutes)
 
