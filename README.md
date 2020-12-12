@@ -136,6 +136,12 @@ the change in cycle count when enabling latency sensitive compilation (Section
 
 **TODO**.
 
+**Calyx:**
+```
+mkdir -p results/systolic/futil
+ls benchmarks/systolic-sources/*.futil | parallel --bar -j4 "fud e -q {} --to resource-estimate > results/systolic/futil/{/.}.json"
+```
+
 ### (Optional) Writing a Calyx Program (Estimated time: 15 minutes)
 
 ----
