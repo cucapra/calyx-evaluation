@@ -107,7 +107,33 @@ the change in cycle count when enabling latency sensitive compilation (Section
 
 **TODO**.
 
-----
+#### Vivado HLS (Estimated time: 8 minutes)
+XXX: write words
+Standard (Estimated time: 5 minutes):
+```
+mkdir -p results/standard/hls
+ls benchmarks/small_polybench/*.fuse | parallel --bar -j4 "fud e -q {} --to hls-estimate > results/standard/hls/{/.}.json"
+```
+
+Unrolled (Estimated time: 3 minutes):
+```
+mkdir -p results/unrolled/hls
+ls benchmarks/unrolled/*.fuse | parallel --bar -j4 "fud e -q {} --to hls-estimate > results/unrolled/hls/{/.}.json"
+```
+
+#### Calyx (Estimated time: 50 minutes)
+XXX: write words
+Standard (Estimated time: 25 minutes):
+```
+mkdir -p results/standard/futil
+ls benchmarks/small_polybench/*.fuse | parallel --bar -j4 "fud e -q {} --to resource-estimate > results/standard/futil/{/.}.json"
+```
+
+Unrolled (Estimated time: 25 minutes):
+```
+mkdir -p results/unrolled/futil
+ls benchmarks/unrolled/*.fuse | parallel --bar -j4 "fud e -q {} --to resource-estimate > results/unrolled/futil/{/.}.json"
+```
 
 ### (Optional) Writing a Calyx Program (Estimated time: 15 minutes)
 
@@ -116,6 +142,12 @@ the change in cycle count when enabling latency sensitive compilation (Section
 ### (Optional) Implementing a Compiler Pass (Estimated time: 15 minutes)
 
 ---
+
+Systolic:
+```
+mkdir -p results/systolic/hls
+ls benchmarks/unrolled/*.fuse | parallel --bar -j4 "fud e -q {} --to hls-estimate > results/unrolled/hls/{/.}.json"
+```
 
 ## Scripts
 

@@ -1,0 +1,9 @@
+{
+  "total_lut": 3150,
+  "instance_lut": 40,
+  "lut": 3110,
+  "dsp": 60,
+  "avg_latency": 789,
+  "best_latency": 789,
+  "worst_latency": 789
+}
