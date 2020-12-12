@@ -95,20 +95,8 @@ Calyx-based systolic arrays.
 This section reproduces Figure 6a and 6b which compare the estimated cycle
 count and resource usage of HLS and Calyx-based designs.
 
-**TODO**
-
-----
-
-### Latency-Sensitive compilation (Estimated time: 30 minutes)
-
-In this section, we will collect data to reproduce Figure 6c which captures
-the change in cycle count when enabling latency sensitive compilation (Section
-4.4) with the Calyx compiler.
-
-**TODO**.
-
 #### Vivado HLS (Estimated time: 8 minutes)
-XXX: write words
+**TODO**: write words and scriptify
 Standard (Estimated time: 5 minutes):
 ```
 mkdir -p results/standard/hls
@@ -122,7 +110,7 @@ ls benchmarks/unrolled/*.fuse | parallel --bar -j4 "fud e -q {} --to hls-estimat
 ```
 
 #### Calyx (Estimated time: 50 minutes)
-XXX: write words
+XXX: write words and scriptify
 Standard (Estimated time: 25 minutes):
 ```
 mkdir -p results/standard/futil
@@ -133,7 +121,20 @@ Unrolled (Estimated time: 25 minutes):
 ```
 mkdir -p results/unrolled/futil
 ls benchmarks/unrolled/*.fuse | parallel --bar -j4 "fud e -q {} --to resource-estimate > results/unrolled/futil/{/.}.json"
-```
+``
+
+**TODO**: get Calyx latency numbers
+
+
+----
+
+### Latency-Sensitive compilation (Estimated time: 30 minutes)
+
+In this section, we will collect data to reproduce Figure 6c which captures
+the change in cycle count when enabling latency sensitive compilation (Section
+4.4) with the Calyx compiler.
+
+**TODO**.
 
 ### (Optional) Writing a Calyx Program (Estimated time: 15 minutes)
 
