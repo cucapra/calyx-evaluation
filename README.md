@@ -121,7 +121,7 @@ Unrolled (Estimated time: 25 minutes):
 ```
 mkdir -p results/unrolled/futil
 ls benchmarks/unrolled/*.fuse | parallel --bar -j4 "fud e -q {} --to resource-estimate > results/unrolled/futil/{/.}.json"
-``
+```
 
 **TODO**: get Calyx latency numbers
 
