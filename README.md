@@ -108,25 +108,43 @@ The graph generating is done in `analysis/artfact.ipynb`.
 
 ----
 
-### HLS vs. Systolic Array (Estimated time: 1-2 hours)
+### Data Collection
+
+#### HLS vs. Systolic Array (Estimated time: ~30 minutes)
 
 In this section, we will collect data to reproduce Figure 5a and 5b which
 compare the estimated cycle count and resource usage of HLS designs and
 Calyx-based systolic arrays.
 
-**Vivado HLS (Estimate time: 1-2 minutes):**
+**Sources:**
+ - The Dahlia sources files are in `benchmarks/systolic_sources/*.fuse`.
+ - The systolic array parameters are stored in `benchmarks/systolic_sources/*.systolic`
+ - The systolic array data for Verilator simulation is in `benchmarks/systolic_sources/*.systolic.data`
 
+**Vivado HLS (Estimate time: 1-2 minutes):**
+To gather the Vivado HLS data, run:
 ```
 ./scripts/systolic_hls.sh
 ```
+<details>
+<summary>The script is a simple wrapper over the following `fud` calls: [click to expand]</summary>
+ - `fud e {dahlia file} --to hls-estimate`: The `--to hls-estimate` flag uses Vivado HLS to compile and then estimate resource usage of an input program.
+</details>
 
 **Calyx (Estimated time: 30 minutes):**
+To gather the Calyx systolic array data, run:
 ```
 ./scripts/systolic_calyx.sh
 ```
+<details>
+<summary>The script is a simple wrapper over the following `fud` calls: [click to expand]</summary>
+ - `fud e --from systolic --to resource-estimate -s systolic.flags {parameters}`: The `--to resource-estimate` flag uses Verilator to simulate the input program. We count the number of simulated cycles and return that. The `-s` flags pass parameters to the underling tools that `fud` calls.
+ - `fud e --from systolic --to vcd_json -s systolic.flags {parameters} -s verilog.data {data}`: The `--to vcd_json` flag uses Verilator to simulate the input program. We count the number of simulated cycles and return that. The `-s` flags pass parameters to the underling tools that `fud` calls.
+</details>
+
 ----
 
-### HLS vs. Calyx (Estimated time: 4-5 hours)
+#### HLS vs. Calyx (Estimated time: 4-5 hours)
 
 This section reproduces Figure 6a and 6b which compare the estimated cycle
 count and resource usage of HLS and Calyx-based designs.
