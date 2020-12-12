@@ -119,12 +119,10 @@ For those interested, we've included the shape of the `fud` calls in expandable 
 <details>
 <summary>Expand for a key for what different flags do:</summary>
     <ol>
-        <li>
-            <code>--to hls-estimate</code>: Uses Vivado HLS to compile and estimate resource usage of an input Dahlia/C++ program.
-            <code>--to resource-estimate</code>: Uses Vivado to synthesis Verilog and estimate resource usage.
-            <code>-s systolic.flags {args}</code>: Passes in parameters to the systolic array frontend.
-            <code>-s verilog.data {data file}</code>: Passes in a json data file to be given to Verilator for simulation.
-        </li>
+        <li><code>--to hls-estimate</code>: Uses Vivado HLS to compile and estimate resource usage of an input Dahlia/C++ program.</li>
+        <li><code>--to resource-estimate</code>: Uses Vivado to synthesis Verilog and estimate resource usage.</li>
+        <li><code>-s systolic.flags {args}</code>: Passes in parameters to the systolic array frontend.</li>
+        <li><code>-s verilog.data {data file}</code>: Passes in a json data file to be given to Verilator for simulation.</li>
     </ol>
 </details>
 
@@ -152,7 +150,7 @@ To gather the Calyx systolic array data, run:
 <details>
 <summary>The script is a simple wrapper over the following <code>fud</code> calls: [click to expand]</summary>
     <ol>
-        <li><code>fud e --from systolic --to resource-estimate -s systolic.flags {parameters}</code>:\
+        <li><code>fud e --from systolic --to resource-estimate -s systolic.flags {parameters}</code></li>
         <li><code>fud e --from systolic --to vcd_json -s systolic.flags {parameters} -s verilog.data {data}</code></li>
     </ol>
 </details>
