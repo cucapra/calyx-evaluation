@@ -120,7 +120,7 @@ mkdir -p results/systolic/hls
 ls benchmarks/systolic-sources/*.fuse | parallel --bar -j4 "fud e -q {} --to hls-estimate > results/systolic/hls/{/.}.json"
 ```
 
-**Calyx (Estimated time: XXX minutes):**
+**Calyx (Estimated time: 15-20 minutes):**
 ```
 mkdir -p results/systolic/futil
 ls benchmarks/systolic-sources/*.systolic | parallel --bar -j4 "fud e -q --from systolic --to resource-estimate -s systolic.flags '\$(cat {})' > results/systolic/futil/{/.}.json"
