@@ -68,7 +68,7 @@ The following instructions assume you're using the VM:
 
 ----
 
-### Experimental Data and Graph Generation (Estimated time: 10 minutes)
+## Experimental Data and Graph Generation (Estimated time: 10 minutes)
 
 In this section, we will regenerate graphs presented in the paper using
 from **data already committed to the repository**.
@@ -108,7 +108,7 @@ The graph generating is done in `analysis/artfact.ipynb`.
 
 ----
 
-### Data Collection
+## Data Collection
 In this section, we will be collecting the data to reproduce all the figures in the paper.
 Start by moving the results directory somewhere else:
 ```
@@ -134,7 +134,7 @@ For those interested, we've included the shape of the `fud` calls in expandable 
     </ul>
 </details>
 
-#### HLS vs. Systolic Array (Estimated time: ~30 minutes)
+### HLS vs. Systolic Array (Estimated time: ~30 minutes)
 In this section, we will collect data to reproduce Figure 5a and 5b which
 compare the estimated cycle count and resource usage of HLS designs and
 Calyx-based systolic arrays.
@@ -171,7 +171,7 @@ For those interested, the file sources for the above experiments are:
 
 ----
 
-#### HLS vs. Calyx (Estimated time: 4-5 hours)
+### HLS vs. Calyx (Estimated time: 4-5 hours)
 This section reproduces Figure 6a and 6b which compare the estimated cycle
 count and resource usage of HLS and Calyx-based designs.
 
@@ -220,6 +220,8 @@ To gather the latency sensitive vs. latency insensitive data, run:
 For those interested, the Polybench file sources for the above experiments are:
  - The Dahlia gemm kernels are in `benchmarks/polybench/*.fuse`.
  - The data files for simulation are in `benchmarks/polybench/*.fuse.data`
+
+## Playing with Infrastructure
 
 ### (Optional) Writing a Calyx Program (Estimated time: 15 minutes)
 
