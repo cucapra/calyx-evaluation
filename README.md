@@ -76,7 +76,30 @@ Since collecting the data relies on proprietary compilers and takes several
 hours, we provide this step as a quick sanity check.
 The next section will covers how to collect the data.
 
-**TODO**
+In the root `calyx-eval` directory, run `jupyter lab`. This will open a web page
+that let's you interact with the provided Jupyter notebooks.
+
+#### Data organization
+All the data lives in the `results` directory. There are three directories:
+ - `standard`: standard Polybench benchmarks
+ - `unrolled`: unrolled versions of select Polybench benchmarks
+ - `systolic`: Systolic array data.
+
+Each of these directories have a `calyx` and an `hls` directory which contain
+a json file for each benchmark.
+
+#### Data processing
+For easier processing, we transform the `json` files into `csv` files. This is done with
+the `analysis/data_format.ipynb` notebook file.
+
+Run the notebook, and check to make sure that `data.csv` files have appeared in each of
+the data directories.
+
+#### Graph generation
+The graph generating is done in `analysis/artfact.ipynb`.
+ - Click "Restart the kernel and re-run the whole notebook" button (⏩)️.
+ - All the graphs will be generated within the notebook under headers that correspond with the figures
+ in the paper.
 
 ----
 
@@ -117,10 +140,22 @@ mkdir -p results/standard/futil
 ls benchmarks/small_polybench/*.fuse | parallel --bar -j4 "fud e -q {} --to resource-estimate > results/standard/futil/{/.}.json"
 ```
 
+Standard Latency (Estimated time: 7 minutes):
+```
+mkdir -p results/standard/futil-latency
+ls benchmarks/small_polybench/*.fuse | parallel --bar -j4 "fud e -q {} --to vcd_json -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/standard/futil-latency/{/.}.json"
+```
+
 Unrolled (Estimated time: 25 minutes):
 ```
 mkdir -p results/unrolled/futil
 ls benchmarks/unrolled/*.fuse | parallel --bar -j4 "fud e -q {} --to resource-estimate > results/unrolled/futil/{/.}.json"
+```
+
+Unrolled Latency (Estimated time: 7 minutes):
+```
+mkdir -p results/unrolled/futil-latency
+ls benchmarks/unrolled/*.fuse | parallel --bar -j4 "fud e -q {} --to vcd_json -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/unrolled/futil-latency/{/.}.json"
 ```
 
 **TODO**: get Calyx latency numbers

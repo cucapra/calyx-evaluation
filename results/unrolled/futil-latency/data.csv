@@ -1,0 +1,12 @@
+benchmark,type,key,value
+gesummv,futil-unrolled,latency,1693
+syr2k,futil-unrolled,latency,10407
+gemver,futil-unrolled,latency,1722
+gemm,futil-unrolled,latency,2393
+3mm,futil-unrolled,latency,4968
+atax,futil-unrolled,latency,1786
+gramschmidt,futil-unrolled,latency,7364
+doitgen,futil-unrolled,latency,23058
+syrk,futil-unrolled,latency,5262
+2mm,futil-unrolled,latency,3999
+mvt,futil-unrolled,latency,921
