@@ -92,7 +92,7 @@ a json file for each benchmark.
 For easier processing, we transform the `json` files into `csv` files. This is done with
 the `analysis/data_format.ipynb` notebook file.
 
- - Navigate to the `data_format` notebook.
+ - Navigate to the `analysis/data_format.ipynb` notebook.
  - Click "Restart the kernel, then re-run the whole notebook" button (⏩).
  - Check that a `data.csv` file has appeared in each of the data directories (`results/standard/hls/data.csv`, `results/standard/futil/data.csv`, ...).
 
@@ -101,6 +101,7 @@ the data directories.
 
 #### Graph generation
 The graph generating is done in `analysis/artfact.ipynb`.
+ - Navigate to the `analysis/artfact.ipynb` notebook.
  - Click "Restart the kernel and re-run the whole notebook" button (⏩)️.
  - All the graphs will be generated within the notebook under headers that correspond with the figures
  in the paper.
@@ -113,7 +114,7 @@ In this section, we will collect data to reproduce Figure 5a and 5b which
 compare the estimated cycle count and resource usage of HLS designs and
 Calyx-based systolic arrays.
 
-**Vivado HLS (Estimate time: XXX minutes):**
+**Vivado HLS (Estimate time: 1-2 minutes):**
 ```
 mkdir -p results/systolic/hls
 ls benchmarks/systolic-sources/*.fuse | parallel --bar -j4 "fud e -q {} --to hls-estimate > results/systolic/hls/{/.}.json"
@@ -122,13 +123,13 @@ ls benchmarks/systolic-sources/*.fuse | parallel --bar -j4 "fud e -q {} --to hls
 **Calyx (Estimated time: XXX minutes):**
 ```
 mkdir -p results/systolic/futil
-ls benchmarks/systolic-sources/*.futil | parallel --bar -j4 "fud e -q {} --to resource-estimate > results/systolic/futil/{/.}.json"
+ls benchmarks/systolic-sources/*.systolic | parallel --bar -j4 "fud e -q --from systolic --to resource-estimate -s systolic.flags '\$(cat {})' > results/systolic/futil/{/.}.json"
 ```
 
-**Calyx latency (Estimated time: 1 minute):**
+**Calyx latency (Estimated time: 10 minute):**
 ```
 mkdir -p results/systolic/futil-latency
-ls benchmarks/systolic-sources/*.fuse | parallel --bar -j4 "fud e -q {} --to vcd_json -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/systolic/futil-latency/{/.}.json"
+ls benchmarks/systolic-sources/*.futil | parallel --bar -j4 "fud e -q --from systolic --to vcd_json -s systolic.flags '\$(cat {})' -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/systolic/futil-latency/{/.}.json"
 ```
 ----
 
@@ -177,9 +178,6 @@ mkdir -p results/unrolled/futil-latency
 ls benchmarks/unrolled/*.fuse | parallel --bar -j4 "fud e -q {} --to vcd_json -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/unrolled/futil-latency/{/.}.json"
 ```
 
-**TODO**: get Calyx latency numbers
-
-
 ----
 
 ### Latency-Sensitive compilation (Estimated time: 30 minutes)
@@ -188,7 +186,18 @@ In this section, we will collect data to reproduce Figure 6c which captures
 the change in cycle count when enabling latency sensitive compilation (Section
 4.4) with the Calyx compiler.
 
-**TODO**.
+#### Static timing enabled (Estimated time: 7 minutes)
+```
+mkdir -p results/latency-sensitive/with-static-timing
+ls benchmarks/small_polybench/*.fuse | parallel --bar -j4 "fud e -q {} --to vcd_json -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/latency-sensitive/with-static-timing/{/.}.json"
+```
+
+
+#### Static timing pass disabled (Estimated time: 9 minutes)
+```
+mkdir -p results/latency-sensitive/no-static-timing
+ls benchmarks/small_polybench/*.fuse | parallel --bar -j4 "fud e -q {} --to vcd_json -s futil.flags '-d static-timing' -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/latency-sensitive/no-static-timing/{/.}.json"
+```
 
 
 ### (Optional) Writing a Calyx Program (Estimated time: 15 minutes)
@@ -199,11 +208,6 @@ the change in cycle count when enabling latency sensitive compilation (Section
 
 ---
 
-Systolic:
-```
-mkdir -p results/systolic/hls
-ls benchmarks/unrolled/*.fuse | parallel --bar -j4 "fud e -q {} --to hls-estimate > results/unrolled/hls/{/.}.json"
-```
 
 ## Scripts
 
