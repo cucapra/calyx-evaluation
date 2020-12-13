@@ -303,6 +303,7 @@ To gather the latency sensitive vs. latency insensitive data, run:
     </ul>
 </details>
 
+<details>
 <summary>Relevant files: [click to expand]</summary>
     This script uses the sources here:
     <ul>
