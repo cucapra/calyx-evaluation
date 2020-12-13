@@ -34,9 +34,6 @@ Vagrant.configure("2") do |config|
     vb.memory = "4096"
     vb.cpus = 2
     vb.gui = gui_enabled?
-
-    # disable serial ports
-    vb.customize [ "modifyvm", :id, "--uartmode1", "disconnected" ]
   end
   #
   # View the documentation for the provider you are using for more
@@ -53,7 +50,7 @@ Vagrant.configure("2") do |config|
     # system dependencies
     apt-get update
     DEBIAN_FRONTEND=noninteractive apt-get -y install xubuntu-core^
-    DEBIAN_FRONTEND=noninteractive apt-get install -y xauth libxrender1 libxtst6 libxi6 jq sbt default-jre default-jdk virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11 python3-distutils firefox autoconf flex bison
+    DEBIAN_FRONTEND=noninteractive apt-get install -y xauth libxrender1 libxtst6 libxi6 jq sbt default-jre default-jdk virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11 python3-distutils firefox autoconf flex bison parallel
     sed -i 's/allowed_users=.*$/allowed_users=anybody/' /etc/X11/Xwrapper.config
   SHELL
 
@@ -78,7 +75,7 @@ Vagrant.configure("2") do |config|
     source ~/.profile
 
      # python packages
-    pip install flit numpy
+    pip install flit numpy jupyter jupyterlab
 
     # rust and rust packages
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
@@ -107,13 +104,20 @@ Vagrant.configure("2") do |config|
     fud config stages.futil.exec "futil"
     cd ~
 
+    # futil eval directory
+    git clone https://github.com/cucapra/futil-evaluation.git
+
     # add Xilinx tools to the path
     cat /vagrant/Xilinx_profile >> ~/.profile
+    cat /vagrant/Xilinx_profile >> ~/.bashrc
 
     # move Xilinx installer to Desktop
+    mkdir -p ~/Desktop
     cp /vagrant/Xilinx_Unified_2019.2_1106_2127_Lin64.bin ~/Desktop/
 
-    # move benchmarks to virtual machine
-    cp -r /vagrant/benchmarks ~/
+    # make vagrant default user
+    if ! cat /etc/lightdm/lightdm-gtk-greeter.conf | grep "user-session="; then
+       echo "user-session=vagrant" | sudo tee -a /etc/lightdm/lightdm-gtk-greeter.conf
+    fi
   SHELL
 end

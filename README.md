@@ -19,8 +19,10 @@ the paper:
 
 The artifact is available in two formats: A virtual machine image and through
 code repositories hosted on Github.
-If you're using the VM image, skip to the next step.
 
+If you want to use the VM, download the `.ova` [here][vm-link], and skip to the next step (Installing external tools).
+
+Otherwise:
 - Install the [Dahlia compiler][dahlia].
   - (*Optional*) Run the Dahlia tests to ensure that the compiler is correctly installed.
 - Install the [Calyx compiler][calyx-install] and all of its [testing dependencies][calyx-install-testing] (`runt`, `vcdump`, `verilator`, `jq`).
@@ -50,7 +52,7 @@ The following instructions assume you're using the VM:
 7. Choose `Vivado` and click `Next`.
 7. Choose `Vivado HLS WebPACK` and click `Next`.
 8. Leave the defaults for selecting devices and click `Next`.
-9. Change the install path from `/tools/Xilinx` to `/home/vagrant/Xilinx`.
+9. **Important!** Change the install path from `/tools/Xilinx` to `/home/vagrant/Xilinx`.
 10. Install.  Depending on the speed of your connection, the whole process
     should take about 2 - 4 hrs.
 
@@ -58,27 +60,30 @@ The following instructions assume you're using the VM:
 
 - **Experimental data and graph generation**: Generate the graphs found in the paper using pre-supplied data.
   - Play around with the data and generate graph using supplied jupyter notebeooks.
-  - **Cycle counts normalized to Vivado HLS**: TODO
-  - **LUT usage normalized to Vivado HLS**: TODO
-  - **Cycle counts normalized to latency-insensitive design**: TODO
+  - **Systolic array comparison**
+    - 5a. Vivado HLS vs. Systolic Array Cycle count
+    - 5b. Vivado HLS vs. Systolic Array LUT usage
+  - **Polybench graphs**
+    - 6a. Cycle counts normalized to Vivado HLS
+    - 6b. LUT usage normalized to Vivado HLS
+    - 6c. Cycle counts normalized to latency-insensitive design
 - **Regenerating Data**
-  - **Polybench experiments**: Compare the Calyx compiler to the Vivado HLS toolchain on the linear algebra polybench benchmarks.
   - **Systolic Array**: Compare the Calyx compiler to the Vivado HLS toolchain on systolic arrays of different sizes.
+  - **Polybench experiments**: Compare the Calyx compiler to the Vivado HLS toolchain on the linear algebra polybench benchmarks.
 - *(Optional)* Using the Calyx compiler
   - Implement a counter by writing Calyx IL.
   - Implement a simple pass for the Calyx compiler.
 
 ----
 
-## Experimental Data and Graph Generation (Estimated time: 10 minutes)
-
+## Experimental Data and Graph Generation (Estimated time: 5 minutes)
 In this section, we will regenerate graphs presented in the paper using
 from **data already committed to the repository**.
 Since collecting the data relies on proprietary compilers and takes several
 hours, we provide this step as a quick sanity check.
 The next section will covers how to collect the data.
 
-In the root `calyx-eval` directory, run `jupyter lab`. This will open a web page
+In the root `futil-evaluation` directory, run `jupyter lab`. This will open a web page
 that let's you interact with the provided Jupyter notebooks.
 
 #### Data organization
@@ -289,3 +294,4 @@ rather then printing the whole thing out at the end of the job.
 [vivado-webpack]: https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Unified_2019.2_1106_2127_Lin64.bin
 [verismith]: https://johnwickerson.github.io/papers/verismith_fpga20.pdf
 [hello-world]: https://capra.cs.cornell.edu/calyx/tutorial/langtut.html
+[vm-link]: https://cornell.box.com/s/xkvdmtl4l3rhj0gy8qbxo7tzra5bb266
