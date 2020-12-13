@@ -75,7 +75,7 @@ Vagrant.configure("2") do |config|
     source ~/.profile
 
      # python packages
-    pip install flit numpy jupyter jupyterlab
+    pip install flit numpy pandas seaborn matplotlib jupyter jupyterlab
 
     # rust and rust packages
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
