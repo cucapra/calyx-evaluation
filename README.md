@@ -1,7 +1,5 @@
 # Calyx Evaluation
 
-**TODO**: For each script, say what file is generated.
-
 This repository contains the evaluation materials for our ASPLOS 2021 paper,
 "A Compiler Infrastructure for Hardware Accelerators".
 
