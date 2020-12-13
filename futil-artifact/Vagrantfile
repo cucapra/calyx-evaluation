@@ -119,5 +119,8 @@ Vagrant.configure("2") do |config|
     if ! cat /etc/lightdm/lightdm-gtk-greeter.conf | grep "user-session="; then
        echo "user-session=vagrant" | sudo tee -a /etc/lightdm/lightdm-gtk-greeter.conf
     fi
+
+    # allow user to access shared folders
+    sudo adduser $(whoami) vboxsf
   SHELL
 end
