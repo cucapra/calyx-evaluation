@@ -158,6 +158,11 @@ To gather the Vivado HLS data, run:
     </ul>
 </details>
 
+This script uses the sources here:
+ - `benchmarks/systolic_sources/*.fuse`
+to generate the data:
+ - `results/systolic/hls/*.json`
+
 **Calyx (Estimated time: 30 minutes):**
 To gather the Calyx systolic array data, run:
 ```
@@ -171,10 +176,12 @@ To gather the Calyx systolic array data, run:
     </ul>
 </details>
 
-For those interested, the file sources for the above experiments are:
- - The Dahlia gemm kernels are in `benchmarks/systolic_sources/*.fuse`.
- - The systolic array parameters are stored in `benchmarks/systolic_sources/*.systolic`
- - The systolic array data for Verilator simulation is in `benchmarks/systolic_sources/*.systolic.data`
+This script uses the sources here:
+ - `benchmarks/systolic_sources/*.systolic`
+ - `benchmarks/systolic_sources/*.systolic.data`
+to generate the data:
+ - `results/systolic/futil`
+ - `results/systolic/futil-latency`
 
 ----
 
@@ -194,6 +201,13 @@ To gather the Polybench HLS data, run:
     </ul>
 </details>
 
+This script uses the sources here:
+ - `benchmarks/polybench/*.fuse`
+ - `benchmarks/unrolled/*.fuse`
+to generate the data:
+ - `results/standard/hls`
+ - `results/unrolled/hls`
+
 **Calyx** (Estimated time: 75 minutes):
 To gather the Polybench Calyx data, run:
 ```
@@ -207,9 +221,14 @@ To gather the Polybench Calyx data, run:
     </ul>
 </details>
 
-For those interested, the Polybench file sources for the above experiments are:
- - The Dahlia gemm kernels are in `benchmarks/polybench/*.fuse`.
- - The data files for simulation are in `benchmarks/polybench/*.fuse.data`
+This script uses the sources here:
+ - `benchmarks/polybench/*.fuse`
+ - `benchmarks/polybench/*.fuse.data`
+ - `benchmarks/unrolled/*.fuse`
+ - `benchmarks/unrolled/*.fuse.data`
+to generate the data:
+ - `results/standard/hls`
+ - `results/unrolled/hls`
 
 ----
 
@@ -223,10 +242,20 @@ To gather the latency sensitive vs. latency insensitive data, run:
 ```
 ./scripts/latency_sensitive.sh
 ```
+<details>
+<summary>The script is a simple wrapper over the following <code>fud</code> calls: [click to expand]</summary>
+    <ul>
+        <li><code>fud e {dahlia file} --to vcd_json -s verilog.data {data}</code></li>
+        <li><code>fud e {dahlia file} --to vcd_json -s verilog.data {data} -s futil-flags '-d static-timing'</code></li>
+    </ul>
+</details>
 
-For those interested, the Polybench file sources for the above experiments are:
- - The Dahlia gemm kernels are in `benchmarks/polybench/*.fuse`.
- - The data files for simulation are in `benchmarks/polybench/*.fuse.data`
+This script uses the sources here:
+ - `benchmarks/polybench/*.fuse`
+ - `benchmarks/polybench/*.fuse.data`
+to generate the data:
+ - `results/latency-sensitive/with-static-timing`
+ - `results/latency-sensitive/no-static-timing`
 
 ## Playing with Infrastructure
 
@@ -238,52 +267,6 @@ XXX(sam). flesh this out a tiny bit.
 ----
 
 ### (Optional) Implementing a Compiler Pass (Estimated time: 15 minutes)
-
----
-
-
-## Scripts
-
-*vivado.sh*: Does the bulk of the work running `vivado` or `vivado_hls`. It has two modes,
-`./vivado.sh futil` and `./vivado.sh hls`. `futil` mode expects a `.sv` file to be provided,
-copies over necessary files to a server, runs `vivado`, and then copies the results back.
-
-`hls` mode expects a `.cpp` file to be provided, copies over files to a server, runs `vivado_hls` and then
-copies the results back.
-
-Examples:
-To synthesis some Futil generated SystemVerilog:
-```
-mkdir my_results
-./scripts/vivado.sh futil my_file.sv my_results
-./scripts/futil_copy.sh my_results my_results
-./scripts/extract.py my_results
-```
-
-For HLS:
-```
-mkdir my_results
-./scripts/vivado.sh hls my_file.cpp my_results
-./scripts/hls_copy.sh my_results my_results
-./scripts/extract.py my_results
-```
-
-
-For comparing the Vivado HLS results against the equivalent Futil results, use
-*compare.sh*. I usually don't call this directly and instead call `run_all.sh`
-which is a simple wrapper on top that uses GNU parallel to parallelize running
-multiple benchmarks. This expects a file with a list of benchmark names. This is
-my workflow:
-
-```
-ls ~futil/benchmarks/*.fuse > benchmarks
-./scripts/run_all.sh benchmarks -j8 --lb # passes on extra flags to `parallel`
-```
-
-The `--lb` flag tells `parallel` to print something out every line it receives from a job
-rather then printing the whole thing out at the end of the job.
-
-`-j8` tells parallel to run `8` jobs in parallel.
 
 [calyx]: https://github.com/cucapra/futil
 [calyx-eval]: https://github.com/cucapra/futil-evaluation
