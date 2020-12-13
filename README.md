@@ -160,6 +160,7 @@ To gather the Vivado HLS data, run:
 
 This script uses the sources here:
  - `benchmarks/systolic_sources/*.fuse`
+
 to generate the data:
  - `results/systolic/hls/*.json`
 
@@ -179,6 +180,7 @@ To gather the Calyx systolic array data, run:
 This script uses the sources here:
  - `benchmarks/systolic_sources/*.systolic`
  - `benchmarks/systolic_sources/*.systolic.data`
+
 to generate the data:
  - `results/systolic/futil/*.json`
  - `results/systolic/futil-latency/*.json`
@@ -204,6 +206,7 @@ To gather the Polybench HLS data, run:
 This script uses the sources here:
  - `benchmarks/polybench/*.fuse`
  - `benchmarks/unrolled/*.fuse`
+
 to generate the data:
  - `results/standard/hls/*.json`
  - `results/unrolled/hls/*.json`
@@ -226,6 +229,7 @@ This script uses the sources here:
  - `benchmarks/polybench/*.fuse.data`
  - `benchmarks/unrolled/*.fuse`
  - `benchmarks/unrolled/*.fuse.data`
+
 to generate the data:
  - `results/standard/hls/*.json`
  - `results/unrolled/hls/*.json`
@@ -253,6 +257,7 @@ To gather the latency sensitive vs. latency insensitive data, run:
 This script uses the sources here:
  - `benchmarks/polybench/*.fuse`
  - `benchmarks/polybench/*.fuse.data`
+
 to generate the data:
  - `results/latency-sensitive/with-static-timing/*.json`
  - `results/latency-sensitive/no-static-timing/*.json`
