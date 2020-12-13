@@ -106,7 +106,9 @@ the `results/` directory.
   in the paper.
 
 <details>
-<summary>Details about the structure of the `results` directory [click to expand]</summary>
+<summary>
+Details about the structure of the `results` directory [click to expand]
+</summary>
 
 **Data organization**.
 All the data lives in the `results` directory. There are three directories:
