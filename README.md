@@ -107,7 +107,7 @@ the `results/` directory.
 
 <details>
 <summary>
-Details about the structure of the `results` directory [click to expand]
+Details about the structure of the <code>results</code> directory [click to expand]
 </summary>
 
 **Data organization**.
