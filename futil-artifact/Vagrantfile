@@ -104,15 +104,19 @@ Vagrant.configure("2") do |config|
     fud config stages.futil.exec "futil"
     cd ~
 
+    # make sure Desktop exists
+    mkdir -p ~/Desktop
+
     # futil eval directory
+    cd ~/Desktop
     git clone https://github.com/cucapra/futil-evaluation.git
+    cd ~
 
     # add Xilinx tools to the path
     cat /vagrant/Xilinx_profile >> ~/.profile
     cat /vagrant/Xilinx_profile >> ~/.bashrc
 
     # move Xilinx installer to Desktop
-    mkdir -p ~/Desktop
     cp /vagrant/Xilinx_Unified_2019.2_1106_2127_Lin64.bin ~/Desktop/
 
     # make vagrant default user
