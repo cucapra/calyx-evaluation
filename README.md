@@ -15,14 +15,28 @@ the paper:
 1. To reproduce the graphs presented in our technical paper.
 2. To demonstrate robustness of our software artifacts.
 
-### Prerequisites
+## Prerequisites
+
+### Artifact Sources
 
 The artifact is available in two formats: A virtual machine image and through
 code repositories hosted on Github.
 
-If you want to use the VM, download the `.ova` [here][vm-link], and skip to the next step (Installing external tools).
+**Using the VM**.
+The VM is packaged as an OVA file and can be downloaded [here][vm-link].
+Our instructions assume you're using [VirtualBox][].
 
-Otherwise:
+- Minimum disk space required to install external tools: 30 GB
+  - **TODO**: How is this configured in virtual box
+- Increase number of cores and RAM
+  - Select the VM and click "Settings".
+  - Select "System" > "Motherboard" and increase the "Base Memory" to at least 16 GB.
+  - Select "System" > "Processor" and select at least 4 cores.
+
+**Using a local machine**.
+The following instructions can be used to setup and build all the tools required
+to evaluate Calyx on a local machine:
+
 - Install the [Dahlia compiler][dahlia].
   - (*Optional*) Run the Dahlia tests to ensure that the compiler is correctly installed.
 - Install the [Calyx compiler][calyx-install] and all of its [testing dependencies][calyx-install-testing] (`runt`, `vcdump`, `verilator`, `jq`).
@@ -56,7 +70,7 @@ The following instructions assume you're using the VM:
 10. Install.  Depending on the speed of your connection, the whole process
     should take about 2 - 4 hrs.
 
-### Step-by-Step Guide
+## Step-by-Step Guide
 
 - **Experimental data and graph generation**: Generate the graphs found in the paper using pre-supplied data.
   - Play around with the data and generate graph using supplied jupyter notebeooks.
@@ -74,19 +88,29 @@ The following instructions assume you're using the VM:
   - Implement a counter by writing Calyx IL.
   - Implement a simple pass for the Calyx compiler.
 
-----
-
 ## Experimental Data and Graph Generation (Estimated time: 5 minutes)
-In this section, we will regenerate graphs presented in the paper using
-from **data already committed to the repository**.
-Since collecting the data relies on proprietary compilers and takes several
-hours, we provide this step as a quick sanity check.
-The next section will covers how to collect the data.
+Since the process to collecting data takes several hours, we will first
+regenerate the graphs presented in the paper from **data already committed to
+the repository**.
+The [next section](#data-collection) will demonstrate how to collect this data.
 
-In the root `futil-evaluation` directory, run `jupyter lab`. This will open a web page
-that let's you interact with the provided Jupyter notebooks.
+In the root of the `futil-evaluation` directory, run:
+```
+jupyter lab
+```
 
-#### Data organization
+This will open up a Jupyter notebook that generates graphs using the data in
+the `results/` directory.
+
+- Navigate to the `analysis/artfact.ipynb` notebook.
+- Click "Restart the kernel and re-run the whole notebook" button (⏩)️.
+- All the graphs will be generated within the notebook under headers that correspond with the figures
+  in the paper.
+
+<details>
+<summary>Details about the structure of the `results` directory [click to expand]</summary>
+
+**Data organization**.
 All the data lives in the `results` directory. There are three directories:
  - `standard`: standard Polybench benchmarks
  - `unrolled`: unrolled versions of select Polybench benchmarks
@@ -95,7 +119,7 @@ All the data lives in the `results` directory. There are three directories:
 Each of these directories have a `calyx` and an `hls` directory which contain
 a json file for each benchmark.
 
-#### Data processing
+**Data processing**.
 For easier processing, we transform the `json` files into `csv` files. This is done with
 the `analysis/data_format.ipynb` notebook file.
 
@@ -106,32 +130,33 @@ the `analysis/data_format.ipynb` notebook file.
 Run the notebook, and check to make sure that `data.csv` files have appeared in each of
 the data directories.
 
-#### Graph generation
+**Graph generation**.
 The graph generating is done in `analysis/artfact.ipynb`.
  - Navigate to the `analysis/artfact.ipynb` notebook.
  - Click "Restart the kernel and re-run the whole notebook" button (⏩)️.
  - All the graphs will be generated within the notebook under headers that correspond with the figures
  in the paper.
-
-----
+</details>
 
 ## Data Collection
-In this section, we will be collecting the data to reproduce all the figures in the paper.
+In this section, we will collect the data required to reproduce the figures in
+the paper.
 Start by moving the results directory somewhere else:
 ```
 mv results result_provided
 ```
-The rest of this section will be devoted to regenerating the results in that directory. Once you have
-completed gathering data, go back to the above section and try regenerating the graphs with the fresh data.
 
-Our tool `fud` automates the process of compilation, running synthesis for resource estimates, and
-simulation for cycle counts. However, running `fud` for each benchmark source file is tedious. We've
-automated the process with simple wrapper scripts that find the benchmark source files, call `fud`
-with the correct arguments, and create data files.
+The following explanations will regenerate all the data files in the `results/`
+directory.
+At the end of this section, you can reopen the Jupyter notebook from the previous
+section and regenerate the graphs with the data you collected.
 
-For those interested, we've included the shape of the `fud` calls in expandable drop downs below each script.
+Each subsection uses a single script to collect data for a study.
+The scripts use [fud][], a tool we built to generate and compile Calyx programs
+and invoke various toolchains (simulation, synthesis).
+
 <details>
-<summary>Expand for a key for what different flags do:</summary>
+<summary>Explanation of various flags used by `fud` to automate the evaluation [click to expand]</summary>
     <ul>
         <li><code>--to hls-estimate</code>: Uses Vivado HLS to compile and estimate resource usage of an input Dahlia/C++ program.</li>
         <li><code>--to resource-estimate</code>: Uses Vivado to synthesis Verilog and estimate resource usage.</li>
@@ -291,16 +316,11 @@ To gather the latency sensitive vs. latency insensitive data, run:
     </ul>
 </details>
 
-## Playing with Infrastructure
+## (Optional) Writing a Calyx Program (Estimated time: 15 minutes)
 
-### (Optional) Writing a Calyx Program (Estimated time: 15 minutes)
-
-Check out our documentation for writing your first Calyx program: [hello-world][hello-world].
-XXX(sam). flesh this out a tiny bit.
-
-----
-
-### (Optional) Implementing a Compiler Pass (Estimated time: 15 minutes)
+[Our tutorial][hello-world] guides you through the process of writing a
+Calyx program *by hand* and demonstrates how we use `fud` to simplify working
+with Calyx programs.
 
 [calyx]: https://github.com/cucapra/futil
 [calyx-eval]: https://github.com/cucapra/futil-evaluation
@@ -312,3 +332,4 @@ XXX(sam). flesh this out a tiny bit.
 [verismith]: https://johnwickerson.github.io/papers/verismith_fpga20.pdf
 [hello-world]: https://capra.cs.cornell.edu/calyx/tutorial/langtut.html
 [vm-link]: https://cornell.box.com/s/xkvdmtl4l3rhj0gy8qbxo7tzra5bb266
+[virtualbox]: https://www.virtualbox.org/
