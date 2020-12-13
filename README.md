@@ -158,11 +158,17 @@ To gather the Vivado HLS data, run:
     </ul>
 </details>
 
-This script uses the sources here:
- - `benchmarks/systolic_sources/*.fuse`
-
-to generate the data:
- - `results/systolic/hls/*.json`
+<details>
+<summary>Relevant files: [click to expand]</summary>
+    This script uses the sources here:
+    <ul>
+        <li><code>benchmarks/systolic_sources/*.fuse</code></li>
+    </ul>
+    to generate the data:
+    <ul>
+        <li><code>results/systolic/hls/*.json</code></li>
+    </ul>
+</details>
 
 **Calyx (Estimated time: 30 minutes):**
 To gather the Calyx systolic array data, run:
@@ -177,13 +183,19 @@ To gather the Calyx systolic array data, run:
     </ul>
 </details>
 
-This script uses the sources here:
- - `benchmarks/systolic_sources/*.systolic`
- - `benchmarks/systolic_sources/*.systolic.data`
-
-to generate the data:
- - `results/systolic/futil/*.json`
- - `results/systolic/futil-latency/*.json`
+<details>
+<summary>Relevant files: [click to expand]</summary>
+    This script uses the sources here:
+    <ul>
+        <li><code>benchmarks/systolic_sources/*.systolic</code></li>
+        <li><code>benchmarks/systolic_sources/*.systolic.data</code></li>
+    </ul>
+    to generate the data:
+    <ul>
+        <li><code>results/systolic/futil/*.json</code></li>
+        <li><code>results/systolic/futil-latency/*.json</code></li>
+    </ul>
+</details>
 
 ----
 
@@ -203,13 +215,19 @@ To gather the Polybench HLS data, run:
     </ul>
 </details>
 
-This script uses the sources here:
- - `benchmarks/polybench/*.fuse`
- - `benchmarks/unrolled/*.fuse`
-
-to generate the data:
- - `results/standard/hls/*.json`
- - `results/unrolled/hls/*.json`
+<details>
+<summary>Relevant files: [click to expand]</summary>
+    This script uses the sources here:
+    <ul>
+        <li><code>benchmarks/polybench/*.fuse</code></li>
+        <li><code>benchmarks/unrolled/*.fuse</code></li>
+    </ul>
+    to generate the data:
+    <ul>
+        <li><code>results/standard/hls/*.json</code></li>
+        <li><code>results/unrolled/hls/*.json</code></li>
+    </ul>
+</details>
 
 **Calyx** (Estimated time: 75 minutes):
 To gather the Polybench Calyx data, run:
@@ -224,15 +242,21 @@ To gather the Polybench Calyx data, run:
     </ul>
 </details>
 
-This script uses the sources here:
- - `benchmarks/polybench/*.fuse`
- - `benchmarks/polybench/*.fuse.data`
- - `benchmarks/unrolled/*.fuse`
- - `benchmarks/unrolled/*.fuse.data`
-
-to generate the data:
- - `results/standard/hls/*.json`
- - `results/unrolled/hls/*.json`
+<details>
+<summary>Relevant files: [click to expand]</summary>
+    This script uses the sources here:
+    <ul>
+        <li><code>benchmarks/polybench/*.fuse</code></li>
+        <li><code>benchmarks/polybench/*.fuse.data</code></li>
+        <li><code>benchmarks/unrolled/*.fuse</code></li>
+        <li><code>benchmarks/unrolled/*.fuse.data</code></li>
+    </ul>
+    to generate the data:
+    <ul>
+        <li><code>results/standard/hls/*.json</code></li>
+        <li><code>results/unrolled/hls/*.json</code></li>
+    </ul>
+</details>
 
 ----
 
@@ -254,13 +278,18 @@ To gather the latency sensitive vs. latency insensitive data, run:
     </ul>
 </details>
 
-This script uses the sources here:
- - `benchmarks/polybench/*.fuse`
- - `benchmarks/polybench/*.fuse.data`
-
-to generate the data:
- - `results/latency-sensitive/with-static-timing/*.json`
- - `results/latency-sensitive/no-static-timing/*.json`
+<summary>Relevant files: [click to expand]</summary>
+    This script uses the sources here:
+    <ul>
+        <li><code>benchmarks/polybench/*.fuse</code></li>
+        <li><code>benchmarks/polybench/*.fuse.data</code></li>
+    </ul>
+    to generate the data:
+    <ul>
+        <li><code>results/latency-sensitive/with-static-timing/*.json</code></li>
+        <li><code>results/latency-sensitive/no-static-timing/*.json</code></li>
+    </ul>
+</details>
 
 ## Playing with Infrastructure
 
