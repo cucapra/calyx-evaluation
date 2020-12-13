@@ -8,11 +8,11 @@ fi
 
 # standard (25 minutes)
 mkdir -p results/standard/futil
-ls benchmarks/small_polybench/*.fuse | parallel --bar $parallelism "fud e -q {} --to resource-estimate > results/standard/futil/{/.}.json"
+ls benchmarks/polybench/*.fuse | parallel --bar $parallelism "fud e -q {} --to resource-estimate > results/standard/futil/{/.}.json"
 
 # standard latency (7 minutes)
 mkdir -p results/standard/futil-latency
-ls benchmarks/small_polybench/*.fuse | parallel --bar $parallelism "fud e -q {} --to vcd_json -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/standard/futil-latency/{/.}.json"
+ls benchmarks/polybench/*.fuse | parallel --bar $parallelism "fud e -q {} --to vcd_json -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/standard/futil-latency/{/.}.json"
 
 # unrolled (25 minutes)
 mkdir -p results/unrolled/futil
