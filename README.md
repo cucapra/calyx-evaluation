@@ -53,19 +53,20 @@ If you're installing the tools on your own machine instead the VM, you can
 [download the installer][vivado-webpack].
 The following instructions assume you're using the VM:
 
-1. The desktop should have a file named: `Xilinx_Unified_2019.2_1106_2127_Lin64.bin`.
-2. Right-click on the Desktop and select `Open Terminal Here`.
+1. Log in to the VM with the username `vagrant` and the password `vagrant`.
+2. The desktop should have a file named: `Xilinx_Unified_2019.2_1106_2127_Lin64.bin`.
+3. Right-click on the Desktop and select `Open Terminal Here`.
    In the terminal type following command to start the GUI installer:
    `./Xilinx_Unified_2019.2_1106_2127_Lin64.bin`
-3. Ignore the warning and press `Ok`.
-4. When the box pops up asking you for a new version, click `Continue`.
-5. Enter your Xilinx credentials. If you don't have them, click `please create one` and create a Xilinx account.
-6. Agree to the contract and press `Next`.
-7. Choose `Vivado` and click `Next`.
-7. Choose `Vivado HLS WebPACK` and click `Next`.
-8. Leave the defaults for selecting devices and click `Next`.
-9. **Important!** Change the install path from `/tools/Xilinx` to `/home/vagrant/Xilinx`.
-10. Install.  Depending on the speed of your connection, the whole process
+4. Ignore the warning and press `Ok`.
+5. When the box pops up asking you for a new version, click `Continue`.
+6. Enter your Xilinx credentials. If you don't have them, click `please create one` and create a Xilinx account.
+7. Agree to the contract and press `Next`.
+8. Choose `Vivado` and click `Next`.
+9. Choose `Vivado HLS WebPACK` and click `Next`.
+10. Leave the defaults for selecting devices and click `Next`.
+11. **Important!** Change the install path from `/tools/Xilinx` to `/home/vagrant/Xilinx`.
+12. Install.  Depending on the speed of your connection, the whole process
     should take about 2 - 4 hrs.
 
 ## Step-by-Step Guide
