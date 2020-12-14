@@ -13,6 +13,15 @@ the paper:
 1. To reproduce the graphs presented in our technical paper.
 2. To demonstrate robustness of our software artifacts.
 
+**Important Note**: The figures generated from the artifact evaluation differ slightly from
+the figures in the pre-print. This is for two reasons:
+ 1) Our figures for the systolic array in the pre-print where incorrect due to a bug in our plotting
+ scripts. Our qualitative claims don't change, but the estimated cycles we report are incorrect.
+ 2) We have implemented [resource sharing][resource-sharing] and [register sharing][minimize-registers]
+ optimizations since the pre-print which change the resource numbers slightly.
+
+We have included corrected versions of the graphs in `analysis/*.pdf`
+
 ## Prerequisites
 
 ### Artifact Sources
@@ -351,3 +360,5 @@ with Calyx programs.
 [hello-world]: https://capra.cs.cornell.edu/calyx/tutorial/langtut.html
 [vm-link]: https://cornell.box.com/s/xkvdmtl4l3rhj0gy8qbxo7tzra5bb266
 [virtualbox]: https://www.virtualbox.org/
+[resource-sharing]: https://capra.cs.cornell.edu/calyx/doc/calyx/passes/struct.ResourceSharing.html
+[minimize-registers]: https://capra.cs.cornell.edu/calyx/doc/calyx/passes/struct.MinimizeRegs.html
