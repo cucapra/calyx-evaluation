@@ -65,6 +65,10 @@ to evaluate Calyx on a local machine:
 ### Installing external tools (Estimated time: 2-4 hours)
 Our evaluation uses Xilinx's Vivado and Vivado HLS tools to generate
 area and resource estimates.
+Unfortunately due to licensing restrictions, we can't distribute the VM with
+these tools installed. However, the tools are freely available and below are
+instructions on how to install them.
+
 Our evaluation requires **Vivado WebPACK v.2019.2**.
 Due to the [instability of synthesis tools][verismith], we cannot guarantee our
 evaluation works with a newer or older version of the Vivado tools.
@@ -80,14 +84,19 @@ The following instructions assume you're using the VM:
    `./Xilinx_Unified_2019.2_1106_2127_Lin64.bin`
 4. Ignore the warning and press `Ok`.
 5. When the box pops up asking you for a new version, click `Continue`.
-6. Enter your Xilinx credentials. If you don't have them, click `please create one` and create a Xilinx account.
+6. Enter your Xilinx credentials. If you don't have them, [create a Xilinx account][xilinx-account].
+  - **Note** When you create an account, you need to fill out all the required information on [your profile][xilinx-profile].
+  Otherwise [the Xilinx installer will reject your login](xilinx-fill-account).
+  - The "User ID" is the email address of the Xilinx account you created.
 7. Agree to the contract and press `Next`.
 8. Choose `Vivado` and click `Next`.
-9. Choose `Vivado HLS WebPACK` and click `Next`.
+9. Choose `Vivado HL WebPACK` and click `Next`.
 10. Leave the defaults for selecting devices and click `Next`.
 11. **Important!** Change the install path from `/tools/Xilinx` to `/home/vagrant/Xilinx`.
-12. Install.  Depending on the speed of your connection, the whole process
+12. Confirm that you want to create the directory.
+13. Install.  Depending on the speed of your connection, the whole process
     should take about 2 - 4 hrs.
+
 
 ## Step-by-Step Guide
 
@@ -363,3 +372,6 @@ with Calyx programs.
 [resource-sharing]: https://capra.cs.cornell.edu/calyx/doc/calyx/passes/struct.ResourceSharing.html
 [minimize-registers]: https://capra.cs.cornell.edu/calyx/doc/calyx/passes/struct.MinimizeRegs.html
 [systolic-bug]: https://github.com/cucapra/futil-evaluation/issues/3
+[xilinx-account]: https://www.xilinx.com/registration/create-account.html
+[xilinx-fill-account]: https://forums.xilinx.com/t5/Installation-and-Licensing/What-is-my-user-ID/td-p/1080887
+[xilinx-profile]: https://www.xilinx.com/myprofile/edit-profile.html
