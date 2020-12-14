@@ -24,8 +24,7 @@ code repositories hosted on Github.
 The VM is packaged as an OVA file and can be downloaded [here][vm-link].
 Our instructions assume you're using [VirtualBox][].
 
-- Minimum disk space required to install external tools: 20 GB
-  - **TODO**: How is this configured in virtual box
+- Minimum host disk space required to install external tools: 20 GB
 - Increase number of cores and RAM
   - Select the VM and click "Settings".
   - Select "System" > "Motherboard" and increase the "Base Memory" to 8 GB.
