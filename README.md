@@ -29,7 +29,7 @@ Our instructions assume you're using [VirtualBox][].
 - Increase number of cores and RAM
   - Select the VM and click "Settings".
   - Select "System" > "Motherboard" and increase the "Base Memory" to 8 GB.
-  - Select "System" > "Processor** and select at least 2 cores.
+  - Select "System" > "Processor" and select at least 2 cores.
 
 <details>
 <summary><b>Troubleshooting common VM problems</b> [click to expand]</summary>
@@ -40,7 +40,7 @@ Our instructions assume you're using [VirtualBox][].
  only need about 20gbs of free space.
  - **Running out of memory**. Vivado, Vivado HLS, and Verilator all use a fair amount of memory. If there
  is not enough memory available to the VM, they will crash and data won't be generated. If something fails you can do one of:
-   - Increase the RAM and rerun the script that had a failure
+   - Increase the RAM and rerun the script that had a failure.
    - Ignore the failure, the figure generation scripts are made to be resilient to this kind of data failure.
 </details>
 
