@@ -24,11 +24,11 @@ code repositories hosted on Github.
 The VM is packaged as an OVA file and can be downloaded [here][vm-link].
 Our instructions assume you're using [VirtualBox][].
 
-- Minimum disk space required to install external tools: 30 GB
+- Minimum disk space required to install external tools: 20 GB
   - **TODO**: How is this configured in virtual box
 - Increase number of cores and RAM
   - Select the VM and click "Settings".
-  - Select "System" > "Motherboard" and increase the "Base Memory" to at between 4-8 GB.
+  - Select "System" > "Motherboard" and increase the "Base Memory" to 8 GB.
   - Select "System" > "Processor" and select at least 2 cores.
 
 **Using a local machine**.
@@ -45,7 +45,7 @@ to evaluate Calyx on a local machine:
 ### Installing external tools (Estimated time: 2-4 hours)
 Our evaluation uses Xilinx's Vivado and Vivado HLS tools to generate
 area and resource estimates.
-Our evaluation requires **Vivado WEBPack v.2019.2**.
+Our evaluation requires **Vivado WebPACK v.2019.2**.
 Due to the [instability of synthesis tools][verismith], we cannot guarantee our
 evaluation works with a newer or older version of the Vivado tools.
 
