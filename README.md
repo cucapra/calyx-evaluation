@@ -175,7 +175,7 @@ This allows 4 jobs to run in parallel and will help things run faster. However, 
     </ul>
 </details>
 
-### HLS vs. Systolic Array (Estimated time: ~30 minutes)
+### HLS vs. Systolic Array (Estimated time: 30-45 minutes)
 In this section, we will collect data to reproduce Figure 5a and 5b which
 compare the estimated cycle count and resource usage of HLS designs and
 Calyx-based systolic arrays.
@@ -204,7 +204,7 @@ To gather the Vivado HLS data, run:
     </ul>
 </details>
 
-**Calyx (Estimated time: 30 minutes):**
+**Calyx (Estimated time: 30-45 minutes):**
 To gather the Calyx systolic array data, run:
 ```
 ./scripts/systolic_calyx.sh
@@ -233,11 +233,11 @@ To gather the Calyx systolic array data, run:
 
 ----
 
-### HLS vs. Calyx (Estimated time: 4-5 hours)
+### HLS vs. Calyx (Estimated time: 85 minutes)
 This section reproduces Figure 6a and 6b which compare the estimated cycle
 count and resource usage of HLS and Calyx-based designs.
 
-**Vivado HLS** (Estimated time: 8 minutes):
+**Vivado HLS** (Estimated time: 5-10 minutes):
 To gather the Polybench HLS data, run:
 ```
 ./scripts/polybench_hls.sh
@@ -294,12 +294,12 @@ To gather the Polybench Calyx data, run:
 
 ----
 
-### Latency-Sensitive compilation (Estimated time: 15 minutes)
+### Latency-Sensitive compilation (Estimated time: 10 minutes)
 In this section, we will collect data to reproduce Figure 6c which captures
 the change in cycle count when enabling latency sensitive compilation (Section
 4.4) with the Calyx compiler.
 
-**Data** (Estimated time: 15 minutes):
+**Data** (Estimated time: 10 minutes):
 To gather the latency sensitive vs. latency insensitive data, run:
 ```
 ./scripts/latency_sensitive.sh
