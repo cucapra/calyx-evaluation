@@ -79,15 +79,14 @@ The following instructions assume you're using the VM:
 
 1. Log in to the VM with the username `vagrant` and the password `vagrant`.
 2. The desktop should have a file named: `Xilinx_Unified_2019.2_1106_2127_Lin64.bin`.
-3. Right-click on the Desktop and select `Open Terminal Here`.
-   In the terminal type following command to start the GUI installer:
-   `./Xilinx_Unified_2019.2_1106_2127_Lin64.bin`
+3. Right-click on the Desktop and select `Open Terminal Here` and type following command to start the GUI installer:
+   `sudo ./Xilinx_Unified_2019.2_1106_2127_Lin64.bin`
 4. Ignore the warning and press `Ok`.
 5. When the box pops up asking you for a new version, click `Continue`.
 6. Enter your Xilinx credentials. If you don't have them, [create a Xilinx account][xilinx-account].
-  - **Note** When you create an account, you need to fill out all the required information on [your profile][xilinx-profile].
-  Otherwise [the Xilinx installer will reject your login](xilinx-fill-account).
-  - The "User ID" is the email address of the Xilinx account you created.
+    1. **Note**: When you create an account, you need to fill out all the required information on [your profile][xilinx-profile].
+       Otherwise [the Xilinx installer will reject your login](xilinx-fill-account).
+    2. The "User ID" is the email address of the Xilinx account you created.
 7. Agree to the contract and press `Next`.
 8. Choose `Vivado` and click `Next`.
 9. Choose `Vivado HL WebPACK` and click `Next`.
@@ -101,20 +100,15 @@ The following instructions assume you're using the VM:
 ## Step-by-Step Guide
 
 - **Experimental data and graph generation**: Generate the graphs found in the paper using pre-supplied data.
-  - Play around with the data and generate graph using supplied jupyter notebeooks.
-  - **Systolic array comparison**
-    - 5a. Vivado HLS vs. Systolic Array Cycle count
-    - 5b. Vivado HLS vs. Systolic Array LUT usage
-  - **Polybench graphs**
-    - 6a. Cycle counts normalized to Vivado HLS
-    - 6b. LUT usage normalized to Vivado HLS
-    - 6c. Cycle counts normalized to latency-insensitive design
-- **Regenerating Data**
-  - **Systolic Array**: Compare the Calyx compiler to the Vivado HLS toolchain on systolic arrays of different sizes.
-  - **Polybench experiments**: Compare the Calyx compiler to the Vivado HLS toolchain on the linear algebra polybench benchmarks.
-- *(Optional)* Using the Calyx compiler
-  - Implement a counter by writing Calyx IL.
-  <!-- - Implement a simple pass for the Calyx compiler. -->
+  - Systolic array comparison (Fig 5a, 5b)
+  - Polybench graphs (Fig 6a, 6b, 6c)
+- **Data collection**
+  - Calyx-based Systolic array generator vs. HLS kernels (Section 6.1).
+  - Dahlia-to-Calyx vs. Dahlia-to-HLS (Section 6.2).
+- *(Optional)* **Using the Calyx compiler**
+  - Implement an [example program][hello-world] in Calyx IL.
+  - Take a look at [the documentation][calyx-install] for the Calyx IL.
+  - Take a look at [the documentation][calyx-doc] for the compiler infrastructure.
 
 ## Experimental Data and Graph Generation (Estimated time: 5 minutes)
 Since the process to collecting data takes several hours, we will first
@@ -133,7 +127,7 @@ jupyter lab analysis/artifact.ipynb
 ```
 
 This will open up a Jupyter notebook that generates graphs using the data in
-the `results/` directory.
+che `results/` directory.
 
 - Click "Restart the kernel and re-run the whole notebook" button (⏩)️.
 - All the graphs will be generated within the notebook under headers that correspond with the figures
@@ -181,7 +175,6 @@ section and regenerate the graphs with the data you collected.
 Each subsection uses a single script to collect data for a study.
 The scripts use [fud][], a tool we built to generate and compile Calyx programs
 and invoke various toolchains (simulation, synthesis).
-
 By default, the scripts run one benchmark at a time. If you configured your VM to use more CPU cores
 and memory, you can increase the parallelism with the `-j` flag. For example:
 ```
@@ -352,15 +345,18 @@ To gather the latency sensitive vs. latency insensitive data, run:
     </ul>
 </details>
 
-## (Optional) Writing a Calyx Program (Estimated time: 15 minutes)
+## (Optional) Using the Calyx Compiler (Estimated time: 15 minutes)
 
-[Our tutorial][hello-world] guides you through the process of writing a
+- [Our tutorial][hello-world] guides you through the process of writing a
 Calyx program *by hand* and demonstrates how we use `fud` to simplify working
 with Calyx programs.
+- The documentation for our source code is generated using rustdoc and is [hosted here][calyx-doc].
+- The documentation for Calyx IL is generated using mdbook and is [hosted here][calyx-install].
 
 [calyx]: https://github.com/cucapra/futil
 [calyx-eval]: https://github.com/cucapra/futil-evaluation
 [calyx-install]: https://capra.cs.cornell.edu/calyx/
+[calyx-doc]: https://capra.cs.cornell.edu/calyx/doc/calyx
 [fud]: https://capra.cs.cornell.edu/calyx/tools/fud.html
 [dahlia]: https://github.com/cucapra/dahlia
 [calyx-install-testing]: https://capra.cs.cornell.edu/calyx/#testing-dependencies
