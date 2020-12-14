@@ -15,7 +15,7 @@ the paper:
 
 **Important Note**: The figures generated from the artifact evaluation differ slightly from
 the figures in the pre-print. This is for two reasons:
- 1) Our figures for the systolic array in the pre-print where incorrect due to a bug in our plotting
+ 1) Our figures for the systolic array in the pre-print where incorrect due to [a bug][systolic-bug] in our plotting
  scripts. Our qualitative claims don't change, but the estimated cycles we report are incorrect.
  2) We have implemented [resource sharing][resource-sharing] and [register sharing][minimize-registers]
  optimizations since the pre-print which change the resource numbers slightly.
@@ -362,3 +362,4 @@ with Calyx programs.
 [virtualbox]: https://www.virtualbox.org/
 [resource-sharing]: https://capra.cs.cornell.edu/calyx/doc/calyx/passes/struct.ResourceSharing.html
 [minimize-registers]: https://capra.cs.cornell.edu/calyx/doc/calyx/passes/struct.MinimizeRegs.html
+[systolic-bug]: https://github.com/cucapra/futil-evaluation/issues/3
