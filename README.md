@@ -199,6 +199,9 @@ In this section, we will collect data to reproduce Figure 5a and 5b which
 compare the estimated cycle count and resource usage of HLS designs and
 Calyx-based systolic arrays.
 
+**Reminder**: Remember to compare the figures generated from the data in this section
+against the figures provided in `analysis`, not the ones in the paper.
+
 **Vivado HLS (Estimate time: 1-2 minutes):**
 To gather the Vivado HLS data, run:
 ```
