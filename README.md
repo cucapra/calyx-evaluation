@@ -185,13 +185,13 @@ This allows 4 jobs to run in parallel and will help things run faster. However, 
 
 <details>
 <summary>Explanation of various flags used by <code>fud</code> to automate the evaluation [click to expand]</summary>
-    <ul>
-        <li><code>--to hls-estimate</code>: Uses Vivado HLS to compile and estimate resource usage of an input Dahlia/C++ program.</li>
-        <li><code>--to resource-estimate</code>: Uses Vivado to synthesis Verilog and estimate resource usage.</li>
-        <li><code>--to vcd_json</code>: Uses Verilator to simulate a Verilog program.</li>
-        <li><code>-s systolic.flags {args}</code>: Passes in parameters to the systolic array frontend.</li>
-        <li><code>-s verilog.data {data file}</code>: Passes in a json data file to be given to Verilator for simulation.</li>
-    </ul>
+
+ - `--to hls-estimate`: Uses Vivado HLS to compile and estimate resource usage of an input Dahlia/C++ program.
+ - `--to resource-estimate`: Uses Vivado to synthesis Verilog and estimate resource usage.
+ - `--to vcd_json`: Uses Verilator to simulate a Verilog program.
+ - `-s systolic.flags {args}`: Passes in parameters to the systolic array frontend.
+ - `-s verilog.data {data file}`: Passes in a json data file to be given to Verilator for simulation.
+ - `-s futil.flags '-d static-timing'`: Disables the `static-timing` pass.
 </details>
 
 ### HLS vs. Systolic Array (Estimated time: 30-45 minutes)
@@ -206,21 +206,18 @@ To gather the Vivado HLS data, run:
 ```
 <details>
 <summary>The script is a simple wrapper over the following <code>fud</code> calls: [click to expand]</summary>
-    <ul>
-        <li><code>fud e {dahlia file} --to hls-estimate</code></li>
-    </ul>
+
+ - `fud e {dahlia file} --to hls-estimate`
 </details>
 
 <details>
 <summary>Relevant files: [click to expand]</summary>
-    This script uses the sources here:
-    <ul>
-        <li><code>benchmarks/systolic_sources/*.fuse</code></li>
-    </ul>
-    to generate the data:
-    <ul>
-        <li><code>results/systolic/hls/*.json</code></li>
-    </ul>
+
+This script uses the sources here:
+ - `benchmarks/systolic_sources/*.fuse`
+
+to generate the data:
+ - `results/systolic/hls/*.json`
 </details>
 
 **Calyx (Estimated time: 30-45 minutes):**
@@ -230,24 +227,21 @@ To gather the Calyx systolic array data, run:
 ```
 <details>
 <summary>The script is a simple wrapper over the following <code>fud</code> calls: [click to expand]</summary>
-    <ul>
-        <li><code>fud e --from systolic --to resource-estimate -s systolic.flags {parameters}</code></li>
-        <li><code>fud e --from systolic --to vcd_json -s systolic.flags {parameters} -s verilog.data {data}</code></li>
-    </ul>
+
+ - `fud e --from systolic --to resource-estimate -s systolic.flags {parameters}`
+ - `fud e --from systolic --to vcd_json -s systolic.flags {parameters} -s verilog.data {data}`
 </details>
 
 <details>
 <summary>Relevant files: [click to expand]</summary>
-    This script uses the sources here:
-    <ul>
-        <li><code>benchmarks/systolic_sources/*.systolic</code></li>
-        <li><code>benchmarks/systolic_sources/*.systolic.data</code></li>
-    </ul>
-    to generate the data:
-    <ul>
-        <li><code>results/systolic/futil/*.json</code></li>
-        <li><code>results/systolic/futil-latency/*.json</code></li>
-    </ul>
+
+This script uses the sources here:
+ - `benchmarks/systolic_sources/*.systolic`
+ - `benchmarks/systolic_sources/*.systolic.data`
+
+to generate the data:
+ - `results/systolic/futil/*.json`
+ - `results/systolic/futil-latency/*.json`
 </details>
 
 ----
@@ -263,23 +257,20 @@ To gather the Polybench HLS data, run:
 ```
 <details>
 <summary>The script is a simple wrapper over the following <code>fud</code> calls: [click to expand]</summary>
-    <ul>
-        <li><code>fud e {dahlia file} --to hls-estimate</code></li>
-    </ul>
+
+ - `fud e {dahlia file} --to hls-estimate`
 </details>
 
 <details>
 <summary>Relevant files: [click to expand]</summary>
-    This script uses the sources here:
-    <ul>
-        <li><code>benchmarks/polybench/*.fuse</code></li>
-        <li><code>benchmarks/unrolled/*.fuse</code></li>
-    </ul>
-    to generate the data:
-    <ul>
-        <li><code>results/standard/hls/*.json</code></li>
-        <li><code>results/unrolled/hls/*.json</code></li>
-    </ul>
+
+This script uses the sources here:
+ - `benchmarks/polybench/*.fuse`
+ - `benchmarks/unrolled/*.fuse`
+
+to generate the data:
+ - `results/standard/hls/*.json`
+ - `results/unrolled/hls/*.json`
 </details>
 
 **Calyx** (Estimated time: 75 minutes):
@@ -289,26 +280,23 @@ To gather the Polybench Calyx data, run:
 ```
 <details>
 <summary>The script is a simple wrapper over the following <code>fud</code> calls: [click to expand]</summary>
-    <ul>
-        <li><code>fud e {dahlia file} --to resouce-estimate</code></li>
-        <li><code>fud e {dahlia file} --to vcd_json</code></li>
-    </ul>
+
+ - `fud e {dahlia file} --to resouce-estimate`
+ - `fud e {dahlia file} --to vcd_json`
 </details>
 
 <details>
 <summary>Relevant files: [click to expand]</summary>
-    This script uses the sources here:
-    <ul>
-        <li><code>benchmarks/polybench/*.fuse</code></li>
-        <li><code>benchmarks/polybench/*.fuse.data</code></li>
-        <li><code>benchmarks/unrolled/*.fuse</code></li>
-        <li><code>benchmarks/unrolled/*.fuse.data</code></li>
-    </ul>
-    to generate the data:
-    <ul>
-        <li><code>results/standard/hls/*.json</code></li>
-        <li><code>results/unrolled/hls/*.json</code></li>
-    </ul>
+
+This script uses the sources here:
+ - `benchmarks/polybench/*.fuse`
+ - `benchmarks/polybench/*.fuse.data`
+ - `benchmarks/unrolled/*.fuse`
+ - `benchmarks/unrolled/*.fuse.data`
+
+to generate the data:
+ - `results/standard/hls/*.json`
+ - `results/unrolled/hls/*.json`
 </details>
 
 ----
@@ -325,24 +313,21 @@ To gather the latency sensitive vs. latency insensitive data, run:
 ```
 <details>
 <summary>The script is a simple wrapper over the following <code>fud</code> calls: [click to expand]</summary>
-    <ul>
-        <li><code>fud e {dahlia file} --to vcd_json -s verilog.data {data}</code></li>
-        <li><code>fud e {dahlia file} --to vcd_json -s verilog.data {data} -s futil-flags '-d static-timing'</code></li>
-    </ul>
+
+ - `fud e {dahlia file} --to vcd_json -s verilog.data {data}`
+ - `fud e {dahlia file} --to vcd_json -s verilog.data {data} -s futil.flags '-d static-timing'`
 </details>
 
 <details>
 <summary>Relevant files: [click to expand]</summary>
-    This script uses the sources here:
-    <ul>
-        <li><code>benchmarks/polybench/*.fuse</code></li>
-        <li><code>benchmarks/polybench/*.fuse.data</code></li>
-    </ul>
-    to generate the data:
-    <ul>
-        <li><code>results/latency-sensitive/with-static-timing/*.json</code></li>
-        <li><code>results/latency-sensitive/no-static-timing/*.json</code></li>
-    </ul>
+
+This script uses the sources here:
+ - `benchmarks/polybench/*.fuse`
+ - `benchmarks/polybench/*.fuse.data`
+
+to generate the data:
+ - `results/latency-sensitive/with-static-timing/*.json`
+ - `results/latency-sensitive/no-static-timing/*.json`
 </details>
 
 ## (Optional) Using the Calyx Compiler (Estimated time: 15 minutes)

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Xilinx Installer
+Comment=
+Exec=/home/vagrant/Xilinx_Unified_2019.2_1106_2127_Lin64.bin
+Icon=
+Path=
+Terminal=false
+StartupNotify=false
