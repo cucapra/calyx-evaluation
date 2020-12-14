@@ -27,13 +27,6 @@ Install the vagrant disksize plugin: `vagrant plugin install vagrant-disksize`.
  - Right click on entry for the VM and select, `Export to OCI`.
  - Click through and `Export`.
 
-## Install Vivado tools with WebPACK
-In this step, we install the necessary Vivado tools so that we can synthesis Verilog designs and run Vivado HLS.
-
-### Start the Virtual Machine
-Open the virtual machine in the manager of your choosing (we used VirtualBox). Start the machine and login to the `vagrant`
-user (select this from the drop down menu) with the password `vagrant`.
-
 [vagrant]: https://www.vagrantup.com/
 [virtualbox]: https://www.virtualbox.org/
 [vivado-webpack]: https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Unified_2019.2_1106_2127_Lin64.bin

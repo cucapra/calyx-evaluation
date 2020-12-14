@@ -116,8 +116,15 @@ Vagrant.configure("2") do |config|
     cat /vagrant/Xilinx_profile >> ~/.profile
     cat /vagrant/Xilinx_profile >> ~/.bashrc
 
-    # move Xilinx installer to Desktop
-    cp /vagrant/Xilinx_Unified_2019.2_1106_2127_Lin64.bin ~/Desktop/
+    # move Xilinx installer to home
+    if [ -f "/vagrant/Xilinx_Unified_2019.2_1106_2127_Lin64.bin" ]; then
+      cp /vagrant/Xilinx_Unified_2019.2_1106_2127_Lin64.bin ~
+    fi
+
+    # move Xilinx installer launcher to Desktop
+    if [ -f "/vagrant/Xilinx_installer.desktop" ]; then
+      cp /vagrant/Xilinx_installer.desktop ~/Desktop
+    fi
 
     # make vagrant default user
     if ! cat /etc/lightdm/lightdm-gtk-greeter.conf | grep "user-session="; then
