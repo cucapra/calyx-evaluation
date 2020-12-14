@@ -156,6 +156,14 @@ Each subsection uses a single script to collect data for a study.
 The scripts use [fud][], a tool we built to generate and compile Calyx programs
 and invoke various toolchains (simulation, synthesis).
 
+By default, the scripts run one benchmark at a time. If you configured your VM to use more CPU cores
+and memory, you can increase the parallelism with the `-j` flag. For example:
+```
+./scripts/systolic_hls.sh -j4
+```
+This allows 4 jobs to run in parallel and will help things run faster. However, you may run into
+`Out of Memory` failures. If this happens, simply re-run the script with less parallelism.
+
 <details>
 <summary>Explanation of various flags used by `fud` to automate the evaluation [click to expand]</summary>
     <ul>
