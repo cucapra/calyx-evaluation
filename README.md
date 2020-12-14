@@ -29,7 +29,19 @@ Our instructions assume you're using [VirtualBox][].
 - Increase number of cores and RAM
   - Select the VM and click "Settings".
   - Select "System" > "Motherboard" and increase the "Base Memory" to 8 GB.
-  - Select "System" > "Processor" and select at least 2 cores.
+  - Select "System" > "Processor** and select at least 2 cores.
+
+<details>
+<summary><b>Troubleshooting common VM problems</b> [click to expand]</summary>
+ - **Running out of disk space while installing Vivado tools**. The Vivado installer will sometimes
+ crash or not start if there is not enough disk space. The Virtual Machine is configured to use
+ a dynamically sized disk, so to solve this problem, simply clear space on the host machine. You should
+ only need about 20gbs of free space.
+ - **Running out of memory**. Vivado, Vivado HLS, and Verilator all use a fair amount of memory. If there
+ is not enough memory available to the VM, they will crash and data won't be generated. If something fails you can do one of:
+   - Increase the RAM and rerun the script that had a failure
+   - Ignore the failure, the figure generation scripts are made to be resilient to this kind of data failure.
+</details>
 
 **Using a local machine**.
 The following instructions can be used to setup and build all the tools required
@@ -85,7 +97,7 @@ The following instructions assume you're using the VM:
   - **Polybench experiments**: Compare the Calyx compiler to the Vivado HLS toolchain on the linear algebra polybench benchmarks.
 - *(Optional)* Using the Calyx compiler
   - Implement a counter by writing Calyx IL.
-  - Implement a simple pass for the Calyx compiler.
+  <!-- - Implement a simple pass for the Calyx compiler. -->
 
 ## Experimental Data and Graph Generation (Estimated time: 5 minutes)
 Since the process to collecting data takes several hours, we will first
