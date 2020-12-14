@@ -33,6 +33,7 @@ Our instructions assume you're using [VirtualBox][].
 
 <details>
 <summary><b>Troubleshooting common VM problems</b> [click to expand]</summary>
+
  - **Running out of disk space while installing Vivado tools**. The Vivado installer will sometimes
  crash or not start if there is not enough disk space. The Virtual Machine is configured to use
  a dynamically sized disk, so to solve this problem, simply clear space on the host machine. You should
