@@ -1,4 +1,6 @@
 # Calyx Evaluation
+[![DOI](https://zenodo.org/badge/283842844.svg)](https://zenodo.org/badge/latestdoi/283842844)
+
 
 This repository contains the evaluation materials for our ASPLOS 2021 paper,
 "A Compiler Infrastructure for Hardware Accelerators".
