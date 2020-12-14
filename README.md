@@ -107,13 +107,12 @@ The [next section](#data-collection) will demonstrate how to collect this data.
 
 In the root of the `futil-evaluation` directory, run:
 ```
-jupyter lab
+jupyter lab analysis/artifact.ipynb
 ```
 
 This will open up a Jupyter notebook that generates graphs using the data in
 the `results/` directory.
 
-- Navigate to the `analysis/artfact.ipynb` notebook.
 - Click "Restart the kernel and re-run the whole notebook" button (⏩)️.
 - All the graphs will be generated within the notebook under headers that correspond with the figures
   in the paper.
@@ -124,31 +123,25 @@ Details about the structure of the <code>results</code> directory [click to expa
 </summary>
 
 **Data organization**.
-All the data lives in the `results` directory. There are three directories:
- - `standard`: standard Polybench benchmarks
- - `unrolled`: unrolled versions of select Polybench benchmarks
+All the data lives in the `results` directory. There are four directories:
  - `systolic`: Systolic array data.
+ - `standard`: Standard Polybench benchmarks.
+ - `unrolled`: Unrolled versions of select Polybench benchmarks.
+ - `latency-sensitive`: Polybench benchmarks run with `static-timing` enabled and disabled.
 
-Each of these directories have a `calyx` and an `hls` directory which contain
+The `systolic`, `standard`, and `unrolled` directories each
+have a `futil`, `futil-latency`, and an `hls` sub-directory which contain
 a json file for each benchmark.
 
-**Data processing**.
-For easier processing, we transform the `json` files into `csv` files. This is done with
-the `analysis/data_format.ipynb` notebook file.
+`latency-sensitive` has the sub-directories `with-static-timing` and `no-static-timing` which
+contain a json file for each benchmark.
 
- - Navigate to the `analysis/data_format.ipynb` notebook.
- - Click "Restart the kernel, then re-run the whole notebook" button (⏩).
- - Check that a `data.csv` file has appeared in each of the data directories (`results/standard/hls/data.csv`, `results/standard/futil/data.csv`, ...).
+**Data processing**.
+For easier processing, we transform the `json` files into `csv` files. This is done
+at the top of `analysis/artifact.ipynb`.
 
 Run the notebook, and check to make sure that `data.csv` files have appeared in each of
 the data directories.
-
-**Graph generation**.
-The graph generating is done in `analysis/artfact.ipynb`.
- - Navigate to the `analysis/artfact.ipynb` notebook.
- - Click "Restart the kernel and re-run the whole notebook" button (⏩)️.
- - All the graphs will be generated within the notebook under headers that correspond with the figures
- in the paper.
 </details>
 
 ## Data Collection
