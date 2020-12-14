@@ -28,8 +28,8 @@ Our instructions assume you're using [VirtualBox][].
   - **TODO**: How is this configured in virtual box
 - Increase number of cores and RAM
   - Select the VM and click "Settings".
-  - Select "System" > "Motherboard" and increase the "Base Memory" to at least 16 GB.
-  - Select "System" > "Processor" and select at least 4 cores.
+  - Select "System" > "Motherboard" and increase the "Base Memory" to at between 4-8 GB.
+  - Select "System" > "Processor" and select at least 2 cores.
 
 **Using a local machine**.
 The following instructions can be used to setup and build all the tools required
