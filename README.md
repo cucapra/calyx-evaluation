@@ -24,7 +24,7 @@ code repositories hosted on Github.
 The VM is packaged as an OVA file and can be downloaded [here][vm-link].
 Our instructions assume you're using [VirtualBox][].
 
-- Minimum host disk space required to install external tools: 20 GB
+- Minimum host disk space required to install external tools: 65 GB
 - Increase number of cores and RAM
   - Select the VM and click "Settings".
   - Select "System" > "Motherboard" and increase the "Base Memory" to 8 GB.
@@ -35,8 +35,7 @@ Our instructions assume you're using [VirtualBox][].
 
  - **Running out of disk space while installing Vivado tools**. The Vivado installer will sometimes
  crash or not start if there is not enough disk space. The Virtual Machine is configured to use
- a dynamically sized disk, so to solve this problem, simply clear space on the host machine. You should
- only need about 20gbs of free space.
+ a dynamically sized disk, so to solve this problem, simply clear space on the host machine. You need about 65 gbs of free space.
  - **Running out of memory**. Vivado, Vivado HLS, and Verilator all use a fair amount of memory. If there
  is not enough memory available to the VM, they will crash and data won't be generated. If something fails you can do one of:
    - Increase the RAM and rerun the script that had a failure.
@@ -105,7 +104,12 @@ regenerate the graphs presented in the paper from **data already committed to
 the repository**.
 The [next section](#data-collection) will demonstrate how to collect this data.
 
-In the root of the `futil-evaluation` directory, run:
+Open the `futil-evaluation` directory on the Desktop. Right click in the file explorer
+and select `Open Terminal Here`. First run:
+```
+git pull
+```
+to make sure that everything is up to date. Then run:
 ```
 jupyter lab analysis/artifact.ipynb
 ```
@@ -139,7 +143,6 @@ contain a json file for each benchmark.
 **Data processing**.
 For easier processing, we transform the `json` files into `csv` files. This is done
 at the top of `analysis/artifact.ipynb`.
-
 Run the notebook, and check to make sure that `data.csv` files have appeared in each of
 the data directories.
 </details>
@@ -170,7 +173,7 @@ This allows 4 jobs to run in parallel and will help things run faster. However, 
 `Out of Memory` failures. If this happens, simply re-run the script with less parallelism.
 
 <details>
-<summary>Explanation of various flags used by `fud` to automate the evaluation [click to expand]</summary>
+<summary>Explanation of various flags used by <code>fud</code> to automate the evaluation [click to expand]</summary>
     <ul>
         <li><code>--to hls-estimate</code>: Uses Vivado HLS to compile and estimate resource usage of an input Dahlia/C++ program.</li>
         <li><code>--to resource-estimate</code>: Uses Vivado to synthesis Verilog and estimate resource usage.</li>
