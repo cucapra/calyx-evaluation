@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -euf -o pipefail
+
+if [ -z ${DAHLIA+x} ]; then
+ echo >&2 '`DAHLIA` is not a command. Please export `alias dahlia=<Path to dahlia compiler>`.';
+ exit 1;
+fi
+
+# Make a tmp directory
+tmp="$(mktemp -d)"
+out="$tmp/$(basename -s .fuse $1).cpp"
+exe="$out.o"
+
+$DAHLIA run "$1" -o "$out" --lower 2> /dev/null > /dev/null
+
+$exe $2

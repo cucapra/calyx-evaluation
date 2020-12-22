@@ -1,4 +1,4 @@
-import "fxp_sqrt.h" {
+import "math.h" {
   def sqrt(x: ubit<32>): ubit<32>;
 }
 
