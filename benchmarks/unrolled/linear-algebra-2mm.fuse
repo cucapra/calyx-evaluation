@@ -35,7 +35,7 @@ for (let i: ubit<4> = 0..8) unroll 2 {
     tmp[i][j] := 0;
     ---
     for (let k: ubit<4> = 0..8) unroll 2 {
-      let v: ubit<32> = alpha_int[0] * A[i][k] * B[k][j]
+      let v: ubit<32> = alpha_int[0] * A[i][k] * B[k][j];
     } combine {
       tmp[i][j] += v;
     }
@@ -51,7 +51,7 @@ for (let i1: ubit<4> = 0..8) unroll 2 {
     D[i1][j1] := beta_int[0] * d_tmp;
     ---
     for (let k1: ubit<4> = 0..8) unroll 2 {
-      let v1: ubit<32> = tmp[i1][k1] * C[k1][j1]
+      let v1: ubit<32> = tmp[i1][k1] * C[k1][j1];
     } combine {
       D[i1][j1] += v1;
     }
