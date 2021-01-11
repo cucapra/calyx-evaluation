@@ -31,7 +31,7 @@ The artifact is available in two formats: A virtual machine image and through
 code repositories hosted on Github.
 
 **Using the VM**.
-The VM is packaged as an OVA file and can be downloaded [here][vm-link].
+The VM is packaged as an OVA file and can be downloaded from a permanent link [here][vm-link].
 Our instructions assume you're using [VirtualBox][].
 
 - Minimum host disk space required to install external tools: 65 GB
@@ -62,7 +62,8 @@ to evaluate Calyx on a local machine:
   - (*Optional*) Run the tests to ensure that the Calyx compiler is installed correctly.
 - Install our Calyx driver utility [Fud][fud].
 - Clone the [artifact evaluation repository][calyx-eval].
-- Install evaluation dependencies with: `pip3 install -r requirements.txt`
+- Install evaluation python dependencies with: `pip3 install -r requirements.txt`
+- Follow instructions [here][parallel-install] to install GNU Parallel
 
 ### Installing external tools (Estimated time: 2-4 hours)
 Our evaluation uses Xilinx's Vivado and Vivado HLS tools to generate
@@ -359,3 +360,4 @@ with Calyx programs.
 [xilinx-account]: https://www.xilinx.com/registration/create-account.html
 [xilinx-fill-account]: https://forums.xilinx.com/t5/Installation-and-Licensing/What-is-my-user-ID/td-p/1080887
 [xilinx-profile]: https://www.xilinx.com/myprofile/edit-profile.html
+[parallel-install]: https://www.gnu.org/software/parallel/
