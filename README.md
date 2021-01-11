@@ -63,6 +63,7 @@ to evaluate Calyx on a local machine:
   - (*Optional*) Run the tests to ensure that the Calyx compiler is installed correctly.
 - Install our Calyx driver utility [Fud][fud].
 - Clone the [artifact evaluation repository][calyx-eval].
+- Install evaluation dependencies with: `pip3 install -r requirements.txt`
 
 ### Installing external tools (Estimated time: 2-4 hours)
 Our evaluation uses Xilinx's Vivado and Vivado HLS tools to generate
