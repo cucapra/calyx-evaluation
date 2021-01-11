@@ -352,7 +352,7 @@ with Calyx programs.
 [vivado-webpack]: https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Unified_2019.2_1106_2127_Lin64.bin
 [verismith]: https://johnwickerson.github.io/papers/verismith_fpga20.pdf
 [hello-world]: https://capra.cs.cornell.edu/calyx/tutorial/langtut.html
-[vm-link]: https://cornell.box.com/s/xkvdmtl4l3rhj0gy8qbxo7tzra5bb266
+[vm-link]: https://zenodo.org/record/4432747/files/futil-artifact-public.ova?download=1
 [virtualbox]: https://www.virtualbox.org/
 [resource-sharing]: https://capra.cs.cornell.edu/calyx/doc/calyx/passes/struct.ResourceSharing.html
 [minimize-registers]: https://capra.cs.cornell.edu/calyx/doc/calyx/passes/struct.MinimizeRegs.html
