@@ -1,5 +1,5 @@
 # Calyx Evaluation
-[![DOI](https://zenodo.org/badge/283842844.svg)](https://zenodo.org/badge/latestdoi/283842844)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4432685.svg)](https://doi.org/10.5281/zenodo.4432685)
 
 
 This repository contains the evaluation materials for our ASPLOS 2021 paper,
