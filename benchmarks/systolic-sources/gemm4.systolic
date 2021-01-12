@@ -1,1 +1,6 @@
--tl 4 -td 4 -ll 4 -ld 4
+{
+    "top_length": 4,
+    "top_depth": 4,
+    "left_length": 4,
+    "left_depth": 4
+}
