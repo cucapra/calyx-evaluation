@@ -1,1 +1,6 @@
--tl 6 -td 6 -ll 6 -ld 6
+{
+    "top_length": 6,
+    "top_depth": 6,
+    "left_length": 6,
+    "left_depth": 6
+}

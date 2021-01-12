@@ -1,1 +1,6 @@
--tl 2 -td 2 -ll 2 -ld 2
+{
+    "top_length": 2,
+    "top_depth": 2,
+    "left_length": 2,
+    "left_depth": 2
+}

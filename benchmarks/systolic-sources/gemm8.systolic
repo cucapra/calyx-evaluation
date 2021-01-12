@@ -1,1 +1,6 @@
--tl 8 -td 8 -ll 8 -ld 8
+{
+    "top_length": 8,
+    "top_depth": 8,
+    "left_length": 8,
+    "left_depth": 8
+}

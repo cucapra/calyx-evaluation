@@ -10,10 +10,10 @@ fi
 mkdir -p results/systolic/futil
 ls benchmarks/systolic-sources/*.systolic | \
     parallel --bar $parallelism \
-             "fud e -q --from systolic --to resource-estimate -s systolic.flags '\$(cat {})' > results/systolic/futil/{/.}.json"
+             "fud e -q {} --to resource-estimate > results/systolic/futil/{/.}.json"
 
 # make results directory for futil-latency and run verilator
 mkdir -p results/systolic/futil-latency
 ls benchmarks/systolic-sources/*.systolic | \
     parallel --bar $parallelism \
-             "fud e -q --from systolic --to vcd_json -s systolic.flags '\$(cat {})' -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/systolic/futil-latency/{/.}.json"
+             "fud e -q {} --to vcd_json -s verilog.data '{}.data' | jq '{\"latency\":.TOP.main.clk | add}' > results/systolic/futil-latency/{/.}.json"
