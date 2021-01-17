@@ -1,5 +1,5 @@
 benchmark,type,key,value
-gemm2,systolic-futil,latency,78
-gemm6,systolic-futil,latency,322
-gemm8,systolic-futil,latency,468
-gemm4,systolic-futil,latency,192
+gemm2,systolic-futil,latency,33
+gemm4,systolic-futil,latency,81
+gemm6,systolic-futil,latency,137
+gemm8,systolic-futil,latency,201

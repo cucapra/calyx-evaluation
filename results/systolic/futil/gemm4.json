@@ -1,7 +1,7 @@
 {
-  "lut": 2123,
-  "dsp": 48,
+  "lut": 937,
+  "dsp": 32,
   "meet_timing": 1,
-  "registers": 838,
-  "muxes": 613
+  "registers": 342,
+  "muxes": 323
 }

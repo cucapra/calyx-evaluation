@@ -7,10 +7,10 @@ else
 fi
 
 # make sure results directory exists and run resource estimation
-mkdir -p results/systolic/futil
-ls benchmarks/systolic-sources/*.systolic | \
-    parallel --bar $parallelism \
-             "fud e -q {} --to resource-estimate > results/systolic/futil/{/.}.json"
+# mkdir -p results/systolic/futil
+# ls benchmarks/systolic-sources/*.systolic | \
+#     parallel --bar $parallelism \
+#              "fud e -q {} --to resource-estimate > results/systolic/futil/{/.}.json"
 
 # make results directory for futil-latency and run verilator
 mkdir -p results/systolic/futil-latency

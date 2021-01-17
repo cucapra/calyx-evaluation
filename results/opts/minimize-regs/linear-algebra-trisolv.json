@@ -1,0 +1,20 @@
+{
+  "lut": 373,
+  "dsp": 3,
+  "meet_timing": 1,
+  "registers": 40,
+  "muxes": 70,
+  "clb_registers": 405,
+  "carry8": 10,
+  "f7_muxes": 0,
+  "f8_muxes": 0,
+  "f9_muxes": 0,
+  "clb": 788,
+  "cell_lut1": 4,
+  "cell_lut2": 80,
+  "cell_lut3": 75,
+  "cell_lut4": 98,
+  "cell_lut5": 88,
+  "cell_lut6": 106,
+  "cell_fdre": 404
+}
