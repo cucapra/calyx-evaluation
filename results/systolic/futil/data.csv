@@ -4,11 +4,6 @@ gemm2,systolic-futil,dsp,8
 gemm2,systolic-futil,meet_timing,1
 gemm2,systolic-futil,registers,102
 gemm2,systolic-futil,muxes,100
-gemm4,systolic-futil,lut,937
-gemm4,systolic-futil,dsp,32
-gemm4,systolic-futil,meet_timing,1
-gemm4,systolic-futil,registers,342
-gemm4,systolic-futil,muxes,323
 gemm6,systolic-futil,lut,2107
 gemm6,systolic-futil,dsp,72
 gemm6,systolic-futil,meet_timing,1
@@ -19,3 +14,8 @@ gemm8,systolic-futil,dsp,128
 gemm8,systolic-futil,meet_timing,1
 gemm8,systolic-futil,registers,1230
 gemm8,systolic-futil,muxes,1160
+gemm4,systolic-futil,lut,937
+gemm4,systolic-futil,dsp,32
+gemm4,systolic-futil,meet_timing,1
+gemm4,systolic-futil,registers,342
+gemm4,systolic-futil,muxes,323

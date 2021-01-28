@@ -6,13 +6,6 @@ gemm2,systolic-hls,dsp,12
 gemm2,systolic-hls,avg_latency,62
 gemm2,systolic-hls,best_latency,62
 gemm2,systolic-hls,worst_latency,62
-gemm4,systolic-hls,total_lut,2427
-gemm4,systolic-hls,instance_lut,40
-gemm4,systolic-hls,lut,2387
-gemm4,systolic-hls,dsp,48
-gemm4,systolic-hls,avg_latency,322
-gemm4,systolic-hls,best_latency,322
-gemm4,systolic-hls,worst_latency,322
 gemm6,systolic-hls,total_lut,4949
 gemm6,systolic-hls,instance_lut,40
 gemm6,systolic-hls,lut,4909
@@ -27,3 +20,10 @@ gemm8,systolic-hls,dsp,192
 gemm8,systolic-hls,avg_latency,2210
 gemm8,systolic-hls,best_latency,2210
 gemm8,systolic-hls,worst_latency,2210
+gemm4,systolic-hls,total_lut,2427
+gemm4,systolic-hls,instance_lut,40
+gemm4,systolic-hls,lut,2387
+gemm4,systolic-hls,dsp,48
+gemm4,systolic-hls,avg_latency,322
+gemm4,systolic-hls,best_latency,322
+gemm4,systolic-hls,worst_latency,322
