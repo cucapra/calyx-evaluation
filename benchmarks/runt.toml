@@ -15,7 +15,7 @@ paths = [ "polybench/*.fuse" ]
 cmd = """
 fud exec -s verilog.data {}.data \
          {} --to dat \
-         -q
+         -q | jq .memories
 """
 expect_dir = "simulation/"
 
@@ -25,7 +25,7 @@ paths = [ "unrolled/*.fuse" ]
 cmd = """
 fud exec -s verilog.data {}.data \
          {} --to dat \
-         -q
+         -q | jq .memories
 """
 expect_dir = "simulation/"
 
