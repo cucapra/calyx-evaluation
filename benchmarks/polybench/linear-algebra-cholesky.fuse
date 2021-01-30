@@ -1,6 +1,7 @@
 import c++("math.h")
-       vivado("math.h") {
-  def sqrt(x: ubit<32>): ubit<32>;
+       vivado("math.h")
+       futil("primitives/bitnum/math.futil") {
+  def sqrt(in: ubit<32>): ubit<32>;
 }
 
 decl A_int: ubit<32>[8][8];
@@ -55,5 +56,6 @@ for (let i: ubit<4> = 0..8) {
   ---
   let A_i_i = A_int[i][i];
   ---
-  A_int[i][i] := sqrt(A_i_i);
+  let sq = sqrt(A_i_i);
+  A_int[i][i] := sq;
 }
