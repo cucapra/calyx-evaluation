@@ -9,5 +9,6 @@ futil-artifact/data/*
 futil-artifact/Xilinx_Unified_2019.2_1106_2127_Lin64.bin
 *.png
 *.pdf
+results/*-files
 
 __pycache__
