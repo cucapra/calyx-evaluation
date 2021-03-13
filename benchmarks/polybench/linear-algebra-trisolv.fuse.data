@@ -10,7 +10,11 @@
       33,
       16
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "x_int0": {
     "data": [
@@ -23,7 +27,11 @@
       33,
       16
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "b_int": {
     "data": [
@@ -36,7 +44,11 @@
       49,
       87
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "b_int0": {
     "data": [
@@ -49,7 +61,11 @@
       49,
       87
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "L_int": {
     "data": [
@@ -134,7 +150,11 @@
         44
       ]
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "L_int0_0": {
     "data": [
@@ -219,6 +239,10 @@
         44
       ]
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   }
 }

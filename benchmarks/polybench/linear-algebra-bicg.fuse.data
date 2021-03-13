@@ -82,7 +82,11 @@
         0
       ]
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "A_int0_0": {
     "data": [
@@ -167,7 +171,11 @@
         0
       ]
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "s_int": {
     "data": [
@@ -180,7 +188,11 @@
       0,
       20
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "s_int0": {
     "data": [
@@ -193,7 +205,11 @@
       0,
       20
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "q_int": {
     "data": [
@@ -206,7 +222,11 @@
       30,
       75
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "q_int0": {
     "data": [
@@ -219,7 +239,11 @@
       30,
       75
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "p_int": {
     "data": [
@@ -232,7 +256,11 @@
       16,
       88
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "p_int0": {
     "data": [
@@ -245,7 +273,11 @@
       16,
       88
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "r_int": {
     "data": [
@@ -258,7 +290,11 @@
       54,
       1
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "r_int0": {
     "data": [
@@ -271,6 +307,10 @@
       54,
       1
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   }
 }

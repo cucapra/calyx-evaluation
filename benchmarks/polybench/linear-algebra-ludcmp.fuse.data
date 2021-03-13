@@ -82,7 +82,11 @@
         6
       ]
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "A_int0_0": {
     "data": [
@@ -167,7 +171,11 @@
         6
       ]
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "b_int": {
     "data": [
@@ -180,7 +188,11 @@
       30,
       76
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "b_int0": {
     "data": [
@@ -193,7 +205,11 @@
       30,
       76
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "x_int": {
     "data": [
@@ -206,7 +222,11 @@
       40,
       69
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "x_int0": {
     "data": [
@@ -219,7 +239,11 @@
       40,
       69
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "y_int": {
     "data": [
@@ -232,7 +256,11 @@
       84,
       89
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "y_int0": {
     "data": [
@@ -245,6 +273,10 @@
       84,
       89
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   }
 }

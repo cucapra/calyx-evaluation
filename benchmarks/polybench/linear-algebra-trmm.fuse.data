@@ -3,13 +3,21 @@
     "data": [
       92
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "alpha_int0": {
     "data": [
       92
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "A_int": {
     "data": [
@@ -94,7 +102,11 @@
         50
       ]
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "A_int0_0": {
     "data": [
@@ -179,7 +191,11 @@
         50
       ]
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "B_int": {
     "data": [
@@ -296,7 +312,11 @@
         64
       ]
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "B_int0_0": {
     "data": [
@@ -413,6 +433,10 @@
         64
       ]
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   }
 }
