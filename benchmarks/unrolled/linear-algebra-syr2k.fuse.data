@@ -325,22 +325,6 @@
       "width": 32
     }
   },
-  "A0_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "A0_1": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
   "B_int0_0": {
     "data": [
       [
@@ -464,22 +448,6 @@
         8
       ]
     ],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "B0_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "B0_1": {
-    "data": [],
     "format": {
       "numeric_type": "bitnum",
       "is_signed": false,
