@@ -88,38 +88,6 @@
       "width": 32
     }
   },
-  "E0_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "E0_1": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "E1_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "E1_1": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
   "A_int0_0": {
     "data": [
       [
@@ -203,38 +171,6 @@
         98
       ]
     ],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "A0_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "A0_1": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "A1_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "A1_1": {
-    "data": [],
     "format": {
       "numeric_type": "bitnum",
       "is_signed": false,
@@ -330,38 +266,6 @@
       "width": 32
     }
   },
-  "B0_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "B0_1": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "B1_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "B1_1": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
   "F_int0_0": {
     "data": [
       [
@@ -445,38 +349,6 @@
         13
       ]
     ],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "F0_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "F0_1": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "F1_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "F1_1": {
-    "data": [],
     "format": {
       "numeric_type": "bitnum",
       "is_signed": false,
@@ -572,38 +444,6 @@
       "width": 32
     }
   },
-  "C0_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "C0_1": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "C1_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "C1_1": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
   "D_int0_0": {
     "data": [
       [
@@ -693,38 +533,6 @@
       "width": 32
     }
   },
-  "D0_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "D0_1": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "D1_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "D1_1": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
   "G_int0_0": {
     "data": [
       [
@@ -808,38 +616,6 @@
         12
       ]
     ],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "G0_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "G0_1": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "G1_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "G1_1": {
-    "data": [],
     "format": {
       "numeric_type": "bitnum",
       "is_signed": false,

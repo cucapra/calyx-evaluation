@@ -324,37 +324,5 @@
       "is_signed": false,
       "width": 32
     }
-  },
-  "A0_0": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "A0_1": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "A0_2": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
-  },
-  "A0_3": {
-    "data": [],
-    "format": {
-      "numeric_type": "bitnum",
-      "is_signed": false,
-      "width": 32
-    }
   }
 }
