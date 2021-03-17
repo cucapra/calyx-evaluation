@@ -6,7 +6,11 @@
       4,
       97
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "l1": {
     "data": [
@@ -15,7 +19,11 @@
       7,
       73
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "l2": {
     "data": [
@@ -24,7 +32,11 @@
       64,
       51
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "l3": {
     "data": [
@@ -33,7 +45,11 @@
       85,
       61
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "t0": {
     "data": [
@@ -42,7 +58,11 @@
       21,
       16
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "t1": {
     "data": [
@@ -51,7 +71,11 @@
       31,
       14
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "t2": {
     "data": [
@@ -60,7 +84,11 @@
       86,
       80
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "t3": {
     "data": [
@@ -69,7 +97,11 @@
       23,
       61
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "out_mem": {
     "data": [
@@ -98,6 +130,10 @@
         0
       ]
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   }
 }

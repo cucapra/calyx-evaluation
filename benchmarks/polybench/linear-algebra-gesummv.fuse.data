@@ -3,13 +3,21 @@
     "data": [
       37
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "beta_int0": {
     "data": [
       11
     ],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "A_int0_0": {
     "data": [
@@ -94,23 +102,11 @@
         91
       ]
     ],
-    "bitwidth": 32
-  },
-  "A0_0": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "A0_1": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "A1_0": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "A1_1": {
-    "data": [],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "B_int0_0": {
     "data": [
@@ -195,23 +191,11 @@
         2
       ]
     ],
-    "bitwidth": 32
-  },
-  "B0_0": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "B0_1": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "B1_0": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "B1_1": {
-    "data": [],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "tmp_int0": {
     "data": [
@@ -224,15 +208,11 @@
       67,
       76
     ],
-    "bitwidth": 32
-  },
-  "tmp0": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "tmp1": {
-    "data": [],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "x_int0": {
     "data": [
@@ -245,15 +225,11 @@
       0,
       51
     ],
-    "bitwidth": 32
-  },
-  "x0": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "x1": {
-    "data": [],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "y_int0": {
     "data": [
@@ -266,14 +242,10 @@
       38,
       64
     ],
-    "bitwidth": 32
-  },
-  "y0": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "y1": {
-    "data": [],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   }
 }

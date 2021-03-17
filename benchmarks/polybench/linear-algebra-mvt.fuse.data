@@ -10,15 +10,11 @@
       46,
       87
     ],
-    "bitwidth": 32
-  },
-  "x10": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "x11": {
-    "data": [],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "x2_int0": {
     "data": [
@@ -31,15 +27,11 @@
       24,
       96
     ],
-    "bitwidth": 32
-  },
-  "x20": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "x21": {
-    "data": [],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "y1_int0": {
     "data": [
@@ -52,15 +44,11 @@
       14,
       63
     ],
-    "bitwidth": 32
-  },
-  "y10": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "y11": {
-    "data": [],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "y2_int0": {
     "data": [
@@ -73,15 +61,11 @@
       99,
       46
     ],
-    "bitwidth": 32
-  },
-  "y20": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "y21": {
-    "data": [],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   },
   "A_int0_0": {
     "data": [
@@ -166,22 +150,10 @@
         76
       ]
     ],
-    "bitwidth": 32
-  },
-  "A0_0": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "A0_1": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "A1_0": {
-    "data": [],
-    "bitwidth": 32
-  },
-  "A1_1": {
-    "data": [],
-    "bitwidth": 32
+    "format": {
+      "numeric_type": "bitnum",
+      "is_signed": false,
+      "width": 32
+    }
   }
 }
