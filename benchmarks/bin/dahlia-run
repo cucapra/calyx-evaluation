@@ -3,7 +3,7 @@
 set -euf -o pipefail
 
 if [ -z ${DAHLIA+x} ]; then
- echo >&2 '`DAHLIA` is not a command. Please export `alias dahlia=<Path to dahlia compiler>`.';
+ echo >&2 '`DAHLIA` is not a command. Please export `alias DAHLIA=<Path to dahlia compiler>`.';
  exit 1;
 fi
 
