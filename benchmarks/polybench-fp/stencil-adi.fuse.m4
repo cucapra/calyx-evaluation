@@ -58,11 +58,11 @@ for (let t: ITER = 0..TSTEPS) {
       q[i][j] := ((0-d) * u_j_i_1 + (ONE+TWO*d) * u_j_i - f*u_j_1_i - a*q_i_j_1) / (a*p[i][j-1]+b);
     }
 
-    v[N_1][i] := ONE;
+    v[(N_1 as DATATYPE)][i] := ONE;
     ---
 
     /*TODO: ORIGINAL: for (j=_PB_N-2; j>=1; j--) { }*/
-    for (let j: ITER = N_1..1) {
+    for (let j: ITER = rev 1..N_1) {
       let v_1_j_i = v[j+1][i];
       ---
       v[j][i] := p[i][j] * v_1_j_i + q[i][j];
@@ -90,9 +90,9 @@ for (let t: ITER = 0..TSTEPS) {
       q[i][j] := ((0-a) * v_i_1_j + (ONE+TWO*a)*v[i][j] - c*v_1_i_j-d*q_i_j_1)/(d*p[i][j-1]+e);
     }
 
-    u[i][N-1] := ONE;
+    u[i][N_1] := ONE;
     ---
-    for (let j: ITER = N_1..1) {
+    for (let j: ITER = rev 1..N_1) {
       let u_i_1_j = u[i][j+1];
       ---
       u[i][j] := p[i][j] * u_i_1_j + q[i][j];
