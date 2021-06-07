@@ -1,6 +1,6 @@
 import c++("math.h")
        vivado("math.h")
-       futil("primitives/bitnum/math.futil") {
+       futil("primitives/math.futil") {
   def sqrt(in: ubit<32>): ubit<32>;
 }
 
