@@ -36,7 +36,7 @@ expect_dir = "simulation/"
 name = "Interpreter"
 paths = [ "polybench/*.fuse" ]
 cmd = """
-fud exec -s interpreter.data {}.data \
+fud exec -s verilog.data {}.data \
          {} --to interpreter-out \
          -q | jq .memories.main
 """
@@ -46,7 +46,7 @@ expect_dir = "simulation/"
 # name = "Unrolled interpreter"
 # paths = [ "unrolled/*.fuse" ]
 # cmd = """
-# fud exec -s interpreter.data {}.data \
+# fud exec -s verilog.data {}.data \
          # {} --to interpreter-out \
          # -q | jq .memories.main
 # """
