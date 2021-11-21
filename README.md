@@ -121,6 +121,7 @@ Open the `futil-evaluation` directory on the Desktop. Right click in the file ex
 and select `Open Terminal Here`. First run:
 ```
 git fetch; git checkout 1.2
+sudo apt install texlive texlive-latex-extra dvipng
 ```
 to make sure that everything is up to date. Then run:
 ```
