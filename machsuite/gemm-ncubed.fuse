@@ -1,0 +1,15 @@
+decl m1: fix<64, 32>[64 bank 2][64 bank 4];
+decl m2: fix<64, 32>[64 bank 8][64 bank 4];
+decl prod: fix<64, 32>[64 bank 2][64 bank 4];
+
+for (let i: ubit<6> = 0..64) {
+  for (let j: ubit<6> = 0..64) {
+    let sum: fix<64, 32> = 0.0;
+    for (let k: ubit<6> = 0..64) {
+      let mult = m1[i][k] * m2[k][j];
+    } combine {
+      sum += mult;
+    }
+    prod[i][j] := sum;
+  }
+}

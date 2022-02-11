@@ -1,0 +1,47 @@
+decl force_x: fix<64,32>[256];
+decl force_y: fix<64,32>[256];
+decl force_z: fix<64,32>[256];
+decl position_x: fix<64,32>[256];
+decl position_y: fix<64,32>[256];
+decl position_z: fix<64,32>[256];
+decl nl: bit<32>[256][16];
+
+let lj1:fix<64,32> = 1.5;
+let lj2:fix<64,32> = 2.0;
+
+for (let i: ubit<8> = 0..256) {
+  let ix = position_x[i];
+  let iy = position_y[i];
+  let iz = position_z[i];
+  ---
+
+  let fx: fix<64,32> = 0.0;
+  let fy: fix<64,32> = 0.0;
+  let fz: fix<64,32> = 0.0;
+
+  for (let j: ubit<4> = 0..16) {
+    let j_idx = nl[i][j];
+
+    let jx = position_x[j_idx];
+    let jy = position_y[j_idx];
+    let jz = position_z[j_idx];
+
+    let delx = ix - jx;
+    let dely = iy - jy;
+    let delz = iz - jz;
+
+    let r2inv = (1.0 as fix<64, 32>) / (delx * delx + dely * dely + delz * delz);
+    let r6inv = r2inv * r2inv * r2inv;
+    let potential = r6inv * (lj1 * r6inv - lj2);
+
+    let force = r2inv * potential;
+  } combine {
+    fx += delx * force;
+    fy += dely * force;
+    fz += delz * force;
+  }
+
+  force_x[i] := fx;
+  force_y[i] := fy;
+  force_z[i] := fz;
+}

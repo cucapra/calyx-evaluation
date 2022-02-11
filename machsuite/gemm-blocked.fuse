@@ -1,0 +1,24 @@
+decl m1: fix<64, 32>[64][64];
+decl m2: fix<64, 32>[64][64];
+decl prod: fix<64, 32>[64][64];
+
+for (let i: ubit<6> = 0..64) {
+  for (let j: ubit<6>  = 0..64) {
+    prod[i][j] := (0.0 as fix<64, 32>);
+  }
+}
+---
+for (let jj: ubit<4> = 0..8) {
+  for (let kk: ubit<4> = 0..8) {
+    for (let i: ubit<6> = 0..64) {
+      for (let j: ubit<4> = 0..8) {
+        for (let k: ubit<4> = 0..8) {
+          let temp_x = m1[i][kk * 8 + k];
+          let mul = temp_x * m2[kk * 8 + k][jj * 8 + j];
+        } combine {
+          prod[i][jj * 8 + j] += mul;
+        }
+      }
+    }
+  }
+}
