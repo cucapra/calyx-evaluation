@@ -1,0 +1,30 @@
+decl val: fix<64, 32>[1666];
+decl cols: bit<32>[1666];
+decl row_delimiters: bit<32>[495];
+decl vec: fix<64, 32>[494];
+decl out: fix<64, 32>[494];
+
+let sum: fix<64, 32> = 0.0;
+let si: fix<64, 32> = 0.0;
+
+let tmp_begin: bit<32> = 0;
+let tmp_end: bit<32> = 0;
+let j: bit<32> = 0;
+
+for (let i: ubit<9> = 0..494) {
+  sum := (0.0 as fix<64, 32>);
+  si := (0.0 as fix<64, 32>);
+  tmp_begin := row_delimiters[i];
+  ---
+  tmp_end := row_delimiters[i+1];
+
+  j := tmp_begin;
+  while (j < tmp_end) {
+    decor "#pragma HLS loop_tripcount avg=3"
+    let c_idx = cols[j];
+    si := val[j] * vec[c_idx];
+    sum := sum + si;
+    j := j + 1;
+  }
+  out[i] := sum;
+}

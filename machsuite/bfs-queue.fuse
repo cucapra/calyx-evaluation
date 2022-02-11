@@ -1,0 +1,87 @@
+// record edge_t {
+//   src: ubit<64>;
+//   dst: ubit<64>
+// }
+
+// record node_t {
+//   edge_begin: ubit<64>;
+//   edge_end: ubit<64>
+// }
+
+// decor "#pragma SDS data copy(nodes[0:256])"
+// decor "#pragma SDS data zero_copy(level[0:256])"
+// decor "#pragma SDS data zero_copy(level_counts[0:10])"
+
+decl nodes_edge_begin: ubit<64>[256];
+decl nodes_edge_end: ubit<64>[256];
+decl edges_src: ubit<64>[4096];
+decl edges_dst: ubit<64>[4096];
+
+decl starting_node_fake: ubit<64>;
+decl level: bit<8>[256];
+decl level_counts: ubit<64>[10];
+
+let queue: ubit<64>[256];
+let MAX_LEVEL: bit<8> = 127;
+let starting_node: ubit<64> = 38;
+
+{
+  let q_in: ubit<64> = 1;
+  let q_out: ubit<64> = 0;
+  level[starting_node] := 0;
+  level_counts[0] := 1;
+
+  if (q_in == 0) {
+    queue[255] := starting_node;
+  } else {
+    queue[q_in - 1] := starting_node;
+  }
+  let temp_q_in = (q_in + 1) % 256;
+  q_in := temp_q_in;
+  ---
+
+  for (let dummy: ubit<8> = 0..256) {
+    decor "#pragma HLS loop_tripcount max=256 min=1"
+    let q_empty = false;
+    if (q_in > q_out) {
+      q_empty := (q_in == q_out + 1);
+    } else {
+      q_empty := (q_in == 0) && (q_out == 255);
+    }
+
+    if (q_empty) {
+      dummy := (256 as ubit<8>);
+    }
+
+    let n = queue[q_out];
+    q_out := (q_out + 1) % 256;
+    let e = nodes_edge_begin[n];
+    let tmp_end: ubit<64> = nodes_edge_end[n];
+    ---
+
+    while(e < tmp_end) {
+      decor "#pragma HLS loop_tripcount avg=17"
+      let tmp_dst: ubit<64> = edges_dst[e];
+      let tmp_level: bit<8> = level[tmp_dst];
+      ---
+
+      if (tmp_level == MAX_LEVEL) {
+        tmp_level := level[n] + 1;
+        let tmp_level_counts = level_counts[tmp_level];
+        ---
+
+        level[tmp_dst] := tmp_level;
+        level_counts[tmp_level] := tmp_level_counts + 1;
+
+        if (q_in == 0) {
+          queue[255] := tmp_dst;
+        } else {
+          queue[q_in - 1] := tmp_dst;
+        }
+        temp_q_in := (q_in + 1) % 256;
+        q_in := temp_q_in;
+      }
+      e := e + 1;
+    }
+  }
+}

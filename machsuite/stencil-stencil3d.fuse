@@ -1,0 +1,52 @@
+decl C: bit<32>[2];
+decl orig: bit<32>[32][32][16];
+decl sol: bit<32>[32][32][16];
+
+// Handle boundary conditions by filling with original values
+for (let j = 0..32) {
+  for (let k = 0..16) {
+    sol[0][j][k] := orig[0][j][k];
+    ---
+    sol[31][j][k] := orig[31][j][k];
+  }
+}
+---
+
+for (let i = 1..31) {
+  for (let k = 0..16) {
+    sol[i][0][k] := orig[i][0][k];
+    ---
+    sol[i][31][k] := orig[i][31][k];
+  }
+}
+---
+
+for (let i = 1..31) {
+  for (let j = 1..31) {
+    sol[i][j][0] := orig[i][j][0];
+    ---
+    sol[i][j][15] := orig[i][j][15];
+  }
+}
+---
+
+// Stencil computation
+for (let i = 1..31) {
+  for (let j = 1..31) {
+    for (let k = 1..15) {
+      let temp1 = orig[i][j][k] * C[0];
+      ---
+      let temp2 = orig[i + 1][j][k] * C[1] + temp1;
+      ---
+      let temp3 = orig[i - 1][j][k] * C[1] + temp2;
+      ---
+      let temp4 = orig[i][j + 1][k] * C[1] + temp3;
+      ---
+      let temp5 = orig[i][j - 1][k] * C[1] + temp4;
+      ---
+      let temp6 = orig[i][j][k + 1] * C[1] + temp5;
+      ---
+      sol[i][j][k] := orig[i][j][k - 1] * C[1] + temp6;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+def cpf(pattern: bit<8>[4], kmpNext: bit<32>[4]) = {
+  let k: bit<32> = 0;
+  kmpNext[0] := 0;
+  ---
+  for (let q: ubit<2> = 1..4) {
+    decor "#pragma HLS loop_tripcount max=4 min=0"
+    let k_val = pattern[k];
+    ---
+    let q_val = pattern[q];
+    ---
+    while (k > 0 && k_val != q_val) {
+      decor "#pragma HLS loop_tripcount max=0 min=0"
+      k := kmpNext[q];
+      k_val := pattern[k];
+      ---
+      q_val := pattern[q];
+    }
+    ---
+    if (k_val == q_val) {
+      k := k + 1;
+    }
+    kmpNext[q] := k;
+  }
+}
+
+decl pattern: bit<8>[4];
+decl input: bit<8>[32411];
+decl kmpNext: bit<32>[4];
+decl n_matches: bit<32>[1];
+
+n_matches[0] := 0;
+cpf(pattern, kmpNext);
+---
+let q:bit<32> = 0;
+for (let i: ubit<15> = 0..32411) {
+  decor "#pragma HLS loop_tripcount max=32411 min=0"
+  while (q > 0 && pattern[q] != input[i]) {
+    decor "#pragma HLS loop_tripcount max=1 min=0"
+    q := kmpNext[q];
+  }
+  ---
+  if (pattern[q] == input[i]) {
+    q := q + 1;
+  }
+  if (q >= 4) {
+    let temp:bit<32> = n_matches[0];
+    ---
+    n_matches[0] := temp + 1;
+    q := kmpNext[q - 1];
+  }
+}

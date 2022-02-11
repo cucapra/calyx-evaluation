@@ -1,0 +1,43 @@
+decl real: fix<64,32>[1024];
+decl img: fix<64,32>[1024];
+decl real_twid: fix<64,32>[512];
+decl img_twid: fix<64,32>[513];
+
+let span:bit<32> = 1024 >> 1;
+let log:bit<32> = 0;
+
+while (span != 0) {
+  let odd = span;
+  while (odd < 1024) {
+    // based on baseline software, but check for rewrites
+    decor "#pragma HLS loop_tripcount avg=512"
+    odd := odd | span;
+    let even = odd ^ span;
+    let real_odd = real[odd];
+    let img_odd = img[odd];
+    ---
+    let real_even = real[even];
+    let img_even = img[even];
+    let temp_r = real_even + real_odd;
+    let temp_i = img_even + img_odd;
+    ---
+    real[odd] := real_even - real_odd;
+    img[odd] := img_even - img_odd;
+    ---
+    real[even] := temp_r;
+    img[even] := temp_i;
+    let rootindex = (((even << log) as ubit<10>) & (1023 as ubit<10>));
+    ---
+    if (rootindex != 0) {
+      let temp = real_twid[rootindex] * real[odd] - img_twid[rootindex] * img[odd];
+      img_odd := img[odd];
+      ---
+      img[odd] := real_twid[rootindex] * img_odd + img_twid[rootindex] * real[odd];
+      ---
+      real[odd] := temp;
+    }
+    odd := odd + 1;
+  }
+  span := span >> 1;
+  log := log + 1;
+}

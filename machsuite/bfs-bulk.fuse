@@ -1,0 +1,55 @@
+// record edge_t {
+//   src: ubit<64>;
+//   dst: ubit<64>
+// }
+
+// record node_t {
+//   edge_begin: ubit<64>;
+//   edge_end: ubit<64>
+// }
+
+decl nodes_edge_begin: ubit<64>[256];
+decl nodes_edge_end: ubit<64>[256];
+decl edges_src: ubit<64>[4096];
+decl edges_dst: ubit<64>[4096];
+
+decl starting_node: ubit<64>;
+decl level: bit<8>[256];
+decl level_counts: ubit<64>[10];
+
+let MAX_LEVEL: bit<8> = 127;
+
+level[starting_node] := 0;
+level_counts[0] := 1;
+---
+
+for (let horizon: bit<8> = 0..10) {
+  decor "#pragma HLS loop_tripcount max=10 min=1"
+  let cnt: ubit<64> = 0;
+  for (let n: ubit<8> = 0..256) {
+    let tmp_l = level[n];
+    ---
+    if (tmp_l == horizon) {
+      let e = nodes_edge_begin[n];
+      ---
+      let tmp_end = nodes_edge_end[n];
+      ---
+      while (e < tmp_end) {
+        decor "#pragma HLS loop_tripcount avg=17"
+        let tmp_dst = edges_dst[e];
+        let tmp_level = level[tmp_dst];
+        ---
+        if (tmp_level == MAX_LEVEL) {
+          level[tmp_dst] := horizon + 1;
+          ---
+          cnt := cnt + 1;
+        }
+        e := e + 1;
+      }
+    }
+  }
+  level_counts[horizon + 1] := cnt;
+  if (cnt == 0) {
+    horizon := 10;
+  }
+}
