@@ -2,7 +2,7 @@ ver = "0.3.2"
 
 [[tests]]
 name = "Gold"
-paths = [ "polybench/**/*.fuse" ]
+paths = [ "polybench/*.fuse" ]
 cmd = """
 ./bin/dahlia-run {} {}.data
 """
@@ -11,7 +11,7 @@ expect_dir = "simulation/"
 
 [[tests]]
 name = "Correctness"
-paths = [ "polybench/**/*.fuse" ]
+paths = [ "polybench/*.fuse" ]
 cmd = """
 fud exec -s verilog.data {}.data \
          --through verilog \
