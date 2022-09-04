@@ -2,7 +2,7 @@ ver = "0.4.0"
 
 [[tests]]
 name = "Gold"
-paths = [ "polybench/*.fuse" ]
+paths = ["polybench/*.fuse"]
 cmd = """
 ./bin/dahlia-run {} {}.data
 """
@@ -11,7 +11,7 @@ expect_dir = "simulation/"
 
 [[tests]]
 name = "Correctness"
-paths = [ "polybench/*.fuse" ]
+paths = ["polybench/*.fuse"]
 cmd = """
 fud exec -s verilog.data {}.data \
          --through verilog \
@@ -22,7 +22,7 @@ expect_dir = "simulation/"
 
 [[tests]]
 name = "Unrolled"
-paths = [ "unrolled/*.fuse" ]
+paths = ["unrolled/*.fuse"]
 cmd = """
 fud exec -s verilog.data {}.data \
          -s futil.flags ' --disable-verify' \
@@ -34,11 +34,11 @@ expect_dir = "simulation/"
 
 [[tests]]
 name = "Interpreter"
-paths = [ "polybench/**/*.fuse" ]
+paths = ["polybench/**/*.fuse"]
 cmd = """
 fud exec -s verilog.data {}.data \
          {} --to interpreter-out \
-         -q | jq .memories.main
+         -q | jq .main
 """
 expect_dir = "simulation/"
 
@@ -47,8 +47,8 @@ expect_dir = "simulation/"
 # paths = [ "unrolled/*.fuse" ]
 # cmd = """
 # fud exec -s verilog.data {}.data \
-         # {} --to interpreter-out \
-         # -q | jq .memories.main
+# {} --to interpreter-out \
+# -q | jq .memories.main
 # """
 # expect_dir = "simulation/"
 # timeout = 120
