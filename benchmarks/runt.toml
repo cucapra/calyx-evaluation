@@ -14,7 +14,7 @@ name = "Correctness"
 paths = ["polybench/*.fuse"]
 cmd = """
 fud exec -s verilog.data {}.data \
-         --through verilog \
+         --through icarus-verilog \
          {} --to dat \
          -q | jq .memories
 """
@@ -25,7 +25,7 @@ name = "Unrolled"
 paths = ["unrolled/*.fuse"]
 cmd = """
 fud exec -s verilog.data {}.data \
-         -s futil.flags ' --disable-verify' \
+         -s calyx.flags ' --disable-verify' \
          --through verilog \
          {} --to dat \
          -q | jq .memories
