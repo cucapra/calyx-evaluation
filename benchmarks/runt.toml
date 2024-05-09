@@ -21,11 +21,35 @@ fud exec -s verilog.data {}.data \
 expect_dir = "simulation/"
 
 [[tests]]
+name = "Correctness-One-Hot"
+paths = ["polybench/*.fuse"]
+cmd = """
+fud exec -s verilog.data {}.data \
+         -s calyx.flags "-x one-hot-cutoff=64" \
+         --through icarus-verilog \
+         {} --to dat \
+         -q | jq .memories
+"""
+expect_dir = "simulation/"
+
+[[tests]]
 name = "Unrolled"
 paths = ["unrolled/*.fuse"]
 cmd = """
 fud exec -s verilog.data {}.data \
          -s calyx.flags ' --disable-verify' \
+         --through verilog \
+         {} --to dat \
+         -q | jq .memories
+"""
+expect_dir = "simulation/"
+
+[[tests]]
+name = "Unrolled-One-Hot"
+paths = ["unrolled/*.fuse"]
+cmd = """
+fud exec -s verilog.data {}.data \
+         -s calyx.flags ' --disable-verify -x compile-static:one-hot-cutoff=64' \
          --through verilog \
          {} --to dat \
          -q | jq .memories
